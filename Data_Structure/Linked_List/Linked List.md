@@ -22,7 +22,15 @@
 # How can I improve Time Complexity?
 ## Improve Time Complexity of Insertion
 맨 끝에 삽입하는 경우 O(n)의 시간 복잡도를 가지는데, 이를 O(1)으로 개선할 수 있다!
+어떻게? **tail**을 활용한다.
+`head`가 맨 앞 node의 정보를 기억하고 있는 것 처럼, `tail`이 맨 뒤 node의 정보를 기억하게 만들면 된다.
 
+## Improve Time Complexity of Removal
+맨 끝을 삭제하는 경우 O(n)의 시간 복잡도를 가지는데, 이를 O(1)으로 개선할 수 있다!
+tail이 아니라 `tail 직전 node`를 알아내면 된다.
+맨 끝의 직전 node에 접근해서, 그 node의 다음 node를 `null`로 바꾸면 된다!
+그러나 [[Singly Linked List]]에서는 단반향으로 연결되기 때문에 이를 구현할 방법이 없다.
+여기서 등장하는 것이 [[Doubly Linked List]]이다.
 
 
 # Related Algorithm
