@@ -1,0 +1,152 @@
+{
+  "main": {
+    "id": "3a853e5a7c3b5580",
+    "type": "split",
+    "children": [
+      {
+        "id": "0385819731afd066",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ebe99779189dd4f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data_Structure/Stack.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "49c3f19b4b144431",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e990ea5ee1a93a69",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "fa28a8a6c567ef17",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "98c77259d12ce3bb",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "cc045ea1b92ca07b",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "8c520c8896ddfd94",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "98db5877934149d7",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Data_Structure/Stack.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "1f6343e4cedf11a5",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "Data_Structure/Stack.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "06790ff24f134a64",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Data_Structure/Stack.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ebe99779189dd4f8",
+  "lastOpenFiles": [
+    "Algorithm/Sort/Sort.md",
+    "Data_Structure/Linked_List/Singly Linked List.md",
+    "Data_Structure/Tree/Tree.md",
+    "Data_Structure/Tree/Trie.md",
+    "Data_Structure/Tree/Heap.md",
+    "Algorithm/Floyd's ...(토끼 거북).md",
+    "Data_Structure/Stack.md",
+    "Data_Structure/Hash Table(Hash Map).md",
+    "Data_Structure/Queue.md",
+    "Algorithm/Sort/Quick Sort.md",
+    "Algorithm/Sort/Selection Sort.md",
+    "Algorithm/Sort/Insertion Sort.md",
+    "Data_Structure/Linked_List/Linked List.md",
+    "Algorithm/Binary Search.md",
+    "Algorithm/Naive String Search.md"
+  ]
+}
