@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data_Structure/Linked_List/Linked List.md",
+                "file": "Data_Structure/Linked_List/Singly Linked List.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Linked_List/Linked List.md",
+                "file": "Data_Structure/Linked_List/Singly Linked List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Linked_List/Linked List.md",
+                "file": "Data_Structure/Linked_List/Singly Linked List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Linked_List/Linked List.md"
+                "file": "Data_Structure/Linked_List/Singly Linked List.md"
               }
             }
           },
@@ -159,8 +159,8 @@
   },
   "active": "4ae6401b84fe4ac7",
   "lastOpenFiles": [
-    "Data_Structure/Linked_List/Singly Linked List.md",
     "Data_Structure/Linked_List/Linked List.md",
+    "Data_Structure/Linked_List/Singly Linked List.md",
     "Data_Structure/Stack.md",
     "Algorithm/Sort/Sort.md",
     "Algorithm/Naive String Search.md",
