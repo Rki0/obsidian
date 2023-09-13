@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data_Structure/Stack.md",
+                "file": "Data_Structure/Linked_List/Linked List.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Stack.md",
+                "file": "Data_Structure/Linked_List/Linked List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Stack.md",
+                "file": "Data_Structure/Linked_List/Linked List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Stack.md"
+                "file": "Data_Structure/Linked_List/Linked List.md"
               }
             }
           },
@@ -158,9 +158,10 @@
   },
   "active": "4ae6401b84fe4ac7",
   "lastOpenFiles": [
+    "Data_Structure/Linked_List/Singly Linked List.md",
+    "Data_Structure/Linked_List/Linked List.md",
     "Data_Structure/Stack.md",
     "Algorithm/Sort/Sort.md",
-    "Data_Structure/Linked_List/Linked List.md",
     "Algorithm/Naive String Search.md",
     "Algorithm/Binary Search.md",
     "Algorithm/Sort/Bubble Sort.md",
@@ -171,7 +172,6 @@
     "Algorithm/Sort",
     "Untitled.canvas",
     "Algorithm/Floyd's ...(토끼 거북).md",
-    "Data_Structure/Linked_List/Singly Linked List.md",
     "Data_Structure/Queue.md",
     "Data_Structure/Tree/Trie.md",
     "Data_Structure/Tree/Heap.md",
