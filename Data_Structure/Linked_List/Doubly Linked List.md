@@ -1,5 +1,3 @@
-
-
 # Comparisons with [[Singly Linked List]]
 - 이전 노드를 저장해야하기 때문에 메모리를 더 많이 사용한다.
 - 그 대신 Searching은 [[Singly Linked List]]보다 절반의 시간만 걸린다.
@@ -18,6 +16,8 @@
 	- tail을 사용하여 맨 끝을 제거 : O(1) - tail을 통해 마지막 node의 이전 node에 접근할 수 있기 때문.
 
 # Implement
+[[Singly Linked List]]와 매우 유사한 구조를 가지고 있으나, `prev`가 추가됐다는 점을 신경써야한다.
+
 ```js
 class Node {
 	constructor(val){
@@ -167,7 +167,10 @@ class DoublyLinkedList {
 		let afterNode = beforeNode.next;
 		let newNode = new Node(val);
 
-		beforeNode.next = 
+		beforeNode.next = newNode;
+		newNode.next = afterNode;
+		newNode.prev = beforeNode;
+		afterNode.prev = newNode;
 
 		this.length++;
 
@@ -176,21 +179,25 @@ class DoublyLinkedList {
 
 	remove(index){
 		if(index < 0 || index >= this.length){
-			return false;
-		}
-
-		if(index === this.length - 1){
-			return !!this.pop();
+			return undefined;
 		}
 
 		if(index === 0){
-			return !!this.shift();
+			return this.shift();
 		}
 
-		let prevNode = this.get(index - 1);
-		let removed = prevNode.next;
+		if(index === this.length - 1){
+			return this.pop();
+		}
 
-		prevNode.next = removed.next;
+		let removed = this.get(index);
+		let beforeNode = removed.prev;
+		let afterNode = removed.next;
+
+		beforeNode.next = afterNode;
+		afterNode.prev = beforeNode;
+
+		removed.prev = null;
 		removed.next = null;
 
 		this.length--;
