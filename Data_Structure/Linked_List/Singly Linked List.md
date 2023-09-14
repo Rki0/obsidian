@@ -121,25 +121,25 @@ class SinglyLinkedList{
 	set(index, val){
 		const foundNode = this.get(index);
 
-		if(foundNode){
-			foundNode.val = val;
-			return true;
+		if(!foundNode){
+			return false;
 		}
-
-		return false;
+		
+		foundNode.val = val;
+		return true;
 	}
 
 	insert(index, val){
-		if(index < 0 || index >= this.length){
+		if(index < 0 || index > this.length){
 			return false;
-		}
-
-		if(index === this.length){
-			return !!this.push(val);
 		}
 
 		if(index === 0){
 			return !!this.unshift(val);
+		}
+
+		if(index === this.length){
+			return !!this.push(val);
 		}
 
 		let prevNode = this.get(index - 1);

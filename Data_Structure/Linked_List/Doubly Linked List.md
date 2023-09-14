@@ -115,12 +115,25 @@ class DoublyLinkedList {
 			return null;
 		}
 
-		let current = this.head;
-		let count = 0;
+		let current = null;
+		let count = null;
 
-		while(count < index){
-			current = current.next;
-			count++;
+		if(index <= Math.floor(this.length / 2)){
+			current = this.head;
+			count = 0;
+
+			while(count < index){
+				current = current.next;
+				count++;
+			}
+		} else {
+			current = this.tail;
+			count = this.length - 1;
+
+			while(count > index){
+				current = current.prev;
+				count--;
+			}
 		}
 
 		return current;
@@ -129,33 +142,32 @@ class DoublyLinkedList {
 	set(index, val){
 		const foundNode = this.get(index);
 
-		if(foundNode){
-			foundNode.val = val;
-			return true;
+		if(!foundNode){
+			return false;
 		}
-
-		return false;
+		
+		foundNode.val = val;
+		return true;
 	}
 
 	insert(index, val){
-		if(index < 0 || index >= this.length){
+		if(index < 0 || index > this.length){
 			return false;
+		}
+		
+		if(index === 0){
+			return !!this.unshift(val);
 		}
 
 		if(index === this.length){
 			return !!this.push(val);
 		}
 
-		if(index === 0){
-			return !!this.unshift(val);
-		}
-
-		let prevNode = this.get(index - 1);
+		let beforeNode = this.get(index - 1);
+		let afterNode = beforeNode.next;
 		let newNode = new Node(val);
 
-		let temp = prevNode.next;
-		prevNode.next = newNode;
-		newNode.next = temp;
+		beforeNode.next = 
 
 		this.length++;
 
