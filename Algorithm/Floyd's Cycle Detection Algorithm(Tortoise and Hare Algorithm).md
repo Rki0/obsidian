@@ -1,5 +1,5 @@
-`Floyd's Cycle Detection(Finding) Algorithm`이라고 불리는 이 것은 [[Linked List]]에서 순환(cycle)이 발생하는지 검출하는 알고리즘이다.
-
+- `Floyd's Cycle Detection(Finding) Algorithm`이라고 불리는 이 것은 [[Linked List]]에서 순환(cycle)이 발생하는지 검출하는 알고리즘이다.
+- 두 개의 포인터를 사용하여 하나는 느리게, 하나는 빠르게 움직이는 방법을 사용하기 때문에 `Tortoise and Hare Algorithm(거북이와 토끼 알고리즘)`으로 불리기도 한다.
 # Principle
 원리는 다음과 같다.
 
@@ -19,7 +19,7 @@ class Node {
 	}
 }
 
-class CircularLinkedList{
+class LinkedList{
 	constructor(){
 		this.head = null;
 		this.tail = null;
