@@ -6,9 +6,9 @@
 # Time Complexity
 
 # Implement
-[[Singly Linked List]]를 사용하여 구현한 코드이다.
-`tail`이 `head`와 이어지도록 만들어야한다는 것과 일반적인 순회를 적용하면 무한 루프에 빠져버리는 것에 주의하자.
-
+- [[Singly Linked List]]를 사용하여 구현한 코드이다.
+- `tail`이 `head`와 이어지도록 만들어야한다는 것과 일반적인 순회를 적용하면 무한 루프에 빠져버리는 것에 주의하자.
+- `findCircular()`메서드의 경우, `tail`이 `head`와 연결되어 있다면 `tail`
 ```js
 class Node {
 	constructor(val){
@@ -77,6 +77,7 @@ class CircularLinkedList{
 
 		let currentHead = this.head;
 		this.head = currentHead.next;
+		this.tail.next = this.head;
 		this.length--;
 
 		if(this.length === 0){
@@ -97,6 +98,7 @@ class CircularLinkedList{
 		} else {
 			newNode.next = this.head;
 			this.head = newNode;
+			this.tail.next = this.head;
 		}
 
 		this.length++;
@@ -180,22 +182,27 @@ class CircularLinkedList{
 		return removed;
 	}
 
-	reverse(){
-		let node = this.head;
-		this.head = this.tail;
-		this.tail = node;
-
-		let prev = null;
-		let next = null;
-
-		for(let i = 0; i < this.length; i++){
-			next = node.next;
-			node.next = prev;
-			prev = node;
-			node = next;
+	findCircular(){
+		if(!this.head){
+			return undefined;
 		}
 
-		return this;
+		let rabbit = this.head.next;
+		let turtle = this.head;
+
+		while(rabbit){
+			if(rabbit === turtle){
+				return rabbit;
+			}
+
+			if(rabbit.next){
+				rabbit = rabbit.next.next;
+				turtle = turtle.next;
+				continue;
+			}
+
+			break;
+		}
 	}
 }
 ```
