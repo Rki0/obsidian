@@ -6,6 +6,7 @@
 - Insertion
 	- 맨 앞에 삽입 : O(1) - 가장 앞의 node에 연결하기 때문에, head의 참조만 바꾸면 된다.
 	- 중간, 맨 끝에 삽입 : O(n) - 삽입할 위치를 찾아야하기 때문에.
+	- tail을 사용하여 맨 끝에 삽입 : O(1) - tail을 통해 마지막 node의 참조를 바꾸면 된다.
 - Removal
 	- 맨 앞을 제거 : O(1) - 가장 앞의 node를 제거하기 때문에, head의 참조만 바꾸면 된다.
 	- 중간, 맨 끝을 제거 : O(n) - 삭제하기 위한 node를 찾아야하기 때문에.
@@ -81,7 +82,60 @@ class SinglyLinkedList{
 			this.tail = null;
 		}
 
+		currentHead.next = null;
+
 		return currentHead;
+	}
+
+	unshift(val){
+		const newNode = new Node(val);
+
+		if(!this.head){
+			this.head = newNode;
+			this.tail = newNode;
+		} else {
+			newNode.next = this.head;
+			this.head = newNode;
+		}
+
+		this.length++;
+
+		return this;
+	}
+
+	get(index){
+		if(index < 0 || index >= this.length){
+			return null;
+		}
+
+		let current = this.head;
+		let count = 0;
+
+		while(count < index){
+			current = current.next;
+			count++;
+		}
+
+		return current;
+	}
+
+	set(index, val){
+		const foundNode = this.get(index);
+
+		if(foundNode){
+			foundNode.val = val;
+			return true;
+		}
+
+		return false;
+	}
+
+	insert(index, val){
+		if(index < 0 || index >= this.length){
+			return false;
+		}
+
+		
 	}
 }
 ```
