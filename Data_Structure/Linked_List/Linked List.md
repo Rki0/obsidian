@@ -32,8 +32,3 @@ tail이 아니라 `tail 직전 node`를 알아내면 된다.
 그러나 [[Singly Linked List]]에서는 단반향으로 연결되기 때문에 이를 구현할 방법이 없다.
 여기서 등장하는 것이 [[Doubly Linked List]]이다.
 
-
-# Related Algorithm
-
-- [[Floyd's ...(토끼 거북)]]
-
