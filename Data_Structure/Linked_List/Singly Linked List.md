@@ -12,7 +12,6 @@
 	- 중간, 맨 끝을 제거 : O(n) - 삭제하기 위한 node를 찾아야하기 때문에.
 
 # Implement
-
 ```js
 class Node {
 	constructor(val){
