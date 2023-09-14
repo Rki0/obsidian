@@ -66,6 +66,10 @@ class DoublyLinkedList {
 			this.tail.next = null;
 			popedNode.prev = null;
 		}
+
+		this.length--;
+
+		return popedNode;
 	}
 
 	shift(){
@@ -73,17 +77,20 @@ class DoublyLinkedList {
 			return undefined;
 		}
 
-		let currentHead = this.head;
-		this.head = currentHead.next;
-		this.length--;
+		let oldHead = this.head;
 
-		if(this.length === 0){
+		if(this.length === 1){
+			this.head = null;
 			this.tail = null;
+		} else {
+			this.head = oldHead.next;
+			this.head.prev = null;
+			oldHead.next = null;
 		}
 
-		currentHead.next = null;
+		this.length--;
 
-		return currentHead;
+		return oldHead;
 	}
 
 	unshift(val){
@@ -93,6 +100,7 @@ class DoublyLinkedList {
 			this.head = newNode;
 			this.tail = newNode;
 		} else {
+			this.head.prev = newNode;
 			newNode.next = this.head;
 			this.head = newNode;
 		}
