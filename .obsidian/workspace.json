@@ -20,7 +20,7 @@
             }
           },
           {
-            "id": "6ed6b0dc6323744b",
+            "id": "eecf1060b984191e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6ed6b0dc6323744b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data_Structure/Linked_List/Doubly Linked List.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Linked_List/Singly Linked List.md",
+                "file": "Data_Structure/Linked_List/Doubly Linked List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Linked_List/Singly Linked List.md",
+                "file": "Data_Structure/Linked_List/Doubly Linked List.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Linked_List/Singly Linked List.md"
+                "file": "Data_Structure/Linked_List/Doubly Linked List.md"
               }
             }
           },
@@ -172,8 +184,9 @@
   },
   "active": "6ed6b0dc6323744b",
   "lastOpenFiles": [
-    "Data_Structure/Linked_List/Linked List.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
+    "Data_Structure/Linked_List/Doubly Linked List.md",
+    "Data_Structure/Linked_List/Linked List.md",
     "Data_Structure/Stack.md",
     "Algorithm/Sort/Sort.md",
     "Algorithm/Naive String Search.md",
@@ -194,7 +207,6 @@
     "Data_Structure/Tree",
     "Data_Structure/Tree/Tree.md",
     "Data_Structure",
-    "Data_Structure/Linked_List/Doubly Linked List.md",
     "Data_Structure/Linked_List/Circular Linked List.md",
     "Data_Structure/Linked_List",
     "2023-09-11.md"

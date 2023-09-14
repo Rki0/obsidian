@@ -135,7 +135,66 @@ class SinglyLinkedList{
 			return false;
 		}
 
-		
+		if(index === this.length){
+			return !!this.push(val);
+		}
+
+		if(index === 0){
+			return !!this.unshift(val);
+		}
+
+		let prevNode = this.get(index - 1);
+		let newNode = new Node(val);
+
+		let temp = prevNode.next;
+		prevNode.next = newNode;
+		newNode.next = temp;
+
+		this.length++;
+
+		return true;
+	}
+
+	remove(index){
+		if(index < 0 || index >= this.length){
+			return false;
+		}
+
+		if(index === this.length - 1){
+			return !!this.pop();
+		}
+
+		if(index === 0){
+			return !!this.shift();
+		}
+
+		let prevNode = this.get(index - 1);
+		let removed = prevNode.next;
+
+		prevNode.next = removed.next;
+		removed.next = null;
+
+		this.length--;
+
+		return removed;
+	}
+
+	reverse(){
+		let node = this.head;
+		this.head = this.tail;
+		this.tail = node;
+
+		let prev = null;
+		let next = null;
+
+		for(let i = 0; i < this.length; i++){
+			next = node.next;
+			node.next = prev;
+			prev = node;
+			node = next;
+		}
+
+		return this;
 	}
 }
 ```
