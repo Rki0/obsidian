@@ -9,7 +9,7 @@
 - 원소가 추가될 때마다 공간을 할당받아 비연속적인 메모리 공간에 추가한다.(배열은 주소가 연속적이다.)
 - 탐색을 해야하는 경우에는 배열이 더 낫다. 배열은 인덱스를 통해 O(1)의 시간 복잡도로 탐색이 가능하기 때문.
 
-# Time Complexity
+# Time Complexity([[Singly Linked List]])
 - Access : O(n) - 순차적으로 node를 따라가기 때문.
 - Searching : O(n) - 순차적으로 node를 따라가기 때문.
 - Insertion

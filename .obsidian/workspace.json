@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Data_Structure/Linked_List/Linked List.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6ed6b0dc6323744b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Data_Structure/Linked_List/Singly Linked List.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,7 +170,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4ae6401b84fe4ac7",
+  "active": "6ed6b0dc6323744b",
   "lastOpenFiles": [
     "Data_Structure/Linked_List/Linked List.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
