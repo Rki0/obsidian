@@ -2,7 +2,8 @@
 - LIFO(Last In First Out) 원칙에 기반한 선형 자료구조
 
 # Feature
-- `Array`로 구현하느냐, `Linked List`로 구현하느냐에 따라 시간 복잡도가 달라진다.
+- `Array`로 구현하느냐, `Linked List`로 구현하느냐에 따라 시간 복잡도가 달라진다.(일반적인 경우)
+- 어느 쪽으로 구현하든 같은 시간 복잡도를 가지게 하려면 `Linked List`를 수정해서 사용해야한다.
 - 삽입, 삭제를 최우선으로 하는 자료구조라서 `Searching`이 중요하다면 일반 배열이나 다른 자료 구조를 쓰는게 좋다.
 - `Managing function invocations`, `Undo/Redo`, `Routing(the history object)` 등에 사용된다.
 - `DFS(Depth First Search)` 구현에 주로 사용된다.
@@ -10,10 +11,8 @@
 # Time Complexity
 - Access : O(n) - 선형으로 순차적 접근을 하기 때문.
 - Searching : O(n) - 선형으로 순차적 접근을 하기 때문.
-- Insertion : O(1) - 항상 맨 뒤에 데이터를 넣기 때문.
-- Removal
-	- `Array`로 구현한 경우 : O(n) - 배열 특성 상, 하나의 인덱스가 제거되면 그 뒤의 모든 인덱스의 변경이 발생하기 때문.
-	- `Linked List`로 구현한 경우 : O(1) - `head`를 통해 맨 위로 바로 접근하며, node의 참조만 변경하면 되기 때문.
+- Insertion : O(1) - 항상 맨 위에 데이터를 넣기 때문.
+- Removal : O(1) - 항상 맨 위에서 데이터를 꺼내기 때문.
 
 # Stack Overflow / Underflow
 ## Overflow
@@ -47,13 +46,47 @@
 	- 현재 값과 현재 `min`을 같이 넣어놨던 2번 방법과 달리, 현재 `min`을 같은 `index`의 다른 `Stack`에 만들어가는 것이다.
 
 # What should I use for implementation? Array or Linked List?
-
+1. `Array`로 구현하는 방법
+	- JS 내장 배열과 그 메서드(e.g push, pop)를 사용하면 별도의 작업이 필요하지 않다.
+1. `Linked List`로 구현하는 방법
+	- [[Singly Linked List]]에서 구현한 `push`, `pop` 메서드를 사용하면 안된다!
+	- `Stack`은 시간 복잡도가 `O(1)`이어야하는데, [[Singly Linked List]]에서 구현한 것은 `O(n)`이기 때문이다.
+	- 따라서, 약간의 수정이 필요하다.
 
 # Implement
 ## Using Array
+- JS의 경우 동적으로 배열 길이가 늘어나기 때문에 상관 없지만, `Stack Overflow` 등을 구현하기 위해 최대 길이를 정해놓고 진행한다.
 
 ```js
-let stack = [];
+class Stack{
+	constructor(){
+		this.stack = [];
+		this.top = -1;
+		this.maxLength = 10;
+	}
+
+	isFull(){
+		if(this.stack.length === this.maxLength){
+			return true;
+		}
+
+		return false;
+	}
+
+	isEmpty(){
+		if(this.stack.length === 0){
+			return true;
+		}
+
+		return false;
+	}
+
+	push(val){
+		if(this.isFull()){
+			throw new Error("Stack Overflow")
+		}
+	}
+}
 ```
 ## Using [[Singly Linked List]]
 
