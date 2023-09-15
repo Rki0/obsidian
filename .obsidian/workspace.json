@@ -8,66 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4ae6401b84fe4ac7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data_Structure/Linked_List/Linked List.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eecf1060b984191e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data_Structure/Linked_List/Singly Linked List.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6ed6b0dc6323744b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data_Structure/Linked_List/Doubly Linked List.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "79cb8f1ec3f44c9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data_Structure/Linked_List/Circular Linked List.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fc3c731837911e90",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3d139eaf59d04797",
             "type": "leaf",
             "state": {
@@ -78,9 +18,20 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "701f1227e38e57c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data_Structure/Queue.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -220,12 +170,13 @@
   },
   "active": "3d139eaf59d04797",
   "lastOpenFiles": [
+    "Data_Structure/Queue.md",
+    "Data_Structure/Stack.md",
     "Data_Structure/Linked_List/Circular Linked List.md",
     "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
     "Data_Structure/Linked_List/Doubly Linked List.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
     "Data_Structure/Linked_List/Linked List.md",
-    "Data_Structure/Stack.md",
     "Algorithm/Sort/Sort.md",
     "Algorithm/Naive String Search.md",
     "Algorithm/Binary Search.md",
@@ -236,7 +187,6 @@
     "Algorithm/Sort/Selection Sort.md",
     "Algorithm/Sort",
     "Untitled.canvas",
-    "Data_Structure/Queue.md",
     "Data_Structure/Tree/Trie.md",
     "Data_Structure/Tree/Heap.md",
     "Algorithm",

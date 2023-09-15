@@ -120,7 +120,7 @@ class Node{
 class Stack{
 	constructor(){
 		this.top = null;
-		this.button = null
+		this.bottom = null
 		this.length = 0;
 		this.maxLength = 10;
 	}
@@ -150,7 +150,7 @@ class Stack{
 
 		if(!this.top){
 			this.top = newNode;
-			this.botton = newNode;
+			this.bottom = newNode;
 		} else {
 			let temp = this.top;
 			this.top = newNode;
@@ -169,9 +169,19 @@ class Stack{
 
 		if(this.length === 1){
 			this.top = null;
-			this.botton = null;
+			this.bottom = null;
+		} else {
+			this.top = poped.next;
 		}
+
+		poped.next = null;
+		this.length--;
+
+		return poped;
+	}
+
+	peak(){
+		return this.top;
 	}
 }
 ```
-
