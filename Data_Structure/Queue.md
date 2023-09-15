@@ -15,12 +15,33 @@
 - Removal : O(1) - 항상 맨 앞에서 데이터를 꺼내기 때문.
 
 # What should I use for implementation? Array or Linked List?
-1. Array로 구현하는 방법
-	- `push, shift` 메서드를 사용하거나, `unshift`
-1. Linked List로 구현하는 방법
+1. `Array`로 구현하는 방법
+	- `push, shift` 메서드를 사용하거나, `unshift`, `pop` 메서드를 사용할 수 있다.
+	- 그러나 `shift`, `unshift`는 시간 복잡도가 `O(n)`이기 때문에 알맞지 않다.
+2. Linked List로 구현하는 방법
+	- [[Singly Linked List]]에서 구현한 `unshift`, `push` 메서드를 사용하면 안된다!
+	- `Queue`는 시간 복잡도가 `O(1)`이어야하는데, [[Singly Linked List]]에서 구현한 것은 시간 복잡도가 `O(n)`이기 때문이다. 정확히는 `push` 메서드가 `O(n)`의 시간을 가진다.
+	- 따라서, 약간의 수정이 필요하다.
 
 # Implement
+- `Array`를 활용하는 방법은 시간 복잡도가 알맞지 않기 때문에, `Linked List`를 사용하여 구현했다.
+- `Queue`의 가장 앞은 `front`로 `Linked List`의 `head`를 사용하며, 가장 뒤는 `rear`로 `Linked List`의 `tail`을 사용한다.
 
 ```js
+class Node{
+	constructor(val){
+		this.val = val;
+		this.next = null;
+	}
+}
 
+class Queue{
+	constructor(){
+		this.front = null;
+		this.rear = null;
+		this.length = 0;
+	}
+
+	
+}
 ```

@@ -48,7 +48,7 @@
 # What should I use for implementation? Array or Linked List?
 1. `Array`로 구현하는 방법
 	- JS 내장 배열과 그 메서드(e.g push, pop)를 사용하면 별도의 작업이 필요하지 않다.
-1. `Linked List`로 구현하는 방법
+2. `Linked List`로 구현하는 방법
 	- [[Singly Linked List]]에서 구현한 `push`, `pop` 메서드를 사용하면 안된다!
 	- `Stack`은 시간 복잡도가 `O(1)`이어야하는데, [[Singly Linked List]]에서 구현한 것은 `O(n)`이기 때문이다.
 	- 따라서, 약간의 수정이 필요하다.
