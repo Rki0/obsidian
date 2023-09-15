@@ -1,7 +1,7 @@
-
-- LIFO(Last In First Out) 원칙에 기반한 선형 자료구조
+<img width="100%" alt="image" src="https://github.com/Rki0/obsidian/assets/86224851/0e3d7ad3-95ea-4917-ac6c-77ac9fbd1cac">
 
 # Feature
+- LIFO(Last In First Out) 원칙에 기반한 선형 자료구조
 - `Array`로 구현하느냐, `Linked List`로 구현하느냐에 따라 시간 복잡도가 달라진다.(일반적인 경우)
 - 어느 쪽으로 구현하든 같은 시간 복잡도를 가지게 하려면 `Linked List`를 수정해서 사용해야한다.
 - 삽입, 삭제를 최우선으로 하는 자료구조라서 `Searching`이 중요하다면 일반 배열이나 다른 자료 구조를 쓰는게 좋다.
