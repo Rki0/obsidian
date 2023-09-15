@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -172,9 +173,9 @@
   "active": "701f1227e38e57c9",
   "lastOpenFiles": [
     "Data_Structure/Stack.md",
+    "Data_Structure/Queue.md",
     "Data_Structure/Linked_List/Circular Linked List.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
-    "Data_Structure/Queue.md",
     "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
     "Data_Structure/Linked_List/Doubly Linked List.md",
     "Data_Structure/Linked_List/Linked List.md",
