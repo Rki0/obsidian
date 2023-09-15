@@ -24,6 +24,7 @@
 	- 따라서, 약간의 수정이 필요하다.
 
 # Implement
+- `Linear Queue`를 구현하였다.
 - `Array`를 활용하는 방법은 시간 복잡도가 알맞지 않기 때문에, `Linked List`를 사용하여 구현했다.
 - `Queue`의 가장 앞은 `front`로 `Linked List`의 `head`를 사용하며, 가장 뒤는 `rear`로 `Linked List`의 `tail`을 사용한다.
 
@@ -42,6 +43,30 @@ class Queue{
 		this.length = 0;
 	}
 
-	
+	enqueue(val){
+		let newNode = new Node(val);
+
+		if(!this.front){
+			this.front = newNode;
+			this.rear = newNode;
+		} else {
+			this.rear.next = newNode;
+			this.rear = newNode;
+		}
+
+		return ++this.length;
+	}
+
+	dequeue(){
+		if(!this.front){
+			return null;
+		}
+
+		let temp = this.front;
+
+		if(this.length === 1){
+			this.rear = null;
+		}
+	}
 }
 ```
