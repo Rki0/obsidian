@@ -62,11 +62,17 @@ class Queue{
 			return null;
 		}
 
-		let temp = this.front;
+		let dequeued = this.front;
 
 		if(this.length === 1){
 			this.rear = null;
 		}
+
+		this.front = this.front.next;
+		dequeued.next = null;
+		this.length++;
+
+		return dequeued;
 	}
 }
 ```
