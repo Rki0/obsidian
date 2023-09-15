@@ -1,4 +1,5 @@
-
+<img width="100%" alt="image" src="https://www.w3resource.com/w3r_images/bubble-short.png">
+image source : https://www.w3resource.com/w3r_images/bubble-short.png
 # Principle
 - 왼쪽부터 한 칸씩 이동하면서 이웃한 두 수를 비교해서 순서가 제대로 되어 있지 않으면 바꾸는 작업을 반복.
 - 이 과정을 반복할 때마다 마지막 자리에 옮겨진 원소는 정렬이 끝날 때까지 그 자리를 유지한다.
