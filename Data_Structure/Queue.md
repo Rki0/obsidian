@@ -1,3 +1,4 @@
+<img width="100%" alt="image" src="https://github.com/Rki0/obsidian/assets/86224851/3835ad2e-8fb1-4470-baff-8aaddd957164">
 
 # Feature
 - FIFO(First In First Out) 원칙에 기반한 선형 자료구조.
