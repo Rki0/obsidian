@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "94948a643d2f2902",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algorithm/Sort/Bubble Sort.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Hash Table(Hash Map).md",
+                "file": "Algorithm/Sort/Bubble Sort.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Hash Table(Hash Map).md",
+                "file": "Algorithm/Sort/Bubble Sort.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Hash Table(Hash Map).md"
+                "file": "Algorithm/Sort/Bubble Sort.md"
               }
             }
           },
@@ -157,19 +170,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5e82900225191bc0",
+  "active": "94948a643d2f2902",
   "lastOpenFiles": [
+    "Data_Structure/Hash Table(Hash Map).md",
+    "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
+    "Algorithm/Sort/Bubble Sort.md",
     "Data_Structure/Queue.md",
     "Data_Structure/Stack.md",
     "Data_Structure/Linked_List/Circular Linked List.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
-    "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
     "Data_Structure/Linked_List/Doubly Linked List.md",
     "Data_Structure/Linked_List/Linked List.md",
     "Algorithm/Sort/Sort.md",
     "Algorithm/Naive String Search.md",
     "Algorithm/Binary Search.md",
-    "Algorithm/Sort/Bubble Sort.md",
     "Algorithm/Sort/Insertion Sort.md",
     "Algorithm/Sort/Merge Sort.md",
     "Algorithm/Sort/Quick Sort.md",
@@ -179,7 +193,6 @@
     "Data_Structure/Tree/Trie.md",
     "Data_Structure/Tree/Heap.md",
     "Algorithm",
-    "Data_Structure/Hash Table(Hash Map).md",
     "Data_Structure/Tree",
     "Data_Structure/Tree/Tree.md",
     "Data_Structure",
