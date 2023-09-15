@@ -1,4 +1,4 @@
-<img width="100%" alt="스크린샷 2023-09-13 오후 1 37 07" src="https://github.com/Rki0/obsidian/assets/86224851/68a8ae9e-2785-4ff3-b7ba-1b2033313eab">
+<img width="100%" alt="image" src="https://github.com/Rki0/obsidian/assets/86224851/599cb7d9-362d-49d6-8ee8-01d7fb3cdf9c">
 
 # Time Complexity
 - Access : O(n) - 순차적으로 node를 따라가기 때문.

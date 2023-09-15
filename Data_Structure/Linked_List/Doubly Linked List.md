@@ -1,3 +1,5 @@
+<img width="100%" alt="image" src="https://github.com/Rki0/obsidian/assets/86224851/72b5c94e-09d5-4bea-b828-34aa9e45cb19">
+
 # Comparisons with [[Singly Linked List]]
 - 이전 노드를 저장해야하기 때문에 메모리를 더 많이 사용한다.
 - 그 대신 Searching은 [[Singly Linked List]]보다 절반의 시간만 걸린다.

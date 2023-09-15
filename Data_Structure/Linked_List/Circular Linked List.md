@@ -1,3 +1,5 @@
+<img width="100%" alt="image" src="https://github.com/Rki0/obsidian/assets/86224851/522fc194-56c5-4863-b2e0-1a96f2c13095">
+
 # Comparisons with other Linked List
 - `Circular Linked List`는 일반적인 `Linked List`와 달리, 순환 구조를 가진다.
 - 일반적으로는 `tail`이 `head`로 다시 이어지는 형태이며, 양 끝이 아닌 중간 `node`에서 순환이 발생할 수도 있다.

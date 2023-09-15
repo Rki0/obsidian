@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Linked_List/Singly Linked List.md",
+                "file": "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Linked_List/Singly Linked List.md",
+                "file": "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Linked_List/Singly Linked List.md"
+                "file": "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md"
               }
             }
           },
@@ -205,12 +205,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eecf1060b984191e",
+  "active": "fc3c731837911e90",
   "lastOpenFiles": [
-    "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
     "Data_Structure/Linked_List/Circular Linked List.md",
     "Data_Structure/Linked_List/Doubly Linked List.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
+    "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
     "Data_Structure/Linked_List/Linked List.md",
     "Data_Structure/Stack.md",
     "Algorithm/Sort/Sort.md",
