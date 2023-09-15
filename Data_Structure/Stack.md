@@ -61,7 +61,6 @@
 class Stack{
 	constructor(){
 		this.stack = [];
-		this.top = -1;
 		this.maxLength = 10;
 	}
 
@@ -83,14 +82,50 @@ class Stack{
 
 	push(val){
 		if(this.isFull()){
-			throw new Error("Stack Overflow")
+			throw new Error("Stack Overflow");
 		}
+
+		this.stack.push(val);
+	}
+
+	pop(){
+		if(this.isEmpty()){
+			throw new Error("Stack Underflow");
+		}
+
+		return this.stack.pop();
+	}
+
+	peak(){
+		if(this.isEmpty()){
+			return null;
+		}
+
+		return this.stack[this.stack.length - 1];
 	}
 }
 ```
 ## Using [[Singly Linked List]]
+- `head`가 `Stack`의 가장 위, `tail`이 `Stack`의 가장 밑.
+- LIFO의 시간 복잡도를 가지게 하기 위함이다.
 
 ```js
+class Node{
+	constructor(val){
+		this.val = val;
+		this.next = null;
+		this.length = 0;
+	}
+}
 
+class Stack{
+	const
+
+	push(val){
+		let newNode = new Node(val);
+
+		if(!this.first)
+	}
+}
 ```
 
