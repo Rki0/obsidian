@@ -106,25 +106,71 @@ class Stack{
 }
 ```
 ## Using [[Singly Linked List]]
-- `head`가 `Stack`의 가장 위, `tail`이 `Stack`의 가장 밑.
-- LIFO의 시간 복잡도를 가지게 하기 위함이다.
+- LIFO의 시간 복잡도를 가지게 하기 위해, `head`가 `Stack`의 가장 위, `tail`이 `Stack`의 가장 밑을 의미하도록 한다.
+- 여기서의 `push`, `pop` 메서드는 [[Singly Linked List]]의 `unshift`, `shift`와 동일한 기능을 하게 된다.
 
 ```js
 class Node{
 	constructor(val){
 		this.val = val;
 		this.next = null;
-		this.length = 0;
 	}
 }
 
 class Stack{
-	const
+	constructor(){
+		this.top = null;
+		this.button = null
+		this.length = 0;
+		this.maxLength = 10;
+	}
+
+	isFull(){
+		if(this.length === this.maxLength){
+			return true;
+		}
+
+		return false;
+	}
+
+	isEmpty(){
+		if(this.length === 0){
+			return true;
+		}
+
+		return false;
+	}
 
 	push(val){
+		if(this.isFull()){
+			throw new Error("Stack Overflow");
+		}
+
 		let newNode = new Node(val);
 
-		if(!this.first)
+		if(!this.top){
+			this.top = newNode;
+			this.botton = newNode;
+		} else {
+			let temp = this.top;
+			this.top = newNode;
+			this.top.next = temp;
+		}
+
+		return ++this.length;
+	}
+
+	pop(){
+		if(this.isEmpty()){
+			throw new Error("Stack Underflow");
+		}
+
+		let poped = this.top;
+
+		if(this.length === 1){
+			this.top = null;
+			this.botton = null;
+		}
 	}
 }
 ```
