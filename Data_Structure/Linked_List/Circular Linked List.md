@@ -197,27 +197,24 @@ class CircularLinkedList{
 		return removed;
 	}
 
-	findCircular(){
+	isCircular(){
 		if(!this.head){
-			return undefined;
+			return false;
 		}
 
-		let rabbit = this.head.next;
 		let turtle = this.head;
+		let rabbit = this.head;
 
-		while(rabbit){
+		while(turtle && rabbit && rabbit.next){
+			turtle = turtle.next;
+			rabbit = rabbit.next.next;
+
 			if(rabbit === turtle){
-				return rabbit;
+				return true;
 			}
-
-			if(rabbit.next){
-				rabbit = rabbit.next.next;
-				turtle = turtle.next;
-				continue;
-			}
-
-			break;
 		}
+
+		return false;
 	}
 }
 ```
