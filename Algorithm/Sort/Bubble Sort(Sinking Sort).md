@@ -1,3 +1,4 @@
+
 # Principle
 - 왼쪽부터 한 칸씩 이동하면서 이웃한 두 수를 비교해서 순서가 제대로 되어 있지 않으면 바꾸는 작업을 반복.
 - 이 과정을 반복할 때마다 마지막 자리에 옮겨진 원소는 정렬이 끝날 때까지 그 자리를 유지한다.
@@ -24,6 +25,9 @@
 # Implement
 
 ## Unoptimized Version
+- 한 번 순회할 때마다 연산 가장 뒤에 옮겨지는 값은 정렬이 끝난 상태이므로 `i - 1`까지만 연산한다.
+- 현재 코드는 오름차순 정렬로 구현되어 있다.
+
 ```js
 function swap(arr, idx1, idx2) {
 	[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
@@ -43,16 +47,34 @@ function bubbleSort(arr) {
 ```
 
 ## Optimized Version
+- 데이터가 거의 정렬이 된 상태이거나, 이미 정렬이 완료된 상태라면 `Bubble Sort`를 진행할 필요가 없다!
+- 만약, 특정 순회에서 한번이라도 정렬이 발생하지 않는다면, 그 것은 모든 정렬이 완료된 것이므로 빠르게 연산을 종료한다.
+- 현재 코드는 오름차순 정렬로 구현되어 있다.
+
 ```js
+function swap(arr, idx1, idx2) {
+	[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+}
+
 function bubbleSort(arr) {
 	let noSwaps;
 
 	for(let i = arr.length - 1; i > 0; i--){
+		noSwaps = true;
+
 		for(let j = 0; j < i; j++){
 			if(arr[j] > arr[j + 1]){
 				swap(arr, j, j + 1);
+
+				noSwaps = false;
 			}
 		}
+
+		if(noSwaps){
+			break;
+		}
 	}
+
+	return arr;
 }
 ```
