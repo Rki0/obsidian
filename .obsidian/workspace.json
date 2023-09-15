@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/Sort/Bubble Sort.md",
+                "file": "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Sort/Bubble Sort.md",
+                "file": "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/Sort/Bubble Sort.md",
+                "file": "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Sort/Bubble Sort.md"
+                "file": "Algorithm/Sort/Bubble Sort(Sinking Sort).md"
               }
             }
           },
@@ -174,7 +174,7 @@
   "lastOpenFiles": [
     "Data_Structure/Hash Table(Hash Map).md",
     "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
-    "Algorithm/Sort/Bubble Sort.md",
+    "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
     "Data_Structure/Queue.md",
     "Data_Structure/Stack.md",
     "Data_Structure/Linked_List/Circular Linked List.md",

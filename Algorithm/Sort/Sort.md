@@ -1,5 +1,5 @@
 
-[[Bubble Sort]]
+[[Bubble Sort(Sinking Sort)]]
 [[Insertion Sort]]
 [[Selection Sort]]
 [[Merge Sort]]
