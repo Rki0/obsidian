@@ -16,10 +16,30 @@
 - O(1)
 
 # Pseudo Code
-- Start looping with a variable called i the end 
+1. Start looping with a variable called i the end of the array towards the beginning
+2. Start an inner loop with a variable called j from the beginning until i-1
+3. If `arr[j]` is greater than `arr[j+1]`, swap those who values
+4. Return the sorted array
 
 # Implement
 
+## Unoptimized Version
 ```js
+function swap(arr, idx1, idx2) {
+	[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+}
 
+function bubbleSort(arr) {
+	for(let i = arr.length; i > 0; i--){
+		for(let j = 0; j < i - 1; j++){
+			if(arr[j] > arr[j + 1]){
+				let temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+
+	return arr;
+}
 ```
