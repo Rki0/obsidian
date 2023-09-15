@@ -28,7 +28,7 @@ class LinkedList{
 		this.length = 0;
 	}
 
-	findCycle(){
+	isCircular(){
 		if(!this.head){
 			return undefined;
 		}
