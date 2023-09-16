@@ -1,3 +1,4 @@
+https://prepinsta.com/wp-content/uploads/2020/05/Insertion-Sort-in-C.png
 # Principle
 
 # Feature
@@ -19,7 +20,7 @@
 4. Repeat until the array is sorted
 
 # Implement
-- 정렬하고 싶은 대상을 
+- `curr`을 기준으로 왼쪽에 있는 배열이 정렬되도록 만드는 것을 기억하자.
 
 ```js
 function insertionSort(arr) {
