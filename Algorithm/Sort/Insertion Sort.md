@@ -1,6 +1,7 @@
 <img width="100%" alt="image" src="https://prepinsta.com/wp-content/uploads/2020/05/Insertion-Sort-in-C.png">
 image source : https://prepinsta.com/wp-content/uploads/2020/05/Insertion-Sort-in-C.png
 # Principle
+- 
 
 # Feature
 - 원소를 순회하면서 그 왼쪽을 정렬된 배열로 만들어가는 방법이다.
