@@ -1,6 +1,7 @@
-
+<img width="100%" alt="image" src="https://www.w3resource.com/w3r_images/selection-short.png">
+image source : https://www.w3resource.com/w3r_images/selection-short.png
 # Principle
-- 
+- 맨 왼쪽부터 시작해서, 오른쪽에 있는 나머지 원소들 중 최소값과 비교하여 스왑을 한다.
 
 # Feature
 - 크기가 N인 배열에서 가장 작은 값을 선택해서 맨 앞 원소와 자리를 변경하는 것을 반복하는 알고리즘.
@@ -24,7 +25,6 @@
 5. Repeat this with the next element until the array is sorted.
 
 # Implement
-- 
 
 ```js
 function swap(arr, idx1, idx2){
