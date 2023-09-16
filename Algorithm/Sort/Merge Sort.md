@@ -28,6 +28,8 @@ This function should run in `O(n+m)` time and `O(n+m)` space and should not modi
 		2. If the value in the first array is larger than the value in the second array, push the value in the second array into our results and move on to the next value in the second array.
 		3. Once we exhaust one array, push in all remaining values from the other array.
 - merge sort
+	1. Break up the array into halves until you have arrays that are empty or have one element.
+	2. Once you have smaller sorted array, merge those 
 
 # Implement
 
