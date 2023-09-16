@@ -40,3 +40,5 @@ function insertionSort(arr) {
 	return arr;
 }
 ```
+
+<img width="100%" alt="image" src="https://github.com/Rki0/obsidian/assets/86224851/2f4c336e-7ded-4005-9ed2-2d0afa552379">
