@@ -1,4 +1,5 @@
-https://prepinsta.com/wp-content/uploads/2020/05/Insertion-Sort-in-C.png
+<img width="100%" alt="image" src="https://prepinsta.com/wp-content/uploads/2020/05/Insertion-Sort-in-C.png">
+image source : https://prepinsta.com/wp-content/uploads/2020/05/Insertion-Sort-in-C.png
 # Principle
 
 # Feature
