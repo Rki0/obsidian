@@ -29,10 +29,19 @@ This function should run in `O(n+m)` time and `O(n+m)` space and should not modi
 		3. Once we exhaust one array, push in all remaining values from the other array.
 - merge sort
 	1. Break up the array into halves until you have arrays that are empty or have one element.
-	2. Once you have smaller sorted array, merge those 
+	2. Once you have smaller sorted array, merge those arrays with other sorted arrays until you are back at the full length of the array.
+	3. Once the array has been merged back together, return the merged(and sorted) array.
 
 # Implement
-
+- `merge`와 `mergeSort`를 구분해서 구현한다.
+## merge
 ```js
+function merge(arr1, arr2){
+	let result = [];
 
+	let p1 = 0;
+	let p2 = 0;
+
+	while(p1 < arr1.length && )
+}
 ```
