@@ -35,6 +35,9 @@ This function should run in `O(n+m)` time and `O(n+m)` space and should not modi
 # Implement
 - `merge`와 `mergeSort`를 구분해서 구현한다.
 ## merge
+- `sort`와 `merge`를 한번에 담당하고 있다.
+- 병합하고자하는 두 개의 배열을 순회하면서 크기 비교를 하고 새로운 정렬된 배열을 생성해 나간다.
+
 ```js
 function merge(arr1, arr2){
 	let result = [];
@@ -42,6 +45,26 @@ function merge(arr1, arr2){
 	let p1 = 0;
 	let p2 = 0;
 
-	while(p1 < arr1.length && )
+	while(p1 < arr1.length && p2 < arr2.length){
+		if(arr[p1] < arr[p2]){
+			result.push(arr1[p1]);
+			p1++;
+		} else {
+			result.push(arr2[p2]);
+			p2++;
+		}
+	}
+
+	while(p1 < arr1.length){
+		result.push(arr[p1]);
+		p1++;
+	}
+
+	while(p2 < arr2.length){
+		result.push(arr[p2]);
+		p2++;
+	}
+
+	return result;
 }
 ```
