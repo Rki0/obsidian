@@ -94,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -184,6 +185,7 @@
   "active": "7050a870a72bf05e",
   "lastOpenFiles": [
     "Algorithm/Sort/Merge Sort.md",
+    "Algorithm/Sort/Quick Sort.md",
     "Algorithm/Sort/Insertion Sort.md",
     "Algorithm/Sort/Selection Sort.md",
     "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
@@ -199,7 +201,6 @@
     "Algorithm/Sort/Sort.md",
     "Algorithm/Naive String Search.md",
     "Algorithm/Binary Search.md",
-    "Algorithm/Sort/Quick Sort.md",
     "Algorithm/Sort",
     "Untitled.canvas",
     "Data_Structure/Tree/Trie.md",
