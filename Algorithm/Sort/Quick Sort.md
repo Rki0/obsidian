@@ -62,7 +62,7 @@ function pivot(arr, start = 0, end = arr.length - 1){
 }
 ```
 
-만약 `pivot`의 구현이 이해가 되지 않는다면 아래 출력 예시를 살펴보자.
+만약 `pivot()`의 구현이 이해가 되지 않는다면 아래 출력 예시를 살펴보자.
 ```
 // pivot([4, 8, 2, 1, 5, 7, 6, 3])
 
@@ -85,6 +85,8 @@ function pivot(arr, start = 0, end = arr.length - 1){
 // [3, 2, 1, 4, 5, 7, 6, 8] : swapIdx와 start를 바꿈. 정렬 상태에서 4가 있어야할 자리를 찾음!!
 ```
 ## quickSort
+- `pivot()`을 통해 현재 `arr`에서 `pivot`을 설정한다.
+- `pivot`을 기준으로 그 왼쪽 배열과 오른쪽 배열에 각각 `quickSort()`를 재귀적으로 실행한다.
 
 ```js
 function quickSort(arr, left = 0, right = arr.length - 1){
