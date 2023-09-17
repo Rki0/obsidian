@@ -34,7 +34,9 @@ image source : https://wat-images.s3.ap-south-1.amazonaws.com/images/course/ci6l
 # Implement
 
 ## pivot
-- `pivot`을 지정한 뒤
+- 가장 앞의 인덱스를 `pivot`으로 사용한다.
+- 두 번째 인덱스부터 순회하며 
+- 
 
 ```js
 function swap(arr, idx1, idx2){
@@ -52,7 +54,7 @@ function pivot(arr, start = 0, end = arr.length - 1){
 		}
 	}
 
-	swap(arr, swapIdx, i);
+	swap(arr, start, swapIdx);
 
 	return swapIdx;
 }
