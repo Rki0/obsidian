@@ -20,30 +20,6 @@
             }
           },
           {
-            "id": "94948a643d2f2902",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ccfadb660e9e9ca2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithm/Sort/Insertion Sort.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "24c0f3e78aa01969",
             "type": "leaf",
             "state": {
@@ -54,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7050a870a72bf05e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algorithm/Sort/Quick Sort.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -106,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -123,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Sort/Merge Sort.md",
+                "file": "Algorithm/Sort/Quick Sort.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/Sort/Merge Sort.md",
+                "file": "Algorithm/Sort/Quick Sort.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Sort/Merge Sort.md"
+                "file": "Algorithm/Sort/Quick Sort.md"
               }
             }
           },
@@ -194,10 +181,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "24c0f3e78aa01969",
+  "active": "7050a870a72bf05e",
   "lastOpenFiles": [
-    "Algorithm/Sort/Insertion Sort.md",
     "Algorithm/Sort/Merge Sort.md",
+    "Algorithm/Sort/Insertion Sort.md",
     "Algorithm/Sort/Selection Sort.md",
     "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
     "Data_Structure/Linked_List/Doubly Linked List.md",

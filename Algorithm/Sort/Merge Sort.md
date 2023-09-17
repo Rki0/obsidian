@@ -11,7 +11,7 @@ image source : https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_s
 - 즉, `merging`과 `sorting`의 콤비네이션이라고 생각하면 된다.
 
 # Time Complexity
-- General, Worst, Best Case : O( n log n) - 정렬(comparisons per decomposition)이 O(n), 분할(decompositions)이 O(log n)이기 때문.
+- General, Worst, Best Case : O(n log n) - 정렬(comparisons per decomposition)이 O(n), 분할(decompositions)이 O(log n)이기 때문.
 
 # Space Complexity
 - O(n)
@@ -38,6 +38,8 @@ This function should run in `O(n+m)` time and `O(n+m)` space and should not modi
 ## merge
 - `sorting`과 `merging`를 한번에 담당하고 있다.
 - 병합하고자하는 두 개의 배열을 순회하면서 크기 비교를 하고 새롭게 정렬된 배열을 생성해 나간다.
+- 하나의 배열이 먼저 순회가 끝나면 다른 배열의 나머지 부분을 뒤에 그대로 이어준다.
+- 가장 작은 단위에서부터 시작해서 `sorting`되며 합쳐져왔기 때문에 정렬된 상태를 유지하므로, 그대로 이어줄 수있다.
 
 ```js
 function merge(arr1, arr2){
@@ -71,6 +73,9 @@ function merge(arr1, arr2){
 ```
 
 ## mergeSort
+- 배열을 절반씩 잘라서 사용하기 위한 작업을 진행한다.
+- 분리된 두 배열에 대해 `merge`를 호출하여 계속해서 정렬 및 병합된 상태로 만들어준다.
+- 이를 `mergeSort`를 통해 다시 분리하고, 또 다시 `merge`로 정렬 및 병합을 하며 나아간다.
 
 ```js
 function mergeSort(arr){
@@ -83,6 +88,6 @@ function mergeSort(arr){
 	let left = mergeSort(arr.slice(0, mid));
 	let right = mergeSort(arr.slice(mid));
 
-	return mergeSort(left, right);
+	return merge(left, right);
 }
 ```
