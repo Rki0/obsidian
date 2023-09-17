@@ -1,10 +1,12 @@
-
+<img width="100%" alt="image" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Binary_search_tree_example.gif">
+image source : https://upload.wikimedia.org/wikipedia/commons/9/9b/Binary_search_tree_example.gif
 # Feature
 - 이진 트리의 한 유형으로, 왼쪽 하위 트리의 모든 노드가 부모 노드보다 작고, 오른쪽 하위 트리의 모든 노드가 부모 노드보다 크다.
 - 최대 두 개의 자식 노드를 가지며, 왼쪽 자식과 오른쪽 자식으로 구분한다.
 - data set을 이분할 때, 무엇을 기준으로 분할할지에 따라 특화된 이진 트리를 만들 수 있다.
 
 # Time Complexity
+- Insertion : O(log n) - Best, 
 
 # Pseudo Code
 ## insertion
@@ -70,6 +72,8 @@
 5. Return the array of values
 
 # Implement
+- `insert()`와 `find()`를 `iterative`하게 작성한 코드이다.
+- 이 코드로 로직 이해를 한 뒤, `recursive`하게 작성한 코드로 사용해보자.
 
 ```js
 class Node{
