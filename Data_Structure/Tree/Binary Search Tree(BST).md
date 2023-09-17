@@ -75,3 +75,48 @@ class BinarySearchTree{
 	}
 }
 ```
+
+## Insertion - Recursively
+
+```js
+class BinarySearchTree{
+	constructor(){
+		this.root = null;
+	}
+
+	insert(val){
+		const newNode = new Node(val);
+
+		if(!this.root){
+			this.root = newNode;
+			return this;
+		}
+
+		this.insertNode(this.root, newNode);
+	}
+
+	insertNode(node, newNode){
+		if(newNode.val === node.val){
+			return undefined;
+		}
+
+		if(newNode.val < node.val){
+			if(!node.left){
+				node.left = newNode;
+				return this;
+			}
+
+			this.insertNode(node.left, newNode);
+		}
+
+		if(newNode.val > node.val){
+			if(!node.right){
+				node.right = newNode;
+				return this;
+			}
+
+			this.insertNode(node.right, newNode);
+		}
+	}
+}
+```
