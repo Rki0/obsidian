@@ -196,9 +196,9 @@
   },
   "active": "949f77602bc5071c",
   "lastOpenFiles": [
-    "Algorithm/Sort/Merge Sort.md",
-    "Algorithm/Sort/Radix Sort.md",
     "Algorithm/Sort/Quick Sort.md",
+    "Algorithm/Sort/Radix Sort.md",
+    "Algorithm/Sort/Merge Sort.md",
     "Algorithm/Sort/Sort.md",
     "Algorithm/Sort/Insertion Sort.md",
     "Algorithm/Sort/Selection Sort.md",

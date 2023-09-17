@@ -19,7 +19,7 @@ image source : https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_s
 ### getDigit
 - Returns the digit in num at the given place value
 ### digitCount
-
+- Returns the number of digits in num
 ### mostDigits
 
 ## merge sort
@@ -29,7 +29,7 @@ image source : https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_s
 - 
 ## getDigit
 - `i`의 자릿수에 어떤 숫자가 들어있는지 알아내는 함수이다.
-- 
+- `10^(알고자하는 자릿수)`으로 숫자를 나눈 뒤, 10으로 나눈 나머지 값을 얻으면 알고자하는 자릿수의 숫자를 얻을 수 있다.
 
 ```js
 function getDigit(num, i){
@@ -38,21 +38,39 @@ function getDigit(num, i){
 ```
 
 ```
-// getDigit(12345, 0); // 5(1의 자리)
+getDigit(12345, 0); // 5(1의 자리)
 
-// getDigit(12345, 1); // 4(10의 자리)
+getDigit(12345, 1); // 4(10의 자리)
 
-// getDigit(12345, 2); // 3(100의 자리)
+getDigit(12345, 2); // 3(100의 자리)
 
-// getDigit(12345, 3); // 2(1000의 자리)
+getDigit(12345, 3); // 2(1000의 자리)
 
-// getDigit(12345, 4); // 1(10000의 자리)
+getDigit(12345, 4); // 1(10000의 자리)
 
-// getDigit(12345, 5); // 0(100000의 자리)
+getDigit(12345, 5); // 0(100000의 자리)
 ```
-## mergeSort
-- 
+
+## digitCount
+- 숫자가 몇 자리 수인지 알아내는 함수
+- `log10(0)`은 `-Infinity`이므로 예외처리를 해줘야한다.
+- `log10()`와 `Math.floor()`를 사용해서 `num`의 `10^n` 중 `n`을 뽑아낸다.
+- `n`은 0부터 시
 
 ```js
+function digitCount(num){
+	if(num === 0){
+		return 1;
+	}
 
+	return Math.floor(Math.log10(Math.abs(num))) + 1;
+}
+```
+
+```
+digitCount(1); // 1
+
+digitCount(25); // 2
+
+digitCount(314); // 3
 ```
