@@ -1,4 +1,5 @@
-
+<img width="100%" alt="image" src="https://media.geeksforgeeks.org/wp-content/uploads/20221124153129/Treedatastructure.png">
+image source : https://media.geeksforgeeks.org/wp-content/uploads/20221124153129/Treedatastructure.png
 # Terminology
 - 노드(node) : 트리를 구성하는 기본 단위. 데이터와 다른 노드를 가리키는 포인터를 포함한다.
 - 루트(root) : 트리의 최상위 노드. 이 노드에서 모든 트리 순회가 시작된다.
@@ -11,3 +12,12 @@
 - 간선(edge) : 두 노드 간의 연결을 말한다.
 - 깊이(depth) : 특정 노드에서 루트 노드까지 도달하기 위한 간선의 수.
 - 높이(height) : 특정 노드에서 가장 멀리 떨어진 리프 노드까지의 "최장 경로"의 길이. 즉, 주어진 노드로부터 가장 먼 리프 노드까지 도달하기 위해 거쳐야하는 간선의 수. 참고로, 특정 노드의 그 하위 트리 중에서 리프 노드로 가는 것을 의미한다(트리를 거슬러 올라가지는 않기 때문).
+
+# Types of Tree
+[[Binary Search Tree]]
+[[Balanced BST]]
+[[AVL Tree]]
+[[Red-Black Tree]]
+[[B-Tree]]
+[[B+Tree]]
+
