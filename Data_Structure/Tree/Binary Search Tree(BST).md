@@ -6,7 +6,9 @@ image source : https://upload.wikimedia.org/wikipedia/commons/9/9b/Binary_search
 - data set을 이분할 때, 무엇을 기준으로 분할할지에 따라 특화된 이진 트리를 만들 수 있다.
 
 # Time Complexity
-- Insertion : O(log n) - Best, 
+아래 시간 복잡도는 `Insertion`, `Removal`, `Searching` 모두에 해당한다.
+- Best, Average Case : O(log n)
+- Worst Case : O(n)
 
 # Pseudo Code
 ## insertion
