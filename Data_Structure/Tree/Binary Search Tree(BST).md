@@ -8,6 +8,54 @@
 
 # Pseudo Code
 ## Insertion
-1. 
+1. Create a new Node
+2. Starting at the root
+	1. Check if there is a root, if not - the root now becomes that new node!
+	2. If there is a root, check if the value of the new node is greater than or less than the value of the root
+	3. If it is greater
+		1. Check to see if there is a node to the right
+			1. If there is, move to that node and repeat these steps
+			2. If there is not, add that node as the right property
+	4. If it is less
+		1. Check to see if there is a node to the left
+			1. If there is, move to that node and repeat these steps
+			2. If there is not, add that node as the left property
 
 # Implement
+
+```js
+class Node{
+	constructor(val){
+		this.val = val;
+		this.left = null;
+		this.right = null;
+	}
+}
+
+class BinarySearchTree{
+	constructor(){
+		this.root = null;
+	}
+
+	insert(val){
+		const newNode = new Node(val);
+
+		if(!this.root){
+			this.root = newNode;
+			return this;
+		}
+
+		let current = this.root;
+
+		while(current){
+			if(val === current.val){
+				return undefined;
+			}
+
+			if(val < current.val){
+				if(!)
+			}
+		}
+	}
+}
+```
