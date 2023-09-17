@@ -1,12 +1,26 @@
-<img width="100%" alt="image" src="https://www.guru99.com/images/1/020820_0543_BreadthFirs1.png">
-image source : https://www.guru99.com/images/1/020820_0543_BreadthFirs1.png
+<img width="100%" alt="image" src="https://miro.medium.com/v2/resize:fit:1004/format:webp/1*eyqACQAziXkSuMNmMeTa6A.png">
+image source : https://miro.medium.com/v2/resize:fit:1004/format:webp/1*eyqACQAziXkSuMNmMeTa6A.png
 # Feature
 - 넓은 `Tree`에 대해서 좋다. `BFS`에 비해 공간 복잡도가 작기 때문이다. 하나를 깊게 내려가기 때문에 옆으로 넓은 것들에 대해 더 강하다!
 - 깊은 `Tree`에 대해서는 좋지 않다. 깊은 `Tree`의 하나의 경로를 끝까지 들어가야하기 때문이다. 공간 복잡도가 높아진다.
 - 시간 복잡도는 `BFS`와 다를게 없다. 모든 노드를 한번씩 순회하기 때문이다.
+- 본인을 우선 탐색하는지, 중간에 탐색하는지, 나중에 탐색하는지에 따라 코드가 약간씩 변한다.
+
+# Result according to order
+
+```
+    10
+  6   15
+ 3 8    20
+
+Pre-Order : [10,6,3,8,15,20]
+Post-Order : [3,8,6,20,15,10]
+In-Order : [3,6,8,10,15,20]
+```
+`In-Order`의 경우, `Tree`가 정렬된 배열로 만들어진다.  
+`Pre-Order`의 경우, `Tree`를 배열로 만들었을 때, 이 것을 다시 `Tree`로 재구성하기 쉽다.
 
 # Pseudo Code
-- 본인을 우선 탐색하는지, 중간에 탐색하는지, 나중에 탐색하는지에 따라 코드가 약간
 ## Pre-Order
 1. Create a variable to store the values of the nodes visited
 2. Store the root of the BST in a variable called current
