@@ -5,7 +5,7 @@ image source : https://wat-images.s3.ap-south-1.amazonaws.com/images/course/ci6l
 - `pivot`으로 지정한 하나의 원소를 가지고, 정렬된 배열에서 `pivot`이 끝부분이어야하는 인덱스를 찾는다.
 
 # Feature
-- 
+- Worst Case가 되는 것을 최대한 억제하기 위해, 중앙값을 `pivot`으로 삼는 것으로 진행하는 방법도 있다.
 
 # Time Complexity
 - General, Best Case : O(n log n) - 정렬(comparisons per decomposition)이 O(n), 분할(decompositions)이 O(log n)이기 때문.
