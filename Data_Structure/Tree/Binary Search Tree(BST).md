@@ -34,6 +34,11 @@
 	2. If there is, move to that node and repeat these steps
 	3. If there is not, we're done searching!
 
+## BFS
+1. Create a queue(this can be an array) and a variable to store the values of nodes visited
+2. Place the root node in the queue
+3. 
+
 # Implement
 
 ```js
@@ -156,6 +161,40 @@ class BinarySearchTree{
 
 			return this.insertNode(node.right, newNode);
 		}
+	}
+}
+```
+
+## find - Recursive Version
+
+```js
+class BinarySearchTree{
+	constructor(){
+		this.root = null;
+	}
+
+	find(val){
+		if(!this.root){
+			return undefined;
+		}
+
+		return this.findNode(val, this.root);
+	}
+
+	findNode(val, node){
+		if(!node){
+			return undefined;
+		}
+
+		if(val < node.val){
+			return this.findNode(val, node.left);
+		}
+
+		if(val > node.val){
+			return this.findNode(val, node.right);
+		}
+
+		return node;
 	}
 }
 ```
