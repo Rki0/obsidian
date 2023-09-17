@@ -6,17 +6,21 @@ image source : https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_s
 # Feature
 - 정수를 정렬하기 위한 특별한 알고리즘이다.
 - 이 알고리즘은 원소끼리 비교를 하지 않는다!
-- 
 
 # Time Complexity
 - General, Worst, Best Case : O(nk) - k는 숫자의 길이(자릿수), n은 배열의 길이
 
 # Space Complexity
-- O(n + k) - 
+- O(n + k)
 
 # Pseudo Code
+- In order to implement `Radix Sort`, it's helpful to build a few helper functions.
+## helper
+### getDigit
 
-## merge
+### digitCount
+
+### mostDigits
 
 ## merge sort
 
