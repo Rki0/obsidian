@@ -29,14 +29,16 @@ image source : https://wat-images.s3.ap-south-1.amazonaws.com/images/course/ci6l
 5. Swap the starting element(i.e. the pivot) with the pivot index.
 6. Return the pivot index
 ## quick sort
-
+1. Call the pivot helper on the array
+2. When the helper returns to you the updated pivot index, recursively call the pivot helper on the subarray to the left of that index, and the subarray to the right of that index.
+3. Your base case occurs when you consider a subarray with less than 2 elements.
 
 # Implement
 
 ## pivot
 - 가장 앞의 인덱스를 `pivot`으로 사용한다.
-- 두 번째 인덱스부터 순회하며 
-- 
+- 두 번째 인덱스부터 순회하며 `swapIdx`를 증가시키는 것으로 `pivot`이 정렬 상태에서 들어가야할 위치를 탐색한다.
+- 순회를 마치고, 최종적으로 얻어진 `swapIdx`와 `pivot`을 스왑한다. `pivot`을 첫 인덱스로 설정했었기에 `start`와 변경하는 것으로 이를 구현할 수 있다.
 
 ```js
 function swap(arr, idx1, idx2){
