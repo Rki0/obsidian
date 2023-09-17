@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Search/BFS(Breadth First Search).md",
+                "file": "Algorithm/Search/DFS(Depth First Search).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/Search/BFS(Breadth First Search).md",
+                "file": "Algorithm/Search/DFS(Depth First Search).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Search/BFS(Breadth First Search).md"
+                "file": "Algorithm/Search/DFS(Depth First Search).md"
               }
             }
           },
@@ -194,12 +194,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1a70e80223ba58ee",
+  "active": "ce2eabd69f611f7f",
   "lastOpenFiles": [
+    "Data_Structure/Tree/Binary Search Tree(BST).md",
+    "Algorithm/Search/BFS(Breadth First Search).md",
     "Algorithm/Search/DFS(Depth First Search).md",
     "Algorithm/Search",
-    "Algorithm/Search/BFS(Breadth First Search).md",
-    "Data_Structure/Tree/Binary Search Tree(BST).md",
     "Data_Structure/Hash Table(Hash Map).md",
     "Data_Structure/Tree/Tree.md",
     "Algorithm/Sort/Radix Sort.md",
