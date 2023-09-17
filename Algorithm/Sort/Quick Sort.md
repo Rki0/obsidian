@@ -34,7 +34,7 @@ image source : https://wat-images.s3.ap-south-1.amazonaws.com/images/course/ci6l
 # Implement
 
 ## pivot
-- 
+- `pivot`을 지정한 뒤
 
 ```js
 function swap(arr, idx1, idx2){
