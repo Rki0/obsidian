@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algorithm/Search/DFS(Depth First Search).md",
+                "file": "Algorithm/Search/Binary Search.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "23462369f6c80f6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algorithm/Search/Naive String Search.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Search/DFS(Depth First Search).md",
+                "file": "Algorithm/Search/Binary Search.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/Search/DFS(Depth First Search).md",
+                "file": "Algorithm/Search/Binary Search.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Search/DFS(Depth First Search).md"
+                "file": "Algorithm/Search/Binary Search.md"
               }
             }
           },
@@ -172,14 +184,15 @@
   },
   "active": "ce2eabd69f611f7f",
   "lastOpenFiles": [
+    "Algorithm/Search/Naive String Search.md",
+    "Algorithm/Search/Binary Search.md",
+    "Algorithm/Search/DFS(Depth First Search).md",
     "Data_Structure/Hash Table(Hash Map).md",
     "Data_Structure/Tree/Binary Search Tree(BST).md",
-    "Algorithm/Search/DFS(Depth First Search).md",
     "Algorithm/Search/BFS(Breadth First Search).md",
     "Algorithm/Search",
     "Data_Structure/Tree/Tree.md",
     "Algorithm/Sort/Radix Sort.md",
-    "Algorithm/Search/Binary Search.md",
     "Algorithm/Sort/Quick Sort.md",
     "Algorithm/Sort/Merge Sort.md",
     "Algorithm/Sort/Sort.md",
@@ -194,7 +207,6 @@
     "Data_Structure/Stack.md",
     "Data_Structure/Linked_List/Circular Linked List.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
-    "Algorithm/Search/Naive String Search.md",
     "Algorithm/Sort",
     "Untitled.canvas",
     "Data_Structure/Tree/Trie.md",
