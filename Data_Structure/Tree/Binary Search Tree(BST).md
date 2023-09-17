@@ -47,7 +47,9 @@
 3. Write a helper function which accepts a node
 	1. Push the value of the node to the variable that stores the values
 	2. If the node has a left property, call the helper function with the left property on the node
-	3. If the node has a right property, 
+	3. If the node has a right property, call the helper function with the right property on the node
+4. Invoke the helper function with the current variable
+5. Return the array of values
 
 # Implement
 
