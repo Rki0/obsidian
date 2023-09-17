@@ -7,7 +7,7 @@
 # Time Complexity
 
 # Pseudo Code
-## Insertion
+## insertion
 1. Create a new Node
 2. Starting at the root
 	1. Check if there is a root, if not - the root now becomes that new node!
@@ -20,6 +20,19 @@
 		1. Check to see if there is a node to the left
 			1. If there is, move to that node and repeat these steps
 			2. If there is not, add that node as the left property
+## find
+1. Starting at the root
+2. Check if there is a root, if not - we're done searching!
+3. If there is a root, check if the value of the new node is the value we are looking for. If we found it, we're done!
+4. If not, check to see if the value is greater than or less than the value of the root
+5. If it is greater
+	1. Check to see if there is a node to the right
+	2. If there is, move to that node and repeat these steps
+	3. If there is not, we're done searching!
+6. If it is less
+	1. Check to see if there is node to the left
+	2. If there is, move to that node and repeat these steps
+	3. If there is not, we're done searching!
 
 # Implement
 
@@ -72,6 +85,30 @@ class BinarySearchTree{
 				continue;
 			}
 		}
+	}
+
+	find(val){
+		if(!this.root){
+			return undefined;
+		}
+
+		let current = this.root;
+
+		while(current){
+			if(val < current.val){
+				current = current.left;
+				continue;
+			}
+
+			if(val > current.val){
+				current = current.right;
+				continue;
+			}
+
+			return current;
+		}
+
+		return undefined;
 	}
 }
 ```
