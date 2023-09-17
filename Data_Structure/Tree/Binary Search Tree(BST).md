@@ -33,7 +33,6 @@
 	1. Check to see if there is node to the left
 	2. If there is, move to that node and repeat these steps
 	3. If there is not, we're done searching!
-
 ## BFS
 1. Create a queue(this can be an array) and a variable to store the values of nodes visited
 2. Place the root node in the queue
@@ -42,6 +41,13 @@
 	2. If there is a left property on the node dequeued - add it to the queue
 	3. If there is a right property on the node dequeued - add it to the queue
 4. Return the variable that stores the values
+## DFS(Pre-Order)
+1. Create a variable to store the values of the nodes visited
+2. Store the root of the BST in a variable called current
+3. Write a helper function which accepts a node
+	1. Push the value of the node to the variable that stores the values
+	2. If the node has a left property, call the helper function with the left property on the node
+	3. If the node has a right property, 
 
 # Implement
 
@@ -124,7 +130,27 @@ class BinarySearchTree{
 
 	BFS(){
 		let data = [];
-		let queue = 
+		let queue = [];
+
+		let node = this.root;
+
+		queue.push(node);
+
+		while(queue.length > 0){
+			node = queue.shift();
+
+			data.push(node.val);
+
+			if(node.left){
+				queue.push(node.left);
+			}
+
+			if(node.right){
+				queue.push(node.right);
+			}
+		}
+
+		return data;
 	}
 }
 ```
