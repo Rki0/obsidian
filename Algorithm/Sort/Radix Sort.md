@@ -1,15 +1,21 @@
-<img width="100%" alt="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/600px-Merge_sort_algorithm_diagram.svg.png">
-image source : https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/600px-Merge_sort_algorithm_diagram.svg.png
+<img width="100%" alt="image" src="https://www.alphacodingskills.com/cs/img/radix-sort-1.PNG">
+
+<img width="100%" alt="image" src="https://www.alphacodingskills.com/cs/img/radix-sort-2.PNG">
+
+<img width="100%" alt="image" src="https://www.alphacodingskills.com/cs/img/radix-sort-3.PNG">
+image source : https://www.alphacodingskills.com/cs/pages/cs-program-for-radix-sort.php
 # Principle
 -  숫자의 크기가 숫자의 자릿수로 표현된다는 것을 활용한다.
 - 즉, 자릿수가 많으면 더 큰 숫자라는 것을 활용한다는 것이다.
+
 # Feature
 - 정수를 정렬하기 위한 특별한 알고리즘이다.
 - 이 알고리즘은 원소끼리 비교를 하지 않는다!
 
 # Time Complexity
-- General, Worst, Best Case : O(nk) - k는 숫자의 길이(자릿수), n은 배열의 길이
-
+- General, Worst, Best Case : O(n * k) - k는 숫자의 길이(자릿수), n은 배열의 길이
+- 이론적으로는 일반적인 `Comparision Sort(e.g. Bubble, Insertion, Selection, Merge, Quick Sort)`보다 빠른 정렬인데, `k`가 `log N`이 되느냐 아니냐에 따라 여러 가지 의견이 갈리고 있다.
+****
 # Space Complexity
 - O(n + k)
 
@@ -107,7 +113,8 @@ mostDigits([12, 34, 56, 78]); // 2
 
 ### radixSort
 - `mostDigits()`를 통해 가장 긴 자릿수가 무엇인지 얻는다.
-- 각강
+- 각각의 원소가 `k`번째 자리에 어떤 값을 가지고 있는지 얻고, 이에 따라 `digitBuckets`에 분류하여 저장한다.
+- `nums`에 일차적으로 정렬된 배열인 `digitBuckets`를 넣어준다. 이 때, `digitBuckets`는 2차원 배열이므로 `spread operator`로 1차원 배열의 리스트로 만든 뒤, 빈 배열에 `concat`해서 내부 값들만 이어지도록 만들어준다.
 
 ```js
 function radixSort(nums){
