@@ -34,9 +34,10 @@ This function should run in `O(n+m)` time and `O(n+m)` space and should not modi
 
 # Implement
 - `merge`와 `mergeSort`를 구분해서 구현한다.
+- `merge`는 정렬과 병합을 담당하고, `mergeSort`는 `merge`의 재귀적 사용을 담당한다.
 ## merge
-- `sort`와 `merge`를 한번에 담당하고 있다.
-- 병합하고자하는 두 개의 배열을 순회하면서 크기 비교를 하고 새로운 정렬된 배열을 생성해 나간다.
+- `sorting`과 `merging`를 한번에 담당하고 있다.
+- 병합하고자하는 두 개의 배열을 순회하면서 크기 비교를 하고 새롭게 정렬된 배열을 생성해 나간다.
 
 ```js
 function merge(arr1, arr2){
@@ -66,5 +67,22 @@ function merge(arr1, arr2){
 	}
 
 	return result;
+}
+```
+
+## mergeSort
+
+```js
+function mergeSort(arr){
+	if(arr.length === 1){
+		return arr;
+	}
+
+	const mid = Math.floor(arr.length / 2);
+
+	let left = mergeSort(arr.slice(0, mid));
+	let right = mergeSort(arr.slice(mid));
+
+	return mergeSort(left, right);
 }
 ```
