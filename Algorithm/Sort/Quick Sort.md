@@ -21,19 +21,44 @@ image source : https://wat-images.s3.ap-south-1.amazonaws.com/images/course/ci6l
 - The runtime of `Quick Sort` depends in parts on how one selects the pivot.
 - Ideally, the pivot should be chosen so that it's roughly the median value in the data set you're sorting.
 ## pivot
-1. It will help to accept three arguments : an array, a start index, and an end index(these can default to 0 and the array length minus 1, )
+1. It will help to accept three arguments : an array, a start index, and an end index(these can default to 0 and the array length minus 1, respectively)
+2. Grab the pivot from the start of the array(this can be changed if you want, like middle or end of the array)
+3. Store the current pivot index in a variable(this will keep track of where the pivot should end up)
+4. Loop through the array from the start until the end
+	1. If the pivot is greater than the current element, increment the pivot index variable and then swap the current element with the element at the pivot index.
+5. Swap the starting element(i.e. the pivot) with the pivot index.
+6. Return the pivot index
 ## quick sort
 
 
 # Implement
 
-## merge
+## pivot
+- 
 
 ```js
+function swap(arr, idx1, idx2){
+	[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+}
 
+function pivot(arr, start = 0, end = arr.length - 1){
+	let pivot = arr[start];
+	let swapIdx = start;
+
+	for(let i = start + 1; i < arr.length; i++){
+		if(pivot > arr[i]){
+			swapIdx++;
+			swap(arr, swapIdx, i);
+		}
+	}
+
+	swap(arr, swapIdx, i);
+
+	return swapIdx;
+}
 ```
 
-## mergeSort
+## quickSort
 
 ```js
 
