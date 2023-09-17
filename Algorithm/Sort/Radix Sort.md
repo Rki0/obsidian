@@ -106,7 +106,8 @@ mostDigits([12, 34, 56, 78]); // 2
 ```
 
 ### radixSort
-- 
+- `mostDigits()`를 통해 가장 긴 자릿수가 무엇인지 얻는다.
+- 각강
 
 ```js
 function radixSort(nums){
