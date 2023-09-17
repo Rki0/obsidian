@@ -21,3 +21,7 @@ image source : https://media.geeksforgeeks.org/wp-content/uploads/20221124153129
 [[B-Tree]]
 [[B+Tree]]
 
+# Binary Tree
+- 이진 트리(Binary Tree) : 각 노드가 최대 두 개의 자식 노드를 가지는 트리.
+- 완전 이진 트리(Complete Binary Tree) : 마지막 레벨을 제외한 모든 레벨이 완전히 채워져 있으며, 마지막 레벨의 노드들은 왼쪽부터 채워져 있다.
+- 균형 이진 트리(Balanced Binary Tree) : 모든 리프 노드까지의 거리가 거의 동일하다.
