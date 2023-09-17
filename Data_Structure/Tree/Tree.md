@@ -14,7 +14,7 @@ image source : https://media.geeksforgeeks.org/wp-content/uploads/20221124153129
 - 높이(height) : 특정 노드에서 가장 멀리 떨어진 리프 노드까지의 "최장 경로"의 길이. 즉, 주어진 노드로부터 가장 먼 리프 노드까지 도달하기 위해 거쳐야하는 간선의 수. 참고로, 특정 노드의 그 하위 트리 중에서 리프 노드로 가는 것을 의미한다(트리를 거슬러 올라가지는 않기 때문).
 
 # Types of Tree
-[[Binary Search Tree]]
+[[Binary Search Tree(BST)]]
 [[Balanced BST]]
 [[AVL Tree]]
 [[Red-Black Tree]]
