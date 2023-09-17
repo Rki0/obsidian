@@ -53,7 +53,23 @@ class BinarySearchTree{
 			}
 
 			if(val < current.val){
-				if(!)
+				if(!current.left){
+					current.left = newNode;
+					return this;
+				}
+
+				current = current.left;
+				continue;
+			}
+
+			if(val > current.val){
+				if(!current.right){
+					current.right = newNode;
+					return this;
+				}
+
+				current = current.right;
+				continue;
 			}
 		}
 	}
