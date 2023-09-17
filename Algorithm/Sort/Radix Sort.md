@@ -15,9 +15,9 @@ image source : https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_s
 
 # Pseudo Code
 - In order to implement `Radix Sort`, it's helpful to build a few helper functions.
-## helper
+## helper functions
 ### getDigit
-
+- Returns the digit in num at the given place value
 ### digitCount
 
 ### mostDigits
@@ -26,15 +26,30 @@ image source : https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_s
 
 
 # Implement
-- `merge`와 `mergeSort`를 구분해서 구현한다.
-- `merge`는 정렬과 병합을 담당하고, `mergeSort`는 `merge`의 재귀적 사용을 담당한다.
-## merge
+- 
+## getDigit
+- `i`의 자릿수에 어떤 숫자가 들어있는지 알아내는 함수이다.
 - 
 
 ```js
-
+function getDigit(num, i){
+	return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
+}
 ```
 
+```
+// getDigit(12345, 0); // 5(1의 자리)
+
+// getDigit(12345, 1); // 4(10의 자리)
+
+// getDigit(12345, 2); // 3(100의 자리)
+
+// getDigit(12345, 3); // 2(1000의 자리)
+
+// getDigit(12345, 4); // 1(10000의 자리)
+
+// getDigit(12345, 5); // 0(100000의 자리)
+```
 ## mergeSort
 - 
 
