@@ -85,6 +85,8 @@ class BinarySearchTree{
 				continue;
 			}
 		}
+
+		return this;
 	}
 
 	find(val){
@@ -129,7 +131,7 @@ class BinarySearchTree{
 			return this;
 		}
 
-		this.insertNode(this.root, newNode);
+		return this.insertNode(this.root, newNode);
 	}
 
 	insertNode(node, newNode){
@@ -143,7 +145,7 @@ class BinarySearchTree{
 				return this;
 			}
 
-			this.insertNode(node.left, newNode);
+			return this.insertNode(node.left, newNode);
 		}
 
 		if(newNode.val > node.val){
@@ -152,7 +154,7 @@ class BinarySearchTree{
 				return this;
 			}
 
-			this.insertNode(node.right, newNode);
+			return this.insertNode(node.right, newNode);
 		}
 	}
 }
