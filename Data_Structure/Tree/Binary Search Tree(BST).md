@@ -113,7 +113,7 @@ class BinarySearchTree{
 }
 ```
 
-## Insertion - Recursively
+## insertion - Recursive Version
 
 ```js
 class BinarySearchTree{
