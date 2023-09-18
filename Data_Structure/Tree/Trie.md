@@ -84,7 +84,7 @@ class Trie{
 	getAllWords(){
 		let words = [];
 
-		function searchWords(){
+		function searchWords(node, currentWord){
 			if(node.isEndOfWord){
 				words.push(currentWord);
 			}
@@ -93,6 +93,28 @@ class Trie{
 				searchWords(node.children[char], currentWord + char);
 			}
 		}
+
+		searchWords(this.root, "");
+
+		return words;
 	}
+}
+```
+
+## search - Return string matched with argument
+
+```js
+search(word){
+	let current = this.root;
+	let foundWord = '';
+	for(let char of word){
+		if (!current.children[char]) {
+			return null;
+		}
+	
+		foundWord += char; current = current.children[char];
+	}
+	
+	return current.isEndOfWord ? foundWord : null;
 }
 ```
