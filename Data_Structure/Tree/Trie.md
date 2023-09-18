@@ -53,6 +53,46 @@ class Trie{
 	    current.isEndOfWord = true;
 	}
 
-	
+	search(word){
+		let current = this.root;
+
+	    for(let char of word){
+	        if(!current.children[char]){
+	            return false;
+	        }
+
+	        current = current.children[char];
+	    }
+
+	    return current.isEndOfWord;
+	}
+
+	startsWith(prefix){
+		let current = this.root;
+
+	    for(let char of word){
+	        if(!current.children[char]){
+	            return false;
+	        }
+
+	        current = current.children[char];
+	    }
+
+	    return true;
+	}
+
+	getAllWords(){
+		let words = [];
+
+		function searchWords(){
+			if(node.isEndOfWord){
+				words.push(currentWord);
+			}
+		
+			for(let char in node.children){
+				searchWords(node.children[char], currentWord + char);
+			}
+		}
+	}
 }
 ```
