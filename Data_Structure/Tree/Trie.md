@@ -101,20 +101,38 @@ class Trie{
 }
 ```
 
-## search - Return string matched with argument
+## startsWith - Return all words containing the prefix
 
 ```js
-search(word){
+startsWith(prefix) {
 	let current = this.root;
-	let foundWord = '';
-	for(let char of word){
-		if (!current.children[char]) {
-			return null;
+
+	let foundWords = [];
+
+	let currentPrefix = '';
+
+	for(let char of prefix){
+		if(!current.children[char]){
+			return foundWords;
 		}
-	
-		foundWord += char; current = current.children[char];
+		
+		currentPrefix += char;
+		
+		current = current.children[char];
 	}
+
+	function collectWords(node, currentWord){
+		if(node.isEndOfWord){
+			foundWords.push(currentPrefix + currentWord);
+		}
+
+		for(let char in node.children){
+			collectWords(node.children[char], currentWord + char);
+		}
+	}
+
+	collectWords(current, '');
 	
-	return current.isEndOfWord ? foundWord : null;
+	return foundWords;
 }
 ```
