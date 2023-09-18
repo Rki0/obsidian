@@ -15,6 +15,8 @@ image source : https://media.geeksforgeeks.org/wp-content/uploads/20221124153129
 
 # Types of Tree
 [[Binary Search Tree(BST)]]
+[[Trie]]
+[[Heap(Binary Heap)]]
 [[Balanced BST]]
 [[AVL Tree]]
 [[Red-Black Tree]]

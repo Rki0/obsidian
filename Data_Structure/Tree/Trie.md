@@ -1,4 +1,5 @@
-
+<img width="100%" alt="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FpYAoN%2FbtqPZJ9d7rl%2FYGhdbBzRXzLdY1ytJmsvJK%2Fimg.png">
+image source : https://rebro.kr/86
 # Feature
 - [[Tree]]의 일종으로 문자열 검색에 특화된 자료 구조이다.
 - 각 단어가 끝나는 지점에 특별한 표시를 해두는 것으로 해당 위치의 노드까지 문자열을 이루고 있음을 나타낸다.
@@ -102,6 +103,9 @@ class Trie{
 ```
 
 ## startsWith - Return all words containing the prefix
+- 앞서 구현한 `startsWith()`와 다른 부분은 `prefix`를 순회한 뒤, 가능한 문자열을 전부 탐색한다는 것이다.
+- `prefix`가 존재하는 문자열인지부터 판단하고, 그 후, `collectWords()`를 통해 가능한 문자열을 전부 탐색한다.
+- `collectWords()`는 루트 노드가 아니라, `prefix` 순회가 끝난 노드부터 시작한다는 점에 주의하자.
 
 ```js
 startsWith(prefix) {

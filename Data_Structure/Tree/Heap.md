@@ -1,7 +1,0 @@
-[[Tree]]
-
-# Implement
-
-```js
-
-```
