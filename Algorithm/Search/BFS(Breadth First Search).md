@@ -17,6 +17,7 @@ image source : https://www.guru99.com/images/1/020820_0543_BreadthFirs1.png
 # Implement
 - [[Binary Search Tree(BST)]]에 대해서 구현한 것이지만, 기본적인 골조는 같으므로 다양한 자료 구조에서 변형해서 사용하면 된다.
 - 아래 코드는 같은 레벨의 노드를 판단하지 않기 때문에, 순회에만 쓰일 수 있는 방법이다.
+- 또한, `left`, `right`, 즉, `BST`를 가정한 `BFS`이므로 다른 타입의 `Tree`에서는 사용하기 힘들 수 있다.
 
 ```js
 class Node{
@@ -61,16 +62,23 @@ class BinarySearchTree{
 
 ## BFS - How to determine nodes at the same level?
 - 코딩 테스트에서는 `BFS`를 활용하여, 같은 레벨에 있는 노드를 활용해 어떤 기능을 구현하는 문제가 종종 있다.
-- 따라서, 같은 레벨의 노드인지를 판단할 수 있는 방법을 추가하였다.
+- 예를들어, [[Trie]]나 `Graph`가 있을 수 있겠다. 즉, 자식의 개수가 일정하지 않은 형태이다.
+- 따라서, 여러 자식을 가질 때 같은 레벨의 노드인지를 판단할 수 있는 방법을 추가하였다.
 
 ```js
+class Node{
+	constructor(){
+		this.children = {};
+		this.endOfWord = false;
+	}
+}
+
 class BinarySearchTree{
 	constructor(){
-		this.root = null;
+		this.root = new Node();
 	}
 
 	BFS(){
-		let data = [];
 		let queue = [];
 
 		let node = this.root;
@@ -78,20 +86,16 @@ class BinarySearchTree{
 		queue.push(node);
 
 		while(queue.length > 0){
-			node = queue.shift();
+            const sameLevelLength = queue.length;
 
-			data.push(node.val);
-
-			if(node.left){
-				queue.push(node.left);
-			}
-
-			if(node.right){
-				queue.push(node.right);
-			}
+            for(let i = 0; i < sameLevelLength; i++){
+                node = queue.shift();
+            
+                for(let child in node.children){
+                    queue.push(node.children[child]);
+                }
+            }
 		}
-
-		return data;
 	}
 }
 ```
