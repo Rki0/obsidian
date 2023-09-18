@@ -1,6 +1,7 @@
 
 # Feature
 - [[Tree]]의 일종으로 문자열 검색에 특화된 자료 구조이다.
+- 각 단어가 끝나는 지점에 특별한 표시를 해두는 것으로 해당 위치의 노드까지 문자열을 이루고 있음을 나타낸다.
 - 접두사 검색(Prefix Search) : 사용자가 입력한 접두사를 가진 모든 가능한 단어나 문구를 찾는다.
 - 자동 완성(Auto Completion) : 접두사 검색을 기반으로 동작. 사용자가 입력한 부분 문자열을 기반으로 가능한 모든 문자열을 찾아서 제안한다.
 - 사전 검색(Dictionary Search) : 사용자가 완전한 단어나 문구를 입력하여 해당 단어가 사전에 있는지 확인하고 관련 정보를 제공한다.
@@ -15,4 +16,43 @@
 	- 예를들어, '나'('나이키' 검색을 위해), 'ple'('apple'이라는 전체 단어를 모른채 부분만 알 때) 처럼 단어의 일부분만 알고 있을 때, 이 부분을 포함하는 모든 단어('나비', '나이키', 'apple', 'people' 등)를 찾는 것이 어렵다.
 	- 해시 테이블은 전체 문자열을 활용해서 해시화를 하기 때문에, 전체 문자열을 입력받지 않으면 해당 문자열을 검색할 수 없다. 따라서, 자동 완성 기능을 만들 수 없다.
 	- 해시 테이블은 키를 사전 순으로 정렬하지 않는다. 따라서, 단어를 사전 순으로 보고 싶다면 별도의 작업이 필요하다.
-	- 즉, 완전한 단어의 검색만 구현한다면 해시 테이블이 효율적이고, 그 외 기능을 추가행
+	- 즉, 완전한 단어의 검색만 구현한다면 해시 테이블이 효율적이고, 그 외 기능을 추가해야한다면 `Trie`가 유리하다.
+
+# Time Complexity
+- O(n) : 탐색되는 트라이 부분의 노드 수
+
+# Space Complexity
+- O(n) : 재귀적 호출로 인한 문자열의 최대 길이
+
+# Implement
+
+```js
+class Node{
+	constructor(){
+		this.children = {};
+		this.isEndOfWord = false;
+	}
+}
+
+class Trie{
+	constructor(){
+		this.root = new Node();
+	}
+
+	addWord(word){
+	    let current = this.root;
+
+	    for(let char of word){
+	        if(!current.children[char]){
+	            current.children[char] = new Node();
+	        }
+
+	        current = current.children[char];
+	    }
+
+	    current.isEndOfWord = true;
+	}
+
+	
+}
+```
