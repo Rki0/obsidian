@@ -8,6 +8,18 @@
         "type": "tabs",
         "children": [
           {
+            "id": "3d198f950650a508",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TODO.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "5e82900225191bc0",
             "type": "leaf",
             "state": {
@@ -18,8 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3005c13f75b3147b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data_Structure/Tree/Trie.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -86,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Hash Table(Hash Map).md",
+                "file": "Data_Structure/Tree/Trie.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Hash Table(Hash Map).md",
+                "file": "Data_Structure/Tree/Trie.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Hash Table(Hash Map).md"
+                "file": "Data_Structure/Tree/Trie.md"
               }
             }
           },
@@ -138,6 +163,14 @@
               "state": {
                 "sortOrder": "frequency"
               }
+            }
+          },
+          {
+            "id": "d44bf2a6fdad5063",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {}
             }
           }
         ]
@@ -157,13 +190,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5e82900225191bc0",
+  "active": "3005c13f75b3147b",
   "lastOpenFiles": [
+    "Data_Structure/Tree/Trie.md",
+    "TODO.md",
+    "Data_Structure/Hash Table(Hash Map).md",
     "Algorithm/Search/Naive String Search.md",
     "Algorithm/Search/Binary Search.md",
     "Data_Structure/Stack.md",
     "Algorithm/Search/DFS(Depth First Search).md",
-    "Data_Structure/Hash Table(Hash Map).md",
     "Data_Structure/Tree/Binary Search Tree(BST).md",
     "Algorithm/Search/BFS(Breadth First Search).md",
     "Algorithm/Search",
@@ -184,7 +219,6 @@
     "Data_Structure/Linked_List/Singly Linked List.md",
     "Algorithm/Sort",
     "Untitled.canvas",
-    "Data_Structure/Tree/Trie.md",
     "Data_Structure/Tree/Heap.md",
     "Algorithm",
     "Data_Structure/Tree",
