@@ -30,8 +30,8 @@ ex) Max Heap [100, 70, 50, 35, 25, 45, 15]
 오른쪽 자식 노드(6) : 15
 ```
 
-# Relation between Heap and Priority Queue
-
+# Priority Queue
+- 
 
 # Time Complexity
 
