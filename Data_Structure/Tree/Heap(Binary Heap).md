@@ -3,6 +3,7 @@
 - 완전 이진 트리 형태여야한다. === 부모가 최대 2개의 자식 노드를 가진다.
 - 모든 부모 노드가 자식 노드보다 크거나 같은 값을 가져야한다. === `Max Heap`
 - 모든 부모 노드가 자식 노드보다 작거나 같은 값을 가져야한다. === `Min Heap`
+- 형제 노드 간의 관계에 대해서는 조건이 없다는 것에 주의!
 
 # Complete Binary Tree
 - 완전 이진 트리의 특성 상 각 노드의 위치를 배열의 인덱스로 쉽게 표현할 수 있다!
@@ -31,12 +32,23 @@ ex) Max Heap [100, 70, 50, 35, 25, 45, 15]
 ```
 
 # Priority Queue
-- 
+- `Heap`은 `Priority Queue`를 구현하는데 사용된다.
+- `Priority Queue`에서는 검색 기능은 필요없고, 우선 순위가 가장 높은 순서대로 반환하고 삭제할 수 있으면 된다!
 
 # Time Complexity
+Insertion : O(log n)
+Removal : O(log n)
+Search : O(n) => 탐색을 중점적으로 하려면 `Heap`보다는 `BST`쪽이 더 활용도가 높다.
+
+# Pseudo Code
+
 
 # Implement
 
 ```js
-
+class MaxBinaryHeap{
+	constructor(){
+		this.values = [];
+	}
+}
 ```
