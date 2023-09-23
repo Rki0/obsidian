@@ -33,7 +33,7 @@ ex) Max Heap [100, 70, 50, 35, 25, 45, 15]
 오른쪽 자식 노드(6) : 15
 ```
 
-# Priority Queue
+# [[Priority Queue]]
 - `Heap`은 `Priority Queue`를 구현하는데 사용된다.
 - `Priority Queue`에서는 검색 기능은 필요없고, 우선 순위가 가장 높은 순서대로 반환하고 삭제할 수 있으면 된다!
 

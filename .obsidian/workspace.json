@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "291f54ae3fa3f7a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data_Structure/Priority Queue.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Tree/Heap(Binary Heap).md",
+                "file": "Data_Structure/Priority Queue.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Tree/Heap(Binary Heap).md",
+                "file": "Data_Structure/Priority Queue.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Tree/Heap(Binary Heap).md"
+                "file": "Data_Structure/Priority Queue.md"
               }
             }
           },
@@ -178,12 +190,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5e82900225191bc0",
+  "active": "291f54ae3fa3f7a5",
   "lastOpenFiles": [
-    "Algorithm/Search/Binary Search.md",
     "Data_Structure/Tree/Heap(Binary Heap).md",
-    "Data_Structure/Tree/Trie.md",
+    "Data_Structure/Priority Queue.md",
     "TODO.md",
+    "Algorithm/Search/Binary Search.md",
+    "Data_Structure/Tree/Trie.md",
     "Data_Structure/Hash Table(Hash Map).md",
     "Data_Structure/Tree/Binary Search Tree(BST).md",
     "Algorithm/Search/DFS(Depth First Search).md",
