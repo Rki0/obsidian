@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e1d1158ed00787e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data_Structure/Graph.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -111,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Priority Queue.md",
+                "file": "Data_Structure/Graph.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Priority Queue.md",
+                "file": "Data_Structure/Graph.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Priority Queue.md"
+                "file": "Data_Structure/Graph.md"
               }
             }
           },
@@ -190,10 +202,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "291f54ae3fa3f7a5",
+  "active": "e1d1158ed00787e4",
   "lastOpenFiles": [
-    "Data_Structure/Tree/Heap(Binary Heap).md",
     "Data_Structure/Priority Queue.md",
+    "Data_Structure/Graph.md",
+    "Data_Structure/Tree/Heap(Binary Heap).md",
     "TODO.md",
     "Algorithm/Search/Binary Search.md",
     "Data_Structure/Tree/Trie.md",
@@ -224,7 +237,6 @@
     "Algorithm",
     "Data_Structure/Tree",
     "Data_Structure",
-    "Data_Structure/Linked_List",
-    "2023-09-11.md"
+    "Data_Structure/Linked_List"
   ]
 }
