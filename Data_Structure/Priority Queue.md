@@ -4,6 +4,10 @@
 - 보통 [[Heap(Binary Heap)]]을 사용하여 구현한다.
 
 # Implement
+- 우선 순위가 1에 가까울수록 처리 순서가 우선되는 것으로 작성되었다.
+- 즉, `priority`가 1에 가까울수록 우선 처리 되어야하는 노드이다.
+- `priority` 외에도 다른 값들을 사용해서 다양한 조건으로 활용할 수 있다.
+
 ```js
 class Node{
 	constructor(val, priority){
@@ -26,7 +30,77 @@ class PriorityQueue{
 	}
 
 	bubbleUp(){
-		let index = this.values.l
+		let index = this.values.length - 1;
+		const element = this.values[index];
+
+		while(index > 0){
+			let parentIndex = Math.floor((index - 1) / 2);
+			let parent = this.values[parentIndex];
+
+			if(element.priority >= parent.priority){
+				break;
+			}
+
+			this.values[parentIndex] = element;
+			this.values[index] = parent;
+
+			index = parentIndex;
+		}
+	}
+
+	dequeue(){
+		const min = this.values[0];
+		const end = this.values.pop();
+
+		if(this.values.length > 0){
+			this.values[0] = end;
+
+			this.sinkDown();
+		}
+
+		return min;
+	}
+
+	sinkDown(){
+		let index = 0;
+		const element = this.values[0];
+
+		while(true){
+			let leftChildIndex = 2 * index + 1;
+			let rightChildIndex = 2 * index + 2;
+
+			let leftChild = null;
+			let rightChild = null;
+			let swap = null;
+
+			if(leftChildIndex < this.values.length){
+				leftChild = this.values[leftChildIndex];
+
+				if(leftChild.priority < element.priority){
+					swap = leftChildIndex;
+				}
+			}
+
+			if(rightChildIndex < this.values.length){
+				rightChild = this.values[rightChildIndex];
+
+				if(
+					(swap === null && rightChild.priority > element.priority) ||
+					(swap !== null && rightChild.priority > leftChild.priority)
+				){
+					swap = rightChildIndex;
+				}
+			}
+
+			if(swap === null){
+				break;
+			}
+
+			this.values[index] = this.values[swap];
+			this.values[swap] = element;
+
+			index = swap;
+		}
 	}
 }
 ```
