@@ -41,7 +41,18 @@ Removal : O(log n)
 Search : O(n) => 탐색을 중점적으로 하려면 `Heap`보다는 `BST`쪽이 더 활용도가 높다.
 
 # Pseudo Code
-
+## insert
+1. Push the value into the values property on the heap
+2. Bubble the value up to its correct spot!
+## bubbleUp
+1. Create a variable called `index` which is the length of the values `property - 1`
+2. Create a variable called parentIndex which is the floor of `(index - 1) / 2`
+3. Keep looping as long as the values element at parentIndex is less than the values element at the child index
+	1. Swap the value of the values element at the parentIndex with the value of the element property at the child index
+	2. Set the index to be the parentIndex, and start over!
+## extractMax
+1. Swap the first value in the values property with the last one
+2. Pop from 
 
 # Implement
 
@@ -114,10 +125,21 @@ class MaxBinaryHeap{
 				rightChild = this.values[rightChildIndex];
 
 				if(
-					(swap === null && rightChild > element) || (swap !== null && rightChild > leftChild)){
+					(swap === null && rightChild > element) ||
+					(swap !== null && rightChild > leftChild)
+				){
 					swap = rightChildIndex;
 				}
 			}
+
+			if(swap === null){
+				break;
+			}
+
+			this.values[index] = this.values[swap];
+			this.values[swap] = element;
+
+			index = swap;
 		}
 	}
 }
