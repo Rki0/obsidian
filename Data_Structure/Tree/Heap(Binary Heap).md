@@ -1,3 +1,4 @@
+
 # Feature
 - 보통 `Heap`이라고 하면, `Binary Heap`을 말한다.
 - 완전 이진 트리 형태여야한다. === 부모가 최대 2개의 자식 노드를 가진다.
@@ -52,9 +53,19 @@ Search : O(n) => 탐색을 중점적으로 하려면 `Heap`보다는 `BST`쪽이
 	2. Set the index to be the parentIndex, and start over!
 ## extractMax
 1. Swap the first value in the values property with the last one
-2. Pop from 
+2. Pop from the values property, so you can return the value at the end.
+3. Have the new root sink down to correct spot
+## sinkDown
+1. Your parent index starts at 0(the root)
+2. Find the index of the left child(`2 * index + 1`), make sure its not out of bounds
+3. Find the index of the right child(`2 * index + 2`), make sure its not out of bounds
+4. If the left or right child is greater than the element, swap. If both left and right children are larger, swap with the largest child.
+5. The child index you swapped to now becomes the new parent index.
+6. Keep looping and swapping until neither child is larger than the element.
+7. Return the old root!
 
 # Implement
+- `Max Heap`을 기준으로 작성되었다는 것에 주의!
 
 ```js
 class MaxBinaryHeap{
