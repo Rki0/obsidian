@@ -1,4 +1,5 @@
-
+<img width="100%" alt="image" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221220165711/MinHeapAndMaxHeap1.png">
+image source : https://www.geeksforgeeks.org/heap-data-structure/
 # Feature
 - 보통 `Heap`이라고 하면, `Binary Heap`을 말한다.
 - 완전 이진 트리 형태여야한다. === 부모가 최대 2개의 자식 노드를 가진다.
