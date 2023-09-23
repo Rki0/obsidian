@@ -1,10 +1,12 @@
+<img width="100%" alt="image" src="https://www.techiedelight.com/wp-content/uploads/2016/11/Min-Heap.png">
+image source : https://www.techiedelight.com/introduction-priority-queues-using-binary-heaps/
 # Feature
 - 각각의 노드가 우선 순위(priority)를 가진다.
 - 우선 순위가 높은 노드가 우선 순위가 낮은 노드보다 먼저 처리된다.
 - 보통 [[Heap(Binary Heap)]]을 사용하여 구현한다.
 
 # Implement
-- 우선 순위가 1에 가까울수록 처리 순서가 우선되는 것으로 작성되었다.
+- `Min Heap`으로 구현되었다. 루트 노드에 가까울 수록 우선 순위가 높다고 생각하면 된다.
 - 즉, `priority`가 1에 가까울수록 우선 처리 되어야하는 노드이다.
 - `priority` 외에도 다른 값들을 사용해서 다양한 조건으로 활용할 수 있다.
 
