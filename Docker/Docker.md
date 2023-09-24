@@ -146,8 +146,23 @@ docker start -a -i [container name or ID]
 
 ## Delete unused image & container
 ```
-docker rm [container name or ID]
+docker rm [container name or ID] [container name or ID] ...
 ```
 - 만약 실행 중인  `container`를 지우려고 한다면 에러가 발생한다.
+- 따라서 `container`를 중지하고 삭제를 진행하자.
+- 여러 `container`를 나열해서 지울 수도 있다.
+- 물론, `stop`된 `container`를 한번에 모두 지울 수도 있다.
+```
+docker container prune
+```
+
+- `image`를 지우는 방법은 무엇일까?
+```
+docker rmi [image name]
+```
+
+
+- 그런데 이 방법들...너무 귀찮다. `container`를 `stop`하면 매번 이렇게 `rm`을 일일이 해줘야하는걸까?
+- 자동으로 하는 방법이 있다!
 - 
 ## tagged(naming for image)
