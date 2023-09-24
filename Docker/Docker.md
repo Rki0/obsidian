@@ -258,4 +258,19 @@ docker build -t goals:latest .
 
 - 방법이 여러 가지 있다는 것을 알겠는데...그래서 어떻게 공유하는건데?
 - `image`를 공유하기 위해 `Docker`는 내장 명령어가 존재한다.
-- 
+
+- `image`를 공유하기 위해 `push`(업로드)할 수 있는 위치는 주로 두 가지가 있다.
+- `Docker Hub` 혹은 `Private Registry`
+	1. `Docker Hub`
+		- 공식 `Docker` 이미지 레지스트리이다.
+		- public, private, official `image` 등 다양하게 존재한다.(e.g. `node`의 경우 `official`)
+	2. `Private Registry`
+		- 많은 공급자가 있다.
+		- 내가 사용하고자 하는 레지스트리라면 어떤 것이든!
+		- 나만의(팀만의) `image`를 둘 수 있다.
+
+- 어찌됐든, `push`를 통해 `image`의 공유가 가능하다!
+- 공유된 `image`는 `pull`을 통해 팀원이든, 다른 사람이든 사용할 수 있게 된다.
+```
+
+```
