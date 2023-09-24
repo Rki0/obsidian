@@ -16,4 +16,12 @@
 docker run -p 3000:[port number of image] [container ID]
 ```
 
-- `image`는 읽기 전용이다! 코드에 변경이 있더라도 이를 `DOc`
+- `image`는 읽기 전용이다! 즉, 한번 `build`된 `image`는 잠겨있으며 스스로 업데이트를 하지 못한다.
+- 기본적으로 `image`는 복사(`COPY`) 시점에 소스 코드의 스냅샷을 만든다.
+- 따라서, `COPY`가 진행된 후에 변경된 코드는 `image`에 반영되지 않는다.
+- 즉, 코드에 변경이 있더라도 `image`를 다시 `build`하지 않으면, 반영이 되지 않는다는 것이다.
+
+# Layer is the base of image
+- `image`는 `layer` 기반이다.
+- `image`를 다시 `build`할 때, 변경된 부분의 명령과 그 이후의 모든 명령이 재평가 된다.
+- 변경되지 않은 코드를 다시 `build`하는 경우 `CACHED`라는 문구가 함께 나오는 것을
