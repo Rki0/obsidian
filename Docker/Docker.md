@@ -144,4 +144,10 @@ docker start -a -i [container name or ID]
 ```
 - `-t` 명령어의 경우 처음 `docker run`을 실행했을 때 적용되었으므로, 여기서는 하지않아도 된다.
 
+## Delete unused image & container
+```
+docker rm [container name or ID]
+```
+- 만약 실행 중인  `container`를 지우려고 한다면 에러가 발생한다.
+- 
 ## tagged(naming for image)
