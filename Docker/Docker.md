@@ -291,8 +291,19 @@ rki0/udemy_node
 - 위 명령어를 통해 `Docker Hub`에 만들어둔 레포지토리에 `image`를 공유한다.
 
 - 사용 중인 `image`를 `Docker Hub`애 공유한 `image`로 바꾸려면?
-- 해당 `image`를 사용하고 있는 디렉토리로 가서, `Docker Hub`의 `image`로 다시 `build`하면 된다.
+- 두 가지 방법이 있다.
+1. 해당 `image`를 사용하고 있는 디렉토리로 가서, `Docker Hub`의 `image`로 다시 `build`하면 된다.
 ```
 cd udemy_docker(소스 코드가 있는 로컬 폴더)
-docker build rkio
+docker build -t rki0/udemy_docker .
 ```
+
+2. 사용하려는 `image`를 이미 가지고 있다면, 이를 재사용할 수 있다.
+	- `tag`를 바꾸면 된다!
+```
+docker tag [old name] [new name]
+
+ex)
+docker tag goals:latest rki0/udemy_docker
+```
+- `name`만 써도 되고, `tag`까지 써도 된다.
