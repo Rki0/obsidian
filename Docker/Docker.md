@@ -43,8 +43,31 @@ docker run -p 3000:[port number of image] [container ID]
 - 즉, `Docker`는 `Dockerfile`의 명령어를 다시 실행 했을 때의 결과가 이전과 동일하다는 것을 인식 할 수 있다는 것이다.
 - `Docker`는 각 명령의 결과를 `cache`하고 `image`를 다시 `build`할 때, 명령을 다시 실행할 필요가 없으면 `cache`된 결과를 사용한다.
 - 즉, 모든 명령은 `Dockerfile`의 `layer`를 나타낸다!
+- 그러나, 변경이 생기면 변경 이후의 `layer`가 무효화 된다는 것을 잊지말자!
 
-그러나, 소스 코드의 변경이 `dependencies`의 변경을 의미하지는 않는다.
-따라서, `npm install`을 매 `build`마다 실행하는 것은 명백히 낭비라고 생각된다.
+# Let's optimize "npm install"
+- 그런데 소스 코드의 변경이 `dependencies`의 변경을 의미하지는 않는다.
+- 따라서, `npm install`을 매 `build`마다 실행하는 것은 명백히 낭비라고 생각된다.
 
-# Let's optimize "RUN" command
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json /app
+
+RUN npm install
+
+COPY . /app
+
+EXPOSE 80
+
+CMD [ "node", "server.js" ]
+```
+
+- `package.json`을 `container`의 `app` 디렉토리에 `COPY`한 다음
+- `npm install`을 `RUN`하고
+- 다른 코드를 `COPY`한다.
+- 이러면 다른 코드를 `COPY`하기 전에 `npm install`의 `layer`가 먼저 오게 되면서
+- 소스 코드에 변경이 있더라도, 소스 코드 `COPY` 명령 앞의 `layer`는 무효화되지 않게 된다.
+- 즉, `npm install`이 다시 실행되지 않는다는 것이다!
