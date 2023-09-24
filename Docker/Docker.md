@@ -85,6 +85,20 @@ CMD [ "node", "server.js" ]
 - `docker run ...`은 터미널이 입력 불가능한 상태로 유지되었던 반면, `docker start ....`는 `container`를 실행하고 터미널에 다른 입력이 가능한 상태로 다시 돌아온다.
 
 ## Attached & Detached container
+- `docker run`으로 시작하는 경우, `attached` 모드가 디폴트이다.
+- `docker start`로 시작하는 경우, `detached` 모드가 디폴트이다.
+- `docker run`의 경우, 터미널이 계속 유지되고 있기 때문에 `console.log()` 같은 것들을 확인할 수 있다.
+- 그러나, `docker start`의 경우, 터미널이 입력 가능 상태로 돌아오기 때문에 `console.log()` 같은 것들을 확인할 수 없다.
+- 즉, `attached` 모드는 그 `container`의 출력 결과를 수신한다.
 
+- 그러면 `docker run`은 `detached` 모드로 할 수 없나요?
+```
+docker run -p 3000:80 -d [container name or ID]
+```
+- `-d` 커맨드를 사용하면 `docker run`도 `detached` 모드로 실행할 수 있다.
+- `detached`된 `container`를 다시 연결하고 싶다면
+```
+docker container attach [container name or ID]
+```
 
 ## tagged(naming for image)
