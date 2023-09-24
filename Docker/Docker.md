@@ -170,7 +170,22 @@ docker image prune
 
 - 그런데 이 방법들...너무 귀찮다. `container`를 `stop`하면 매번 이렇게 `rm`을 일일이 해줘야하는걸까?
 - 자동으로 하는 방법이 있다!
+- `docker run`을 통해 `container`를 만들 때, `--rm` 커맨드를 같이 써주면 `stop` 시 자동으로 `container`가 삭제된다.
 ```
-docker run --rm [container name or ID]
+docker run -p 3000:80 --rm [container name or ID]
 ``` 
+- 보통 소스 코드가 변경되어 `image`를 다시 `build`하는 상황이면, 새로운 `container`를 만들어야 하기 때문에 `container`를 삭제한다.
+- 이런 경우 유용하게 사용될 수 있다.
+
+## image inspection
+- `image`의 정보를 살펴보면 용량이 상당히 큰데, 이게 곧 `container`의 용량을 의미하는 것이 아니다.
+- `container`는 `image` 위에 추가된 `layer`이기 때문이다. 따라서, 용량은 `image`보다 작다.
+- `image`는 소스 코드나 환경 설정을 담고 있기 때문에 용량이 큰 것이다.
+- `image`를 검사하는 방법은 다음과 같다.
+```
+docker images inspect [image ID]
+```
+- 이 명령을 실행하면 `image`에 대한 정보가 나오게 된다.
+
+
 ## tagged(naming for image)
