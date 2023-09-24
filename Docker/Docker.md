@@ -186,6 +186,7 @@ docker run -p 3000:80 --rm [container name or ID]
 docker images inspect [image ID]
 ```
 - 이 명령을 실행하면 `image`에 대한 정보가 나오게 된다.
-
+- 운영체제, `layer`, `image`를 사용 중인 `container` 등등..
+- `layer`는 `Dockerfile`에서 알 수 있는 것들과 개수가 다를 수 있는데, 이는 `D`
 
 ## tagged(naming for image)
