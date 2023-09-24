@@ -277,3 +277,22 @@ docker pull [image name]
 ```
 - 만약 `Private Registry`에 `push`, `pull`을 하려면 호스트를 표시해야하기 때문에, 명령어에 해당 공급자의 `URL`이 포함되어야한다.
 - 가령, `image name`을 `HOST:NAME` 이런 식으로 한다던지 말이다.
+
+- 아래는 1번 방법으로 진행하는 경우에 대한 것이므로 참고하자.
+- 레포지토리가 곧 `image`이다.
+```
+docker push [image name]
+
+[image name] === Docker Hub 가입 시 설정한 닉네임/레포지토리 이름 의 형태이다.
+
+ex)
+rki0/udemy_node
+```
+- 위 명령어를 통해 `Docker Hub`에 만들어둔 레포지토리에 `image`를 공유한다.
+
+- 사용 중인 `image`를 `Docker Hub`애 공유한 `image`로 바꾸려면?
+- 해당 `image`를 사용하고 있는 디렉토리로 가서, `Docker Hub`의 `image`로 다시 `build`하면 된다.
+```
+cd udemy_docker(소스 코드가 있는 로컬 폴더)
+docker build rkio
+```
