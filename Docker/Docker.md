@@ -272,5 +272,8 @@ docker build -t goals:latest .
 - 어찌됐든, `push`를 통해 `image`의 공유가 가능하다!
 - 공유된 `image`는 `pull`을 통해 팀원이든, 다른 사람이든 사용할 수 있게 된다.
 ```
-
+docker push [image name]
+docker pull [image name]
 ```
+- 만약 `Private Registry`에 `push`, `pull`을 하려면 호스트를 표시해야하기 때문에, 명령어에 해당 공급자의 `URL`이 포함되어야한다.
+- 가령, `image name`을 `HOST:NAME` 이런 식으로 한다던지 말이다.
