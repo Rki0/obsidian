@@ -158,11 +158,19 @@ docker container prune
 
 - `image`를 지우는 방법은 무엇일까?
 ```
-docker rmi [image name]
+docker rmi [image ID] [image ID] ...
 ```
-
+- 이를 통해 `image`와 그 내부의 모든 `layer`를 삭제할 수 있다.
+- 만약, `image`를 사용 중인 `container`가 있다면 `image`를 삭제할 수 없다는 점에 주의하자!
+- 즉, `image`를 사용하는 모든 `container`를 `rm`해줘야지, 해당 `image`를 삭제할 수 있다.
+- 물론, 삭제할 수 있는 모든 `image`를 지우는 방법도 있다.
+```
+docker image prune
+```
 
 - 그런데 이 방법들...너무 귀찮다. `container`를 `stop`하면 매번 이렇게 `rm`을 일일이 해줘야하는걸까?
 - 자동으로 하는 방법이 있다!
-- 
+```
+docker run --rm [container name or ID]
+``` 
 ## tagged(naming for image)
