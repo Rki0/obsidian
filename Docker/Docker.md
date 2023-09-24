@@ -84,4 +84,7 @@ CMD [ "node", "server.js" ]
 - `docker start [container name]`을 통해 중지했던 `container`를 다시 시작할 수 있다!
 - `docker run ...`은 터미널이 입력 불가능한 상태로 유지되었던 반면, `docker start ....`는 `container`를 실행하고 터미널에 다른 입력이 가능한 상태로 다시 돌아온다.
 
+## Attached & Detached container
+
+
 ## tagged(naming for image)
