@@ -299,7 +299,7 @@ docker build -t rki0/udemy_docker .
 ```
 
 2. 사용하려는 `image`를 이미 가지고 있다면, 이를 재사용할 수 있다.
-	- `tag`를 바꾸면 된다!
+	- `image`의 이름을 바꿔주면 된다!
 ```
 docker tag [old name] [new name]
 
@@ -307,3 +307,23 @@ ex)
 docker tag goals:latest rki0/udemy_docker
 ```
 - `name`만 써도 되고, `tag`까지 써도 된다.
+- 기존의 `image`는 삭제되지 않고 그대로 있고, 복제되어 새로운 `image`가 생성된다!
+- 새로 생성된 `image`를 `push`하면 `Docker Hub`에 공유할 수 있다....
+
+- 그런데, `push`를 해봤더니 거절 에러가 뜬다.
+```
+denied: requested access to the resource is denied
+```
+- 로컬에서 실행하는 `Docker` 명령은 내가 `Docker Hub`의 레포지토리와 어떤 관계가 있는지 알지 못하기 때문이다.
+- 즉, 레포지토리에 변경을 가할 수 있는 권한이 있는지 모르기 때문에 그런 것이다.
+- 따라서 로그인을 한 뒤 진행해야한다. 한번만 해주면 된다.
+```
+docker login
+```
+- 로그인을 한 뒤, `push`를 하면 정상적으로 작동하는 것을 확인할 수 있다.
+
+- 그런데, 모든 것을 다 `push`하지는 않는다.
+- `FROM`에 작성하는, `Docker Hub`에 있는 `image`는 연결해서 필요한 추가 코드만 `push`한다.
+
+- `push`를 했으니 `pull`을 해서 공유받는 것도 진행해보자.
+- 
