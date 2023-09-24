@@ -193,6 +193,25 @@ docker images inspect [image ID]
 ## Copy file from(or to) the container
 - 실행 중인 `container`로 혹은 `container` 밖으로 파일 또는 폴더를 복사할 수 있다.
 ```
-docker cp [target source] [destination of copied source]  
+docker cp [target source] [destination of copied source]
+
+[target source] === copy할 파일 혹은 폴더
+[destination of copied source] === copy된 것이 저장될 곳. container_name:folder_name의 형식으로 작성
+
+ex)
+docker cp dummy/. boring_vaughan:/test
+dummy 폴더에 있는 내용이 test 폴더에 복사된다.
 ```
+- `container`에서 로컬 환경으로 가져오는 것 또한 동일하다. 실제 코드 예시로 확인해보자.
+```
+ex)
+docker cp boring_vaughan:/test dummy
+boring_vaughan라는 container의 test 폴더를 로컬의 dummy 폴더로 복사한다.
+```
+
+- 그래서, 이 기능은 어디에 쓰이는 걸까?
+- `container`를 다시 시작하고 `image`를 수정하지 않고도, `container`에 무엇을 추가할 때 사용할 수 있다.
+- 가령, 소스 코드가 변경되었다면 일반적으로는 `image`를 다시 `build`하고 `container`를 다시 시작해야한다.
+- 그러나, 변경된 코드를 `container`에 복사할 수도 있다는 것이다!
+
 ## tagged(naming for image)
