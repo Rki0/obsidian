@@ -220,9 +220,17 @@ boring_vaughan라는 container의 test 폴더를 로컬의 dummy 폴더로 복�
 
 ## tagging(naming) image & container
 - `image`와 `container`는 각각 `TAG`, `NAMES`라는 속성에 자신의 이름을 가지고 있다.
-- 별도로 설정하지 않으면 `<none>` 혹은 자동으로 생성된 이름이 할당된다.
+- 별도로 설정하지 않으면 `image`의 경우 `<none>`, `container`의 경우 자동으로 생성된 이름이 할당된다.
 - 이런 경우, 본인이 사용하는 것의 이름을 일일이 찾아서 복사하고 붙여넣기를 통해 조작해야한다...
 - 아래는 `container`에 이름을 부여하는 방법이다.
 ```
 docker run --name [container's name] [image ID]
+```
+
+- `image`의 `TAG`는 두 부분으로 구성된다.
+- `TAG` === `name : tag`
+- `name` === `image`의 리포지터리. `image`의 일반적인 이름을 설정할 수 있다. 정확히는 여러 개의 특정화된 그룹을 만들 수 있다.
+- `tag` === 
+```
+docker build . 
 ```
