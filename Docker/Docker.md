@@ -229,8 +229,11 @@ docker run --name [container's name] [image ID]
 
 - `image`의 `TAG`는 두 부분으로 구성된다.
 - `TAG` === `name : tag`
-- `name` === `image`의 리포지터리. `image`의 일반적인 이름을 설정할 수 있다. 정확히는 여러 개의 특정화된 그룹을 만들 수 있다.
-- `tag` === 
+- `name` === `image`의 `REPOSITORY`. `image`의 일반적인 이름을 설정할 수 있다. 정확히는 여러 개의 더 전문화될 수 있는 `image`의 그룹을 만들 수 있다.(e.g. `node image`)
+- `tag` === 옵션. `image`의 보다 특정화된 버전을 정의할 수 있다.(e.g. `node:14`의 `14`)
+- `Dockerfile`의 `FROM`에 작성했던 것을 생각하면 이해가 편하다. 외부의 이미지를 가져온 것이지만.
+- 커스텀 `image`에 대해서도 가능하다. 아래 명령어를 살펴보자.
 ```
-docker build . 
+docker build -t goals:latest .
 ```
+- `tag` 부분에 꼭 숫자를 써야하는 것은 아니며, `name`만 적는 것도 가능하다.
