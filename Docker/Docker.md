@@ -128,5 +128,20 @@ docker start -a [container name or ID]
 ```
 docker run -it [container name or ID]
 ```
+- 터미널에 사용자 입력을 받아내는 코드가 실행되는 것을 확인할 수 있을 것이다.
+- 로직을 수행한 뒤에는 `container`가 종료된다.
+
+- 그리고 `container`를 다시 시작하기 위해서 `docker start`를 실행하면..`detached` 모드이기 때문에 `container`와 통신 할 수 없게 된다.
+- `attached` 모드에서 시작하면 해결되지 않을까??
+```
+docker start -a [container name or ID]
+```
+- 그러나 이 방법은 입력을 단 한번만 받을 수 있기 때문에 문제가 발생할 수 있다.(여러 입력을 받는 경우)
+
+- 따라서 `-i` 명령어를 추가해서 사용해주면 된다.
+```
+docker start -a -i [container name or ID]
+```
+- `-t` 명령어의 경우 처음 `docker run`을 실행했을 때 적용되었으므로, 여기서는 하지않아도 된다.
 
 ## tagged(naming for image)
