@@ -190,7 +190,7 @@ docker images inspect [image ID]
 - `layer`는 `Dockerfile`에서 알 수 있는 것들과 개수가 다를 수 있는데, 이는 `Dockerfile`에 정의된 `layer`에만 국한되는 것이 아니기 때문이다.
 - 위 예시들에서는...`node image`로 인한 `layer`도 있기 때문!
 
-## Copy file from(or to) the container
+## Copy file(or folder) from(or to) the container
 - 실행 중인 `container`로 혹은 `container` 밖으로 파일 또는 폴더를 복사할 수 있다.
 ```
 docker cp [target source] [destination of copied source]
@@ -213,5 +213,16 @@ boring_vaughan라는 container의 test 폴더를 로컬의 dummy 폴더로 복�
 - `container`를 다시 시작하고 `image`를 수정하지 않고도, `container`에 무엇을 추가할 때 사용할 수 있다.
 - 가령, 소스 코드가 변경되었다면 일반적으로는 `image`를 다시 `build`하고 `container`를 다시 시작해야한다.
 - 그러나, 변경된 코드를 `container`에 복사할 수도 있다는 것이다!
+- 단, 에러가 발생할 수도 있고, 변경한 파일을 잊어버리기 쉽기 때문에 일반적으로 사용되는 방법은 아니다.
+- 더 나은 방법이 존재하므로 뒤에서 살펴보도록 하자.
+- 그럼에도 이런 방법을 써야하는 경우는...`config` 같은 파일을 변경해야할 때가 있겠다.
+- 혹은 `container`에서 발생한 로그를 로컬로 복사해서 직접 접근하는 경우에도 활용할 수 있다.
 
-## tagged(naming for image)
+## tagging(naming) image & container
+- `image`와 `container`는 각각 `TAG`, `NAMES`라는 속성에 자신의 이름을 가지고 있다.
+- 별도로 설정하지 않으면 `<none>` 혹은 자동으로 생성된 이름이 할당된다.
+- 이런 경우, 본인이 사용하는 것의 이름을 일일이 찾아서 복사하고 붙여넣기를 통해 조작해야한다...
+- 아래는 `container`에 이름을 부여하는 방법이다.
+```
+docker run --name [container's name] [image ID]
+```
