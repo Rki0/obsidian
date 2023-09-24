@@ -96,9 +96,29 @@ CMD [ "node", "server.js" ]
 docker run -p 3000:80 -d [container name or ID]
 ```
 - `-d` 커맨드를 사용하면 `docker run`도 `detached` 모드로 실행할 수 있다.
-- `detached`된 `container`를 다시 연결하고 싶다면
+
+- `detached`된 `container`를 다시 연결하고 싶다면 `attach` 명령어를 사용하면 된다.
 ```
-docker container attach [container name or ID]
+docker attach [container name or ID]
 ```
+
+- 그러면 `detached` 모드에서는 `console.log()`를 어떻게 확인하죠?
+```
+docker logs [container name or ID]
+```
+- `logs` 명령어를 사용하면 `detached` 모드에서도 `console.log()`로 출력되는 값들을 확인할 수 있다.
+- 위 방법은 `docker logs`를 입력했을 때만 `console.log()`를 출력하므로, 매번 하기 귀찮을 수 있다.
+```
+docker logs -f [container name or ID]
+```
+- `-f` 명령어를 같이 사용해주면 `attached` 모드로 전환하여 콘솔을 계속 확인할 수 있다.
+
+- `docker start`를 사용하더라도 `attached` 모드로 실행할 수 있는데,
+```
+docker start -a [container name or ID]
+```
+- `-a` 명령어를 함께 사용해주면 된다.
+
+
 
 ## tagged(naming for image)
