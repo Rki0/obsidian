@@ -326,4 +326,11 @@ docker login
 - `FROM`에 작성하는, `Docker Hub`에 있는 `image`는 연결해서 필요한 추가 코드만 `push`한다.
 
 - `push`를 했으니 `pull`을 해서 공유받는 것도 진행해보자.
-- 
+- 앞서 `docker login`을 해놨기 때문에, 완전히 레포지토리에 대해 모르는 상황을 가정하기 위해 `docker logout`을 한 뒤 진행하였다.
+```
+docker pull [image name]
+
+ex)
+docker pull rki0/udemy_docker
+```
+- `pull`을 성공하는 것으로, public에 공개된 `image`는 누구든 사용할 수 있다는 것을 확인했다.
