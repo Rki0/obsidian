@@ -237,3 +237,12 @@ docker run --name [container's name] [image ID]
 docker build -t goals:latest .
 ```
 - `tag` 부분에 꼭 숫자를 써야하는 것은 아니며, `name`만 적는 것도 가능하다.
+
+## Sharing images & containers
+- 같은 팀 혹은 배포하려는 서버에 `iamge`, `container`를 공유하는 것이 `Docker`를 사용하는 이유 중 하나!
+- `image`를 가지고 있는 사람은 그 것을 기반으로 `container`를 만들 수 있다.
+
+- `image`를 공유하는 방법은 크게 두 가지가 있다.
+	1. `Dockerfile`을 공유한다.
+		- `Dockerfile`과 애플리케이션이 속한 소스 코드를 제공하면 자체 `image`를 생성하고, `container`를 실행할 수 있게 된다.
+	2. 
