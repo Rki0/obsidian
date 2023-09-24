@@ -75,4 +75,11 @@ CMD [ "node", "server.js" ]
 - 즉, `npm install`이 다시 실행되지 않는다는 것이다!
 - 최적화 이전과 비교했을 때, `build` 속도가 유의미하게 빨라진 것을 확인 할 수 있다.
 
-# M
+# Managing images & containers
+
+## Restart stopped container!
+- 지금까지는 `docker stop [container name]`으로 중지한 `container`를 재사용하려면 `docker run -p .....`를 사용해서 다시 시작을 했었다. 그리고 이 방법은 새로운 `container`를 생성하여 실행하는 방법이었다.
+- 그런데 `image`가 변경되지 않은 경우라면 굳이 완전히 새로운 `container`를 생성할 필요가 없다.
+- 
+
+## tagged(naming for image)
