@@ -187,6 +187,12 @@ docker images inspect [image ID]
 ```
 - 이 명령을 실행하면 `image`에 대한 정보가 나오게 된다.
 - 운영체제, `layer`, `image`를 사용 중인 `container` 등등..
-- `layer`는 `Dockerfile`에서 알 수 있는 것들과 개수가 다를 수 있는데, 이는 `D`
+- `layer`는 `Dockerfile`에서 알 수 있는 것들과 개수가 다를 수 있는데, 이는 `Dockerfile`에 정의된 `layer`에만 국한되는 것이 아니기 때문이다.
+- 위 예시들에서는...`node image`로 인한 `layer`도 있기 때문!
 
+## Copy file from(or to) the container
+- 실행 중인 `container`로 혹은 `container` 밖으로 파일 또는 폴더를 복사할 수 있다.
+```
+docker cp [target source] [destination of copied source]  
+```
 ## tagged(naming for image)
