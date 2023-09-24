@@ -119,6 +119,14 @@ docker start -a [container name or ID]
 ```
 - `-a` 명령어를 함께 사용해주면 된다.
 
-
+## Interactive mode
+- 만약 사용자에게서 입력을 받아야하는 상황이라면 어떻게 해야할까?
+- `docker run`을 사용하면 되지 않을까?
+- 안된다! 만약 그렇게한다면 사용자에게 입력을 받아야하는 코드를 실행하는 부분에서 에러가 발생하게 된다.
+- 왜? `container`나 `container`로 실행되는 애플리케이션에는 입력을 할 수 없기 때문이다.
+- 따라서 상호작용이 가능하도록 하는 `-i` 명령어와 터미널을 사용할 수 있게 해주는 `-t` 명령어를 사용해주면 된다.
+```
+docker run -it [container name or ID]
+```
 
 ## tagged(naming for image)
