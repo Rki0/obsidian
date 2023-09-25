@@ -20,24 +20,12 @@
             }
           },
           {
-            "id": "5e82900225191bc0",
+            "id": "8578917e871be37c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data_Structure/Tree/Heap(Binary Heap).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "291f54ae3fa3f7a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data_Structure/Priority Queue.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data_Structure/Graph.md",
+                "file": "Data_Structure/Graph/Graph.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -118,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -135,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data_Structure/Graph.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data_Structure/Graph.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data_Structure/Graph.md"
+                "file": "Untitled.md"
               }
             }
           },
@@ -214,21 +201,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e1d1158ed00787e4",
+  "active": "8578917e871be37c",
   "lastOpenFiles": [
+    "TODO.md",
+    "Untitled.md",
+    "Data_Structure/Graph",
     "Data_Structure/Priority Queue.md",
-    "Data_Structure/Graph.md",
+    "Data_Structure/Graph/Tree/Heap(Binary Heap).md",
+    "Data_Structure/Graph/Graph.md",
     "Docker/Docker.md",
     "Docker",
-    "Data_Structure/Tree/Heap(Binary Heap).md",
-    "TODO.md",
     "Algorithm/Search/Binary Search.md",
-    "Data_Structure/Tree/Trie.md",
+    "Data_Structure/Graph/Tree/Trie.md",
     "Data_Structure/Hash Table(Hash Map).md",
-    "Data_Structure/Tree/Binary Search Tree(BST).md",
+    "Data_Structure/Graph/Tree/Binary Search Tree(BST).md",
     "Algorithm/Search/DFS(Depth First Search).md",
     "Algorithm/Search/BFS(Breadth First Search).md",
-    "Data_Structure/Tree/Tree.md",
+    "Data_Structure/Graph/Tree/Tree.md",
     "Algorithm/Search/Naive String Search.md",
     "Data_Structure/Stack.md",
     "Algorithm/Search",
@@ -244,11 +233,10 @@
     "Pasted image 20230915223330.png",
     "Algorithm/Floyd's Cycle Detection Algorithm(Tortoise and Hare Algorithm).md",
     "Data_Structure/Queue.md",
-    "Data_Structure/Linked_List/Circular Linked List.md",
     "Algorithm/Sort",
     "Untitled.canvas",
     "Algorithm",
-    "Data_Structure/Tree",
+    "Data_Structure/Graph/Tree",
     "Data_Structure",
     "Data_Structure/Linked_List"
   ]

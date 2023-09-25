@@ -1,3 +1,5 @@
+<img width="100%" alt="image" src="https://www.shiksha.com/online-courses/articles/wp-content/uploads/sites/11/2021/09/Graph-Data-Structure.png">
+image source : https://www.shiksha.com/online-courses/articles/graphs-in-data-structure-types-representation-operations/
 # Feature
 - 객체 간의 관계를 정점(Vertex)와 간선(Edge)으로 나타내는 자료구조
 - 부모/자식 관계가 존재하지 않고, 인접한 관계가 있을 뿐이다.
@@ -121,7 +123,16 @@
 		3. Push all of its neighbors into the stack
 7. Return the result array
 ## BFS
-1. 
+1. This function should accept a starting vertex
+2. Create a queue(you can use an array) and place the starting vertex in it
+3. Create an array to store the nodes visited
+4. Create an object to store nodes visited
+5. Mark the starting vertex as visited
+6. Loop as long as there is anything in the queue
+7. Remove the first vertex from the queue and push it into the array that stores nodes visited
+8. Loop over each vertex in the adjacency list for the vertex you are visiting
+9. If it is not inside the object that stores nodes visited, mark it as visited and enqueue that vertex
+10. Once you have finished looping, return the array of visited nodes
 
 # Implement
 - 해당 `Graph`는 무방향 그래프이다.
@@ -215,6 +226,9 @@ class Graph{
 ```
 
 ## DFS - Iterative Version
+- 정점을 처리하는 순서로 인해서 `Recursive Version`과는 표시되는 결과가 다르다.
+- 물론, 어떤 방법을 쓰더라도 `DFS`라는 점은 똑같다.
+
 ```js
 class Graph{
 	constructor(){
