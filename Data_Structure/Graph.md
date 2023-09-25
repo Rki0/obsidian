@@ -58,7 +58,8 @@
 - 정답은 없지만, `Adjacency List`로 구현을 하는게 더 좋다고 생각된다.
 - 현실 속 대부분의 데이터는 큰 `Graph` 속에서 아주 작은 수의 연결을 가지고 있기 때문이다.
 - 연결이 적은 그래프에서 `Matrix`는 공간을 많이 차지하고, `List`는 공간을 덜 차지한다.
-- 
+- `Matrix`는 모든 간선을 순회하는게 느리고, `List`는 빠르다.
+- `Matrix`는 특정 간선을 찾는 것이 빠르고, `List`는 느리다.
 
 # Time Complexity
 - `|V|` : number of vertices
@@ -77,3 +78,15 @@
 - Remove Edge : O(`|E|`)
 - Query = O(`|V| + |E|`)
 - Storage = O(`|V| + |E|`)
+
+# Pseudo Code
+
+
+# Implement
+- 해당 `Graph`는 무방향 그래프이다.
+
+```js
+class Graph{
+	constructor()
+}
+```
