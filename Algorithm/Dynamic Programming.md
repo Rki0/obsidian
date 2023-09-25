@@ -19,5 +19,6 @@
 ## Memoization
 - Storing the results of expensive function calls and returning the cached result when the same inputs occur again.
 - Top-Down
-
 ## Tabulation
+- Storing the result of a previous result in a "table"(usually an array)
+- Usually done w
