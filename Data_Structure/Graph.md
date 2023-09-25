@@ -128,9 +128,54 @@ class Graph{
 
 		const helper = (vertex) => {
 			if(!vertex){
-				return 
+				return null;
 			}
+
+			visited[vertex] = true;
+			result.push(vertex);
+
+			this.adjacencyList[vertex].forEach((neighbor) => {
+				if(!visited[neighbor]){
+					return helper(neighbor);
+				}
+			});
 		}
+
+		helper(start);
+
+		return result;
+	}
+
+	BFS(start){
+		const queue = [start];
+		const result = [];
+		const visited = {};
+		visited[start] = true;
+
+		let currentVertex;
+
+		while(queue.length){
+			currentVertex = queue.shift();
+			result.push(currentVertex);
+
+			this.adjacencyList[currentVertex].forEach((neighbor) => {
+				if(!visited[neighbor]){
+					visited[neighbor] = true;
+					queue.push(neighbor);
+				}
+			});
+		}
+
+		return result;
+	}	
+}
+```
+
+## DFS - Iterative Version
+```
+class Graph{
+	constructor(){
+		this.adjacencyList = {};
 	}
 }
 ```
