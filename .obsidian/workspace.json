@@ -20,24 +20,24 @@
             }
           },
           {
-            "id": "8578917e871be37c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e1d1158ed00787e4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Data_Structure/Graph/Graph.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8578917e871be37c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algorithm/Dijkstra Algorithm.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -106,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -122,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "Algorithm/Dijkstra Algorithm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "Algorithm/Dijkstra Algorithm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "Algorithm/Dijkstra Algorithm.md"
               }
             }
           },
@@ -203,12 +204,12 @@
   },
   "active": "8578917e871be37c",
   "lastOpenFiles": [
+    "Data_Structure/Graph/Graph.md",
+    "Algorithm/Dijkstra Algorithm.md",
     "TODO.md",
-    "Untitled.md",
     "Data_Structure/Graph",
     "Data_Structure/Priority Queue.md",
     "Data_Structure/Graph/Tree/Heap(Binary Heap).md",
-    "Data_Structure/Graph/Graph.md",
     "Docker/Docker.md",
     "Docker",
     "Algorithm/Search/Binary Search.md",

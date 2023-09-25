@@ -81,6 +81,15 @@ image source : https://www.shiksha.com/online-courses/articles/graphs-in-data-st
 - Query = O(`|V| + |E|`)
 - Storage = O(`|V| + |E|`)
 
+# DFS & BFS of Graph
+## DFS
+- [[Tree]]에서와 다른 점은 `Graph`에서 사용하는 `DFS`는 **방문했던 정점을 저장하는 방법**이 추가되어야 무한 루프가 발생하지 않고 진행할 수 있다는 것
+- 방문했던 정점을 전역 변수로 관리하거나 특정 노드의 방문 여부를 저장하는 방법으로 이를 구현할 수 있다.
+## BFS
+- `Graph`는 부모/자식 관계가 없기 때문에 다른 레벨을 판단하기가 어려운데, 이 때 **등고선**을 보는 것처럼 그려보면 이해가 편하다!
+- [[Dijkstra Algorithm]] : 가중치가 양수인 경우 사용하는 알고리즘
+- 벨만포드 알고리즘 : 가중치가 음수인 경우 사용하는 알고리즘
+
 # Pseudo Code
 ## addVertex
 1. Write a method called addVertex, which accepts a name of a vertex
