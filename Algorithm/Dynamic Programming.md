@@ -1,4 +1,8 @@
+<img width="100%" alt="image" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*svQ784qk1hvBE3iz7VGGgQ.jpeg">
+image source : https://medium.com/launch-school/recursive-fibonnaci-method-explained-d82215c5498e
+
 - A method for solving a complex problem by breaking it down into a collection of simpler subproblems, solving each of those subproblems just once, and storing their solutions
+- 위 이미지는 피보나치 수열에 6이라는 값이 들어갔을 때의 상황을 `Tree`로 구현한 것이다. 불필요한 반복 연산이 많을 뿐더러, 작은 수를 넣었음에도 필요한 연산이 기하급수적으로 증가하는 것을 확인할 수 있다.
 
 # Feature
 - 많은 문제에 적용할 수 있는 개념은 아니지만, 이 개념을 적용할 수 있는 문제에 대해서는 그 효율이 기하급수적으로 증가한다.
