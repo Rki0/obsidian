@@ -61,4 +61,36 @@ function fibonacci(n, memo = []){
 }
 ```
 
-- 혹은 `base case`를 
+- 혹은 `base case`를 미리 넣어놓는 방법으로 사용할 수 도 있다.
+```js
+function fibonacci(n, memo = [undefined, 1, 1]){
+	if(memo[n] !== undefined){
+		return memo[n];
+	}
+
+	let res = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+
+	memo[n] = res;
+
+	return res;
+}
+```
+## Tabulation Version
+- `Memoization`의 경우 `n`이 커짐에 따라 콜 스택 오버플로우가 발생할 수도 있는데, `Tabulation` 방법은 그런 걱정이 없다.
+- 재귀가 아니라 반복문이고, 공간 복잡도가 훨씬 작기 때문이다.
+
+```js
+function fibonacci(n){
+	if(n <= 2){
+		return 1;
+	}
+
+	let fibNums = [0, 1, 1];
+
+	for(let i = 3; i <= n; i++){
+		fibNums[i] = fibNums[i - 1] + fibNums[i - 2];
+	}
+
+	return fibNums[n];
+}
+```
