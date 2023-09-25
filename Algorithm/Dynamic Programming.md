@@ -14,11 +14,51 @@
 - 가령, 최단 경로를 구할 때, `A -> D`가 최단 경로라면, 그 하위 경로인 `A -> C`의 최단 경로는 `A -> D`에서의 `A -> C`와 동일할 것이고, 하위 경로인 `A -> B`의 최단 경로 또한 `A -> D`에서의 `A -> B`와 동일할 것이다.
 
 # Using past knowledge!
-- 값을 잘 기억해놓고, 동일한 연산이 나올 때 그 값을 다시 꺼내서 사용하자!
+- `DP`를 할 때는 값을 잘 기억해놓고, 동일한 연산이 나올 때 그 값을 다시 꺼내서 사용하자!
 - 값을 기억하는 방법은 크게 두 가지로 나눌 수 있다.
 ## Memoization
 - Storing the results of expensive function calls and returning the cached result when the same inputs occur again.
 - Top-Down
 ## Tabulation
 - Storing the result of a previous result in a "table"(usually an array)
-- Usually done w
+- Usually done using iteration
+- Better space complexity can be achieved using tabulation
+- Bottom-Up
+
+# Example
+- 피보나치 수열 문제가 대표적인 `DP` 문제이다.
+- 일반적인 방법으로 풀면 시간 복잡도가 `O(2^n)`으로 최악의 성능을 보인다.
+
+```js
+function fibonacci(n){
+	if(n <= 2){
+		return 1;
+	}
+
+	return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+## Memoization Version
+- `memo`에 이미 연산된 `n`에 대한 정보를 저장한다.
+- 다른 재귀에서 사용될 때, 굳이 모든 연산을 다시 하지않고 저장된 값을 꺼내 쓰는 것으로 해결할 수 있다!
+- 따라서, 시간 복잡도가 `O(n)`으로 줄어든다.
+
+```js
+function fibonacci(n, memo = []){
+	if(memo[n] !== undefined){
+		return memo[n];
+	}
+
+	if(n <= 2){
+		return 1;
+	}
+
+	let res = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+
+	memo[n] = res;
+
+	return res;
+}
+```
+
+- 혹은 `base case`를 
