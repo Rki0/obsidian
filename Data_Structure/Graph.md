@@ -80,10 +80,26 @@
 - Storage = O(`|V| + |E|`)
 
 # Pseudo Code
-
+## addVertex
+1. Write a method called addVertex, which accepts a name of a vertex
+2. It should add a key to the adjacency list with the name of the vertex and set its value to be an empty array
+## addEdge
+1. This function should accept two vertices, we can call them vertex1 and vertex2
+2. The function should find in the adjacency list the key of vertex1 and push vertex2 to the array
+3. The function should find in the adjacency list the key of vertex2 and push vertex1 to the array
+## removeEdge
+1. This function should accept two vertices, we can call them vertex1 and vertex2
+2. The function should reassign the key of vertex1 to be an array that does not contain vertex2
+3. The function should reassign the key of vertex2 to be an array that does not contain vertex1
+## removeVertex
+1. The function should accept a vertex to remove
+2. The function should loop as long as there are any other vertices in the adjacency list for that vertex
+3. Inside of the loop, call our `removeEdge()` function with the vertex we are removing and any values in the adjacency list for that vertex
+4. Delete the key in the adjacency list for that vertex
 
 # Implement
 - 해당 `Graph`는 무방향 그래프이다.
+- 에러 핸들링, 예외 처리는 하지 않았으므로 알맞게 추가해서 사용하도록 하자.
 
 ```js
 class Graph{
@@ -172,10 +188,33 @@ class Graph{
 ```
 
 ## DFS - Iterative Version
-```
+```js
 class Graph{
 	constructor(){
 		this.adjacencyList = {};
+	}
+
+	DFS(start){
+		const stack = [start];
+		const result = [];
+		const visited = {};
+		let currentVertex;
+
+		visited[start] = true;
+
+		while(stack.length){
+			currentVertex = stack.pop();
+			result.push(currentVertex);
+
+			this.adjacencyList[currentVertex].forEach((neighbor) => {
+				if(!visited[neighbor]){
+					visited[neighbor] = true;
+					stack.push(neighbor);
+				}
+			});
+		}
+
+		return result;
 	}
 }
 ```
