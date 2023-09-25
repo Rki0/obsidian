@@ -59,3 +59,7 @@
 - 현실 속 대부분의 데이터는 큰 `Graph` 속에서 아주 작은 수의 연결을 가지고 있기 때문이다.
 
 # Time Complexity
+- `|V|` : number of vertices
+- `|E|` = number of edges
+## Adjacency Matrix
+- Add Vertex : O()
