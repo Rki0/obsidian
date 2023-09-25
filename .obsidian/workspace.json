@@ -42,21 +42,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "bf59100874acb116",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algorithm/Search/Naive String Search.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -123,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algorithm/Search/Naive String Search.md",
+                "file": "Docker/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algorithm/Search/Naive String Search.md",
+                "file": "Docker/Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algorithm/Search/Naive String Search.md"
+                "file": "Docker/Docker.md"
               }
             }
           },
@@ -202,8 +190,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf59100874acb116",
+  "active": "3227714fefb94c68",
   "lastOpenFiles": [
+    "Algorithm/Search/Naive String Search.md",
     "Docker/Docker.md",
     "Algorithm/Dynamic Programming.md",
     "Algorithm/Dijkstra Algorithm.md",
@@ -220,7 +209,6 @@
     "Algorithm/Search/DFS(Depth First Search).md",
     "Algorithm/Search/BFS(Breadth First Search).md",
     "Data_Structure/Graph/Tree/Tree.md",
-    "Algorithm/Search/Naive String Search.md",
     "Data_Structure/Stack.md",
     "Algorithm/Search",
     "Algorithm/Sort/Radix Sort.md",
