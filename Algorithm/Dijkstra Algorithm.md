@@ -164,12 +164,30 @@ class WeightedGraph{
 					path.push(smallest);
 					smallest = previous[smallest];
 				}
+
+				break;
 			}
 
-			break;
+			if(smallest || distances !== Infinity){
+				for(let neighbor in this.adjacencyList[smallest]){
+					let nextNode = this.adjacencyList[smallest][neighbor];
+
+					let candidate = distances[smallest] + nextNode.weight;
+
+					let nextNeighbor = nextNode.node;
+
+					if(candidate < distances[nextNeighbor]){
+						distances[nextNeighbor] = candidate;
+
+						previous[nextNeighbor] = smallest;
+
+						node.enqueue(nextNeighbor, candidate);
+					}
+				}
+			}
 		}
 
-		
+		return path.concat(smallest).reverse();
 	}
 }
 ```
