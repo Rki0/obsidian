@@ -96,10 +96,37 @@
 2. The function should loop as long as there are any other vertices in the adjacency list for that vertex
 3. Inside of the loop, call our `removeEdge()` function with the vertex we are removing and any values in the adjacency list for that vertex
 4. Delete the key in the adjacency list for that vertex
+## DFS - Recursive Version
+1. The function should accept a staring node
+2. Create a list to store the end result, to be returned at the very end
+3. Create an object to store visited vertices
+4. Create a helper function which accept a vertex
+	1. The helper function should return early if the vertex is empty
+	2. The helper function should place the vertex it accepts into the visited object and push that vertex into the result array
+	3. Loop over all of the values in the adjacency list for that vertex
+	4. If any of those values have not been visited, recursively invoke the helper function with that vertex
+5. Invoke the helper function with the starting vertex
+6. Return the result array
+## DFS - Iterative Version
+1. The function should accept a staring node
+2. Create a stack to help use keep track of vertices(use a list/array)
+3. Create a list to store the end result, to be returned at the very end
+4. Create an object to store visited vertices
+5. Add the starting vertex to the stack, and mark it visited
+6. While the stack has something in it:
+	1. Pop the next vertex from the stack
+	2. If the vertex hasn't been visited yet:
+		1. Mark it as visited
+		2. Add it to the result list
+		3. Push all of its neighbors into the stack
+7. Return the result array
+## BFS
+1. 
 
 # Implement
 - 해당 `Graph`는 무방향 그래프이다.
 - 에러 핸들링, 예외 처리는 하지 않았으므로 알맞게 추가해서 사용하도록 하자.
+- `this.adjacencyList`는 하나의 정점이 `key`이며, `value`는 그 정점과 연결되어 있는 정점들을 모아놓은 배열이다.
 
 ```js
 class Graph{
