@@ -1,3 +1,5 @@
+<img width="100%" alt="image" src="https://media.geeksforgeeks.org/wp-content/uploads/20230224120836/dijkstras6-(1).png">
+image source : https://www.geeksforgeeks.org/introduction-to-dijkstras-shortest-path-algorithm/
 # Feature
 - 다익스트라 최단 경로 알고리즘으로 보통 다익스트라 알고리즘으로 불린다.
 - 가중치가 양수인 경우 사용하는 알고리즘이다.
