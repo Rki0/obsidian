@@ -10,4 +10,14 @@
 
 # Optimal Substructure
 - A problem is said to have optimal substructure, if an optimal solution can be constructed from optimal solutions of its subproblems.
-- 어떤 문제가 하위 문제의 최적의 해답을 통해 
+- 어떤 문제의 최적의 답이 그 하위 문제의 최적의 답을 통해 만들어질 수 있다면, 그 문제는 `Optimal Substructure`를 가지고 있다고 할 수 있다.
+- 가령, 최단 경로를 구할 때, `A -> D`가 최단 경로라면, 그 하위 경로인 `A -> C`의 최단 경로는 `A -> D`에서의 `A -> C`와 동일할 것이고, 하위 경로인 `A -> B`의 최단 경로 또한 `A -> D`에서의 `A -> B`와 동일할 것이다.
+
+# Using past knowledge!
+- 값을 잘 기억해놓고, 동일한 연산이 나올 때 그 값을 다시 꺼내서 사용하자!
+- 값을 기억하는 방법은 크게 두 가지로 나눌 수 있다.
+## Memoization
+- Storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+- Top-Down
+
+## Tabulation
