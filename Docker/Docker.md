@@ -353,5 +353,13 @@ docker pull rki0/udemy_docker
 	- Fetched/Produced in running container
 	- Stored in memory or temporary files
 	- Dynamic and changing, but cleared regularly
-	- 
+	- Read + Write, temporary, hence stored in **containers**
+	- `image`가 `Read-only`인거지, `image` 위에 생성되는 `layer`인 `container`는 `Read-only`가 아니다!
+	- 따라서 동적인 값들은 `container layer`에 저장된다.
+3. Permanent App Data(e.g. user accounts)
+	- Fetched/Produced in running container
+	- Stored in files or a database
+	- Must not be lost if container stops/restarts
+	- Read + Write, permanent, stored with **containers** & **volumes**
+
 ## Volumes of images & containers
