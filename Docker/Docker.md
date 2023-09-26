@@ -384,4 +384,32 @@ docker pull rki0/udemy_docker
 - 즉, `Docker`가 인식하는 호스트 머신인 나의 컴퓨터에 있는 폴더로서, `container` 내부의 폴더에 맵핑된다.
 - 즉, `image`나 `container`에 존재하는 것이 아니다!
 - `Dockerfile`에서 `COPY` 명령어를 통해 소스 코드의 스냅샷을 만들어서 사용했던 것은 `container`와 지속적인 관계를 가지지 않는다. 그러나! `volume`은 `container` 내부의 폴더를 호스트 머신 상의, `container` 외부 폴더에 연결할 수 있다!!
-- 
+- 게다가 두 폴더의 변경 사항은 다른 폴더에 반영된다! 즉, 호스트 머신에서 파일을 추가하면 `container` 내부에서 엑세스할 수 있고, `container`가 맵핑된 경로에 파일을 추가하면 호스트 머신에서도 사용할 수 있다는 것이다.
+- `volume`은 `container`가 종료된 후에도 계속 유지된다.
+- `container`에 `volume`을 추가하면 해당 `volume`은 제거되지 않으며, `container`가 제거되더라도 `volume`은 유지되기 때문에 다른 곳에서 다시 사용할 수 있다.
+- `container`는 `volume`에 데이터를 Read, Write 할 수 있다.
+
+## Add volumes into the container
+- `Dockerfile`에 `VOLUME` 명령어를 사용해서 `volume`을 추가할 수 있다.
+
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 80
+
+VOLUME [ "/app/feedback" ]
+
+CMD [ "node", "server.js" ]
+```
+
+- `volume`으로 사용하고자하는 폴더를 연결해주면 된다.
+- 위 예시에서는 소스 코드의 `feedback`이라는 폴더를 `volume`으로 사용하고자 하는 것이다.
+- `WORKDIR`가 `app`이기 때문에 `app` 내의 `feedback` 폴더의 접근하는 것을 확인할 수 있다.
