@@ -524,4 +524,5 @@ docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/User
 - 로컬에서 개발할 때 주로 `nodemon`을 설치해서 이를 해결했었다. `Docker`에서도 그렇게 해보자!
 - `package.json`에 수동으로 라이브러리를 추가해준다.
 - 이제 `nodemon`으로 `server.js`가 실행되도록 `scripts`도 변경해주자.
-- `Dockerfile`의 `CMD`도 그에 맞게 변경해주자.
+- `Dockerfile`의 `CMD`도 그에 맞춰 `CMD [ "npm", "start" ]`로 변경해주자.
+- 그리고 `image`를 다시 `build`해주자.
