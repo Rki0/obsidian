@@ -502,9 +502,14 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v $
 - 그 방법은 바로 `Anonymous Volume`을 사용하는 것이다.
 
 ```
-docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v $(pwd) -v /app/node_modules feedback-node:volumes 
+docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/Users/pakkiyoung/udemy_docker:/app" -v /app/node_modules feedback-node:volumes
 ```
 
 - `Dockerfile`에서 `VOLUME [ "/app/node_modules" ]`를 한 것과 같은 효과를 낸다.
 - 그래서, 이게 어떤 도움을 주는걸까?
 - `Docker`는 항상 `container`에 설정하는 모든 `volume`을 평가하며, 충돌이 있는 경우에는 더 긴 내부 경로를 우선시한다.
+- 여전히 `/app`에 `Bind`를 하지만, `app` 폴더 내부의 `node_modules` 폴더에 `Bind`를 하게 되는 것이다.
+- 그 결과 `node_modules`가 살아남게 되어서, 이 폴더가 외부에서 들어오는 유입, 즉, `Bind Mounts`로 인한 충돌을 `Anonymous Volume`으로 덮어쓰게 되는 것이다.
+- 그런데 `Bind Mounts`에서는 `node_modules`가 없는데요...? 그렇다. 그냥 존재하지 않는 `node_modules` 폴더를 덮어쓰는 것이다.
+- 정리하자면, `npm install`을 통해 `image` 생성 중에 생성된 `node_modules` 폴더는 살아남아 실제로 여전히 작동하는 `Bind Mounts`와 함께 공존한다. 즉, `node_modules`는 일종의 예외라고 볼 수 있다.
+- 이제 위 
