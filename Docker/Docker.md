@@ -499,4 +499,12 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v $
 - `RUN npm install` 등, `Dockerfile`의 명령들을 전부 수행한 뒤, 소스 코드를 덮어쓰기를 했기 때문에 `Dockerfile`에서 `image`를 생성하기 위해 했던 명령어들이 전부 의미없게 되버린 것이다.
 - 그래서 `npm install`이 적혀있었음에도 실행되지 않은 것 처럼 된 것이다. 실행된 소스 코드에 실행 전 소스 코드를 덮어쓰기 해버린 꼴이 된 것이니 말이다.(로컬 폴더에서는 `npm install`을 실행하지 않은 상태였다)
 - 이를 해결하기 위해 내부 파일 시스템에 외부에서 덮어쓰지 않아야하는 것이 있다는 것을 `Docker`에게 알려줘야한다!!!
-- 
+- 그 방법은 바로 `Anonymous Volume`을 사용하는 것이다.
+
+```
+docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v $(pwd) -v /app/node_modules feedback-node:volumes 
+```
+
+- `Dockerfile`에서 `VOLUME [ "/app/node_modules" ]`를 한 것과 같은 효과를 낸다.
+- 그래서, 이게 어떤 도움을 주는걸까?
+- `Docker`는 항상 `container`에 설정하는 모든 `volume`을 평가하며, 충돌이 있는 경우에는 더 긴 내부 경로를 우선시한다.
