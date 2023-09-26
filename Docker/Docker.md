@@ -511,5 +511,17 @@ docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/User
 - 여전히 `/app`에 `Bind`를 하지만, `app` 폴더 내부의 `node_modules` 폴더에 `Bind`를 하게 되는 것이다.
 - 그 결과 `node_modules`가 살아남게 되어서, 이 폴더가 외부에서 들어오는 유입, 즉, `Bind Mounts`로 인한 충돌을 `Anonymous Volume`으로 덮어쓰게 되는 것이다.
 - 그런데 `Bind Mounts`에서는 `node_modules`가 없는데요...? 그렇다. 그냥 존재하지 않는 `node_modules` 폴더를 덮어쓰는 것이다.
-- 정리하자면, `npm install`을 통해 `image` 생성 중에 생성된 `node_modules` 폴더는 살아남아 실제로 여전히 작동하는 `Bind Mounts`와 함께 공존한다. 즉, `node_modules`는 일종의 예외라고 볼 수 있다.
-- 이제 위 
+- 정리하자면, `npm install`을 통해 `image` 생성 중에 생성된 `node_modules` 폴더는 살아남아 실제로 여전히 작동하는 `Bind Mounts`와 함께 공존한다. 즉, `node_modules`는 일종의 예외라고 볼 수 있다. `node_modules`는 `Bind Mounts` 폴더의 내용물로 덮어쓰여지지 않게된다.
+- 이제 소스 코드의 변경 사항을 즉각 반영해주는 것을 확인할 수 있다!
+
+- 그런데....html 파일을 수정하는 것은 반영이 되는데, js 파일을 수정하는 것은 반영이 안된다.
+- 왜?????
+- `server.js`는 `node.js` 런타임에 의해 실행된다.
+- 따라서 서버를 다시 실행해주면 변경 사항이 반영이 된는데...
+- `container`가 실행 중일 때, 서버만 다시 시작하는 것은 간단하지 않다.
+- 좋은 방법은 아니지만 가장 간단하게 생각해볼 수 있는 방법은 `container`를 중지하고, 다시 시작하는 것이 있겠다.
+
+- 로컬에서 개발할 때 주로 `nodemon`을 설치해서 이를 해결했었다. `Docker`에서도 그렇게 해보자!
+- `package.json`에 수동으로 라이브러리를 추가해준다.
+- 이제 `nodemon`으로 `server.js`가 실행되도록 `scripts`도 변경해주자.
+- `Dockerfile`의 `CMD`도 그에 맞게 변경해주자.
