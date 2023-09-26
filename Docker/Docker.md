@@ -413,3 +413,6 @@ CMD [ "node", "server.js" ]
 - `volume`으로 사용하고자하는 폴더를 연결해주면 된다.
 - 위 예시에서는 소스 코드의 `feedback`이라는 폴더를 `volume`으로 사용하고자 하는 것이다.
 - `WORKDIR`가 `app`이기 때문에 `app` 내의 `feedback` 폴더의 접근하는 것을 확인할 수 있다.
+- 이는 `container` 외부 폴더에 맵핑되어질 `container` 내부 위치이다.
+
+- 그러나, `feed`
