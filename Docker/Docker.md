@@ -367,4 +367,8 @@ docker pull rki0/udemy_docker
 - 가령, `node.js`를 활용해서 유저의 입력을 텍스트 파일로 변환하는 코드를 작성했다고 해보자.
 - 이를 `container`에서 실행하면 그 파일은 `container`에서 확인할 수 있지, 로컬(i.e. 각자의 IDE) 폴더에서 확인할 수 없다.
 - 즉, `image`와 `container`는 그들의 코드가 있는 로컬 폴더를 기반으로 하는 **자체 파일 시스템**이 있다는 것을 의미한다!!
+- `container`를 중지하는 것은 데이터를 삭제시키지 않는다.(`--rm`으로 `docker run`한 경우에는 중지가 곧 `container`의 삭제이므로 당연히 데이터도 사라진다는 점에 주의하자.)
+- 따라서 `docker start`로 재시작을 해도 데이터가 그대로 `container`에 남아있는다.
+- 같은 `image`를 사용했더라도 `container`가 다르면 당연히 데이터가 사라진다.
+- 이 말은 즉, `container`에서 생성된 데이터는 `image`에 write 되는게 아니라는 것이다! `image`가 `Read-only`라는 것에서 유추할 수 있는 부분이기도 하다.
 - 
