@@ -415,4 +415,12 @@ CMD [ "node", "server.js" ]
 - `WORKDIR`가 `app`이기 때문에 `app` 내의 `feedback` 폴더의 접근하는 것을 확인할 수 있다.
 - 이는 `container` 외부 폴더에 맵핑되어질 `container` 내부 위치이다.
 
-- 그러나, `feed`
+- 그러나, `feedback` 폴더가 `volume`으로 명시된 것이 확인되지만, `container`를 삭제하고 다시 실행하면 `volume`으로 사용되는 `feedback` 폴더가 데이터를 유지하고 있을거라는 예상과는 다르게, 데이터는 삭제된 채로 다시 실행된다.
+- 무엇이 문제일까?
+
+## Two Types of External Data Storages
+- `Docker`에는 여러 가지의 외부 데이터 저장 메커니즘이 있다.
+- `Volumes`와 `Bind Mounts`가 있다.
+
+1. `Volumes`(Managed by Docker)
+2. `Bind Mounts`(Managed by you)
