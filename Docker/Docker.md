@@ -383,4 +383,5 @@ docker pull rki0/udemy_docker
 - 호스트 머신의 하드 드라이브에서 꺼내쓰거나, `container`에 맵핑되는 것을 의미한다.
 - 즉, `Docker`가 인식하는 호스트 머신인 나의 컴퓨터에 있는 폴더로서, `container` 내부의 폴더에 맵핑된다.
 - 즉, `image`나 `container`에 존재하는 것이 아니다!
-- `Dockerfile`에서 `COPY` 명령어를 통해 소스 코드의 스냅샷을 만들어서 사용했던 것은 `container`와 지속적인 관계를 가지지 않는다. 그러나! `volume`은 
+- `Dockerfile`에서 `COPY` 명령어를 통해 소스 코드의 스냅샷을 만들어서 사용했던 것은 `container`와 지속적인 관계를 가지지 않는다. 그러나! `volume`은 `container` 내부의 폴더를 호스트 머신 상의, `container` 외부 폴더에 연결할 수 있다!!
+- 
