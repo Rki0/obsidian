@@ -582,3 +582,9 @@ docker volume rm [VOLUME_NAME]
 - 위 명령어를 통해 `volume`의 삭제도 가능하다.
 - 물론, 사용 중인 `volume`은 삭제할 수 없다!
 - 또한, `volume`을 삭제하면 거기에 저장되어 있던 데이터가 사라진다는 점을 기억하자.
+
+```
+docker volume prune
+```
+- 위 명령어를 통해 사용하지 않는 `volume`을 일괄적으로 삭제할 수 있다.
+
