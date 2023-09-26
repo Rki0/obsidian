@@ -427,9 +427,15 @@ CMD [ "node", "server.js" ]
 		- 앞서 작동하지 않았던 `Dockerfile`의 `VOLUME`이 바로 `Anonymous Volume`이다.
 		- `Docker` 내부의 경로만 지정했지, 호스트 머신의 경로는 지정하지 않았었다.
 		- 따라서, 미러링된 폴더가 어디에 있는지 모르는 상태였던 것이다.
-	1. `Named Volume`
+		- `Anonymous Volume`은 `Docker`가 관리한다.
+		- `container`가 존재하는 동안에만 실제로 존재하게 된다. 즉, `container`를 삭제하면 데이터가 사라지게 된다.
+	2. `Named Volume`
+		-  `cont`
 
 	- 두 경우 모두 `Docker`는 일부 폴더와 경로를 호스트 머신에 설정한다.
 	- `docker volume` 명령어를 통해 접근할 수 있다.
 	- `docker volume ls`를 통해 `volume`인 것들의 리스트를 확인할 수 있는데, `Anonymous Volume`의 경우 `VOLUME NAME`이 무작위로 암호화된 문자열로 나타나게 된다.
+	- `container`에 정의된 경로는 어떠한 생성된 `volume`에 맵핑된다. 그래서 호스트 머신 상의 생성된 경로로 연결된다.
+	- 가령, 앞서 `VOLUME`에 작성했던 `/app/feedback`은 호스트 머신의 어떤 폴더에 매핑된다는 것이다. 물론, `Anonymous Volume`이었기 때문에 우리는 그 경로를 모르는 상태였고, `Docker`가 관리하는 상태였으며, 내 컴퓨터의 어딘가에 숨겨저 있었고, 내가 액세스 할 수 없도록 되어 있었다...
+	- 
 1. `Bind Mounts`(Managed by you)
