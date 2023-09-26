@@ -370,5 +370,17 @@ docker pull rki0/udemy_docker
 - `container`를 중지하는 것은 데이터를 삭제시키지 않는다.(`--rm`으로 `docker run`한 경우에는 중지가 곧 `container`의 삭제이므로 당연히 데이터도 사라진다는 점에 주의하자.)
 - 따라서 `docker start`로 재시작을 해도 데이터가 그대로 `container`에 남아있는다.
 - 같은 `image`를 사용했더라도 `container`가 다르면 당연히 데이터가 사라진다.
-- 이 말은 즉, `container`에서 생성된 데이터는 `image`에 write 되는게 아니라는 것이다! `image`가 `Read-only`라는 것에서 유추할 수 있는 부분이기도 하다.
-- 
+- 즉, `container`에서 생성된 데이터는 `image`에 write 되는게 아니라는 것이다! `image`가 `Read-only`라는 것에서 유추할 수 있는 부분이기도 하다.
+- 한마디로, 동일한 `image`에 기반한 다수의 `container`는 서로 완전히 독립된, 격리된 개체로 작동한다.
+
+- `container`가 삭제되었을 때, 그 내부에 존재하던 데이터가 전부 사라지는 것은 치명적일 수 있다.
+- `container`는 지웠으나 데이터는 계속 유지되기를 바라는 것이 보통이니까.
+- 가령, 코드를 수정하고 `image`를 다시 `build`하고 실행하는 `container`는 새로운 것이기 때문에, 데이터가 삭제되는 것은 상당히 귀찮은 문제를 불러올 수 있다.
+- 이 문제에 대한 해결책이 바로 `volume`이다!
+
+## Introduction of Volumes
+- `volume`은 호스트 머신의 폴더이다.
+- 호스트 머신의 하드 드라이브에서 꺼내쓰거나, `container`에 맵핑되는 것을 의미한다.
+- 즉, `Docker`가 인식하는 호스트 머신인 나의 컴퓨터에 있는 폴더로서, `container` 내부의 폴더에 맵핑된다.
+- 즉, `image`나 `container`에 존재하는 것이 아니다!
+- `Dockerfile`에서 `COPY` 명령어를 통해 소스 코드의 스냅샷을 만들어서 사용했던 것은 `container`와 지속적인 관계를 가지지 않는다. 그러나! `volume`은 
