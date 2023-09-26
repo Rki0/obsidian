@@ -363,3 +363,8 @@ docker pull rki0/udemy_docker
 	- Read + Write, permanent, stored with **containers** & **volumes**
 
 ## Volumes of images & containers
+- `container`에서 실행한 애플리케이션에서 저장한 파일이나 데이터들은 `container`에 저장되는 것이지, 로컬에 저장되는 것이 아니다.
+- 가령, `node.js`를 활용해서 유저의 입력을 텍스트 파일로 변환하는 코드를 작성했다고 해보자.
+- 이를 `container`에서 실행하면 그 파일은 `container`에서 확인할 수 있지, 로컬(i.e. 각자의 IDE) 폴더에서 확인할 수 없다.
+- 즉, `image`와 `container`는 그들의 코드가 있는 로컬 폴더를 기반으로 하는 **자체 파일 시스템**이 있다는 것을 의미한다!!
+- 
