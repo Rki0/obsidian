@@ -554,7 +554,3 @@ docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/User
 - 그러면 `Docker`가 그 폴더나, 그 하위 폴더에 Write를 할 수 없게 된다.
 - 물론, 여전히 호스팅 머신에서는 소스 코드 변경이 가능하다.
 - `container`와 거기서 실행되는 애플리케이션에만 영향을 주는 것이다.
-
-```
-docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/Users/pakkiyoung/udemy_docker:/app:ro" -v /app/temp -v /app/node_modules feedback-node:volumes
-```
