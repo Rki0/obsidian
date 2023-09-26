@@ -464,4 +464,5 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feed
 	- `Volumes`와 비슷한 점이 몇 가지 있지만, 한가지 큰 차이점이 있는데, 바로 `Docker`에 의해 관리되는 `volume`의 위치, 즉, 호스트 머신의 파일 시스템 상의 `volume`이 어디 있는지를 알고 있다는 것이다.
 	- 일반적인 `volume`이라면 우리는 그게 어디 있는지 몰랐었다.
 	- 이는 우리가 호스트 머신 상에 맵핑될 `container`의 경로를 설정하기 때문에 가능한 것이다!
-	- 
+	- 호스트 머신 상에서의 경로를 우리가 완전히 인식할 수 있게 되기 때문에, `container`는 `volume`에 Write뿐만 아니라 Read도 가능해져서, 소스 코드를 `Bind Mounts`에 넣을 수 있게 된다!
+	- 즉, 스냅샷을 계속 갱신할 필요가 없게 된다는 것이다.
