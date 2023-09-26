@@ -436,7 +436,7 @@ CMD [ "node", "server.js" ]
 		- `container`가 종료된 후에도 `volume`이 유지된다.
 		- 즉, 하드 드라이브의 폴더가 그대로 유지된다.
 		- 따라서, 새로운 `container`를 시작하더라도 `volume`이 복구되고, 폴더가 복구되어 해당 폴더에 저장된 모든 데이터를 계속 사용할 수 있다.
-		- 영구적이어야하거나, 편집하거나 직접 볼 필요가 없는 중요한 데이터에 적합한 방식이다.
+		- 영구적이어야하거나, 편집할 필요가 없는, 직접 볼 필요가 없는 중요한 데이터에 적합한 방식이다.
 		- `-v` 커맨드를 사용하여 `Named Volume`을 생성할 수 있다.
 		- 저장하려는 `container` 파일 시스템 내부의 경로를 여전히 지정해야한다.
 		- 따라서, `feedback:/app/feedback`의 형태로 사용한다. `:` 앞은 외부 경로, 뒤는 `container` 내부 경로이다.
@@ -466,3 +466,14 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feed
 	- 이는 우리가 호스트 머신 상에 맵핑될 `container`의 경로를 설정하기 때문에 가능한 것이다!
 	- 호스트 머신 상에서의 경로를 우리가 완전히 인식할 수 있게 되기 때문에, `container`는 `volume`에 Write뿐만 아니라 Read도 가능해져서, 소스 코드를 `Bind Mounts`에 넣을 수 있게 된다!
 	- 즉, 스냅샷을 계속 갱신할 필요가 없게 된다는 것이다.
+	- 소스 코드를 `Bind Mounts`에 넣으면 `container`가 이를 인식하여, 소스 코드를 스냅샷에서 복사하는 것이 아니라 `Bind Mounts`에서 복사하게 된다. 이는 호스트 머신의 어떤 폴더에 연결된 것이기 때문에`container`가 항상 최신의 소스 코드에 액세스할 수 있는 것이다!!
+	- 영구적이고 나에 의해 편집 가능한 데이터에 적합하다.(e.g. 소스 코드)
+	- `image`가 아니라, 실행 중인 `container`에만 적용되는 것이기 때문에 `Dockerfile`에서 설정할 수는 없다. 즉, `image`에는 영향을 주지않고 `container`에만 영향을 준다.
+
+```
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v /Users/pakkiyoung/udemy_docker:/app feedback-node:volumes 
+```
+
+- 아까의 명령어에서 `-v`가 또 추가된 것을 확인할 수 있다.
+- 로컬에서 프로젝트 폴더의 경로를 `:` 앞에 붙여준 것이다.
+- 또한 소스 코드 전체를 사용하는 것이기 때문에 `:` 뒤에는 `/app`만 적어주었다. 특정 폴더만 사용하는 것이라면 더 구체
