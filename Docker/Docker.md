@@ -588,3 +588,24 @@ docker volume prune
 ```
 - 위 명령어를 통해 사용하지 않는 `volume`을 일괄적으로 삭제할 수 있다.
 
+## "COPY" vs "Bind Mounts"
+
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 80
+
+VOLUME [ "/app/feedback" ]
+
+CMD [ "node", "server.js" ]
+```
+
+- 앞서, `COPY`
