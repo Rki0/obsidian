@@ -556,3 +556,18 @@ docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/User
 - `container`와 거기서 실행되는 애플리케이션에만 영향을 주는 것이다.
 
 ## Managing Volume
+- `Docker`는 `-v`로 지정한 `volume`이 존재하지 않으면 자동으로 생성한다.(지금까지 봐온 방법)
+- 그런데 아래 명령어를 통해 수동으로 `volume`을 생성할 수도 있다.
+
+```
+docker create volume [VOLUME_NAME]
+```
+
+- `inspect`를 통해 `volume`의 정보를 볼 수도 있는데,
+
+```
+docker volume inspect [VOLUME_NAME]
+```
+
+- `Mountpoint`라는 속성을 통해 실제로 데이터가 저장되는 호스트 머신 상의 경로를 확인할 수 있다!
+- 
