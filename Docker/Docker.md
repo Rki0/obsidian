@@ -338,3 +338,20 @@ docker pull rki0/udemy_docker
 - `docker run` 만으로는 `Docker Hub`에 있는 최신 `image`를 보장할 수 없다.
 - 따라서, `docker pull`을 통해 `image`를 최신화한 뒤, `docker run`을 할 필요가 있다.
 - `docker run`은 `image`가 로컬에 없다면, 히스토리를 검색해 자동으로 `image`를 `pull`하지만, 로컬이 `image`를 가지고 있다면 그게 최신 버전인지 아닌지 상관없이 `pull`하지 않고 그걸 그대로 사용한다.
+
+# Managing Data in images & containers
+- 음? `image`와 `container`를 관리하는게 곧 데이터를 관리하는거 아닌가요? 소스 코드와 환경 설정 등은 데이터잖아요...!
+- 다른 종류의 데이터가 있다!
+
+## Data
+1. Application(Code + Environment)
+	- Written & provided by you(= the developer)
+	- Added to image and container in build phase
+	- "Fixed" : Can't be changed once images is built
+	- Read-only, hence stored in **image**
+2. Temporary App Data(e.g. entered user input)
+	- Fetched/Produced in running container
+	- Stored in memory or temporary files
+	- Dynamic and changing, but cleared regularly
+	- 
+## Volumes of images & containers
