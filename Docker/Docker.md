@@ -430,7 +430,9 @@ CMD [ "node", "server.js" ]
 		- `Anonymous Volume`은 `Docker`가 관리한다.
 		- `container`가 존재하는 동안에만 실제로 존재하게 된다. 즉, `container`를 삭제하면 데이터가 사라지게 된다.
 		- 하나의 `container`에 밀접하게 연관되어 있다.
-	1. `Named Volume`
+		- 물론, `--rm` 옵션을 사용하지 않고 `run`하면 `container`가 삭제된다고 하더라도, 여전히 `Anonymous Volume`이 남아있다.
+		- 이런게 반복되면 계속 쌓이게 되므로, `docker volume rm VOL_NAME`, `docker volume prune` 등을 사용하여 이를 제거할 수 있다.
+	2. `Named Volume`
 		- `container`가 종료된 후에도 `volume`이 유지된다.
 		- 즉, 하드 드라이브의 폴더가 그대로 유지된다.
 		- 따라서, 새로운 `container`를 시작하더라도 `volume`이 복구되고, 폴더가 복구되어 해당 폴더에 저장된 모든 데이터를 계속 사용할 수 있다.
@@ -442,16 +444,18 @@ CMD [ "node", "server.js" ]
 		- 즉, 호스팅 머신에  폴더를 만들어 `container` 내부의 이 폴더에 연결하지만, 이 `volume`은 우리가 지정한 이름으로 저장되는 것이다!!
 		- `Anonymous Volume`과 다른 점은, `container`가 삭제되었을 때, `Docker`에 의해 `volume`이 삭제되지 않는다는 것이다.
 		- 하나의 `container`에만 연결되는 것이 아니다.
+		- 다른 `container`를 생성할 때도 마찬가지로 `-v`를 사용하여 사용하고자하는 `volume`을 연결해주면 그대로 데이터가 남아있는 것을 확인할 수 있다.
 
 	- 두 경우 모두 `Docker`는 일부 폴더와 경로를 호스트 머신에 설정한다.
 	- `docker volume` 명령어를 통해 접근할 수 있다.
 	- `docker volume ls`를 통해 `volume`인 것들의 리스트를 확인할 수 있는데, `Anonymous Volume`의 경우 `VOLUME NAME`이 무작위로 암호화된 문자열로 나타나게 된다.
 	- `container`에 정의된 경로는 어떠한 생성된 `volume`에 맵핑된다. 그래서 호스트 머신 상의 생성된 경로로 연결된다.
 	- 가령, 앞서 `VOLUME`에 작성했던 `/app/feedback`은 호스트 머신의 어떤 폴더에 매핑된다는 것이다. 물론, `Anonymous Volume`이었기 때문에 우리는 그 경로를 모르는 상태였고, `Docker`가 관리하는 상태였으며, 내 컴퓨터의 어딘가에 숨겨저 있었고, 내가 액세스 할 수 없도록 되어 있었다...
-	- 
+	- 아래는 `Named Volume`의 실행 코드 예시이다.
 
 ```
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
 ```
 
 2. `Bind Mounts`(Managed by you)
+	- 
