@@ -432,6 +432,7 @@ CMD [ "node", "server.js" ]
 		- 하나의 `container`에 밀접하게 연관되어 있다.
 		- 물론, `--rm` 옵션을 사용하지 않고 `run`하면 `container`가 삭제된다고 하더라도, 여전히 `Anonymous Volume`이 남아있다.
 		- 이런게 반복되면 계속 쌓이게 되므로, `docker volume rm VOL_NAME`, `docker volume prune` 등을 사용하여 이를 제거할 수 있다.
+		- `container`에 이미 존재하는 특정 데이터를 잠그는데 유용하다. 다른 모듈에 의해 덮여쓰여지는 것을 방지하는데 유용하다. 아래에서 실제 사례와 함께 살펴보게 될 것이다.
 	2. `Named Volume`
 		- `container`가 종료된 후에도 `volume`이 유지된다.
 		- 즉, 하드 드라이브의 폴더가 그대로 유지된다.
@@ -526,3 +527,17 @@ docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/User
 - 이제 `nodemon`으로 `server.js`가 실행되도록 `scripts`도 변경해주자.
 - `Dockerfile`의 `CMD`도 그에 맞춰 `CMD [ "npm", "start" ]`로 변경해주자.
 - 그리고 `image`를 다시 `build`해주자.
+- 이제 js 파일의 변경도 즉각 반영해주는 것을 확인할 수 있다!!
+
+## Overview Volumes & Bind Mounts
+
+```
+// Anonymous Volume
+docker run -v /app/data...
+
+// Named Volume
+docker run -v data:/app/data...
+
+// Bind Mounts
+docker run -v /path/to/code:/app/code...
+```
