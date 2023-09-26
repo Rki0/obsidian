@@ -470,6 +470,7 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feed
 	- 소스 코드를 `Bind Mounts`에 넣으면 `container`가 이를 인식하여, 소스 코드를 스냅샷에서 복사하는 것이 아니라 `Bind Mounts`에서 복사하게 된다. 이는 호스트 머신의 어떤 폴더에 연결된 것이기 때문에`container`가 항상 최신의 소스 코드에 액세스할 수 있는 것이다!!
 	- 영구적이고 나에 의해 편집 가능한 데이터에 적합하다.(e.g. 소스 코드)
 	- `image`가 아니라, 실행 중인 `container`에만 적용되는 것이기 때문에 `Dockerfile`에서 설정할 수는 없다. 즉, `image`에는 영향을 주지않고 `container`에만 영향을 준다.
+	- 호스트 머신의 경로를 이용하기 때문에 호스트의 파일 시스템, 즉, 로컬에서 지워야한다.
 
 ```
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v /Users/pakkiyoung/udemy_docker:/app feedback-node:volumes 
@@ -513,6 +514,7 @@ docker run -d -p 3000:80 --name feedback-app -v feedback:/app/feedback -v "/User
 - 그 결과 `node_modules`가 살아남게 되어서, 이 폴더가 외부에서 들어오는 유입, 즉, `Bind Mounts`로 인한 충돌을 `Anonymous Volume`으로 덮어쓰게 되는 것이다.
 - 그런데 `Bind Mounts`에서는 `node_modules`가 없는데요...? 그렇다. 그냥 존재하지 않는 `node_modules` 폴더를 덮어쓰는 것이다.
 - 정리하자면, `npm install`을 통해 `image` 생성 중에 생성된 `node_modules` 폴더는 살아남아 실제로 여전히 작동하는 `Bind Mounts`와 함께 공존한다. 즉, `node_modules`는 일종의 예외라고 볼 수 있다. `node_modules`는 `Bind Mounts` 폴더의 내용물로 덮어쓰여지지 않게된다.
+- 즉, 외부(로컬) 경로보다 내부(`container`)의 경로를 우선시 할 수 있게 만들어준 것이다.
 - 이제 소스 코드의 변경 사항을 즉각 반영해주는 것을 확인할 수 있다!
 
 - 그런데....html 파일을 수정하는 것은 반영이 되는데, js 파일을 수정하는 것은 반영이 안된다.
@@ -541,3 +543,5 @@ docker run -v data:/app/data...
 // Bind Mounts
 docker run -v /path/to/code:/app/code...
 ```
+
+## Read-onnly
