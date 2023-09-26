@@ -472,6 +472,10 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feed
 
 ```
 docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v /Users/pakkiyoung/udemy_docker:/app feedback-node:volumes 
+
+
+// shortcuts version(경로를 매번 복사하기 귀찮은 경우)
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v $(pwd) feedback-node:volumes 
 ```
 
 - 아까의 명령어에서 `-v`가 또 추가된 것을 확인할 수 있다.
@@ -485,4 +489,12 @@ docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v /
 - 그렇게...위 명령어를 실행했더니..!! 에러가 발생한다. 웹 페이지가 열리지않는다.
 - 심지어 `docker ps -a`로 확인해봤더니 `container` 자체가 보이지 않는다.
 - 아무래도 실행과 동시에 종료되어 `--rm`으로 인해 삭제되는 것으로 보인다...
-- `--rm`을 지우고 `logs`를 확인해본 결과 
+- `--rm`을 지우고 `logs`를 확인해본 결과, 실행과 동시에 종료되는 것은 확인이 되었고, 그 이유는 `express`가 설치되지 않았기 때문이라고 한다.
+- `dependencies`가 제대로 `npm install`이 안된 것인데...이전까지는 잘됐다는게 문제다...
+- 왜 갑자기 안된다고 하는걸까?
+- 방금 추가한 `Bind Mounts`와 관련이 있다.
+- 무엇이 문제였을까?
+
+- `/app` 폴더에 모든 소스 코드를 덮어쓰기를 했는데, 이게 문제였다.
+- `RUN npm install` 등, `Dockerfile`의 명령들을 전부 수행한 뒤, 소스 코드를 덮어쓰기를 했기 때문에 `Dockerfile`에서 `image`를 생성하기 위해 했던 명령어들이 전부 의미없게 되버린 것이다.
+- 그래서 `npm install`이 적혀있었음에도 실행되지 않은 것 처럼 된 것이다. 실행된 소스 코드에 실행 전 소스 코드를 덮어쓰기 해버린 꼴이 된 것이니 말이다.
