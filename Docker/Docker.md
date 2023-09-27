@@ -844,3 +844,15 @@ mongoose.connect(
 - 이를 개선해보자!
 
 ## Creating Container Networks
+- `docker run`에 `--network` 옵션을 추가하면 여러 개의 `container`를 연결해줄 수 있다!
+- 즉, 모든 `container`가 서로 통신할 수 있는 네트워크가 생성된다.
+- 앞서 수동으로 진행했던 과정을 자동으로 해주는 것이다.
+- 참고로 존재하지 않는 네트워크에 대해서 실행하면 에러가 발생한다.
+- 즉, 자동으로 네트워크를 생성해주지 않는다는 것이다.
+- 따라서, 사용할 네크워크를 생성할 필요가 있다.
+
+```
+docker network create [network name]
+```
+
+- 네트워크를 생성한 뒤
