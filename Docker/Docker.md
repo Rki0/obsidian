@@ -608,4 +608,8 @@ VOLUME [ "/app/feedback" ]
 CMD [ "node", "server.js" ]
 ```
 
-- 앞서, `COPY`
+- 앞서, `Bind Mounts`를 통해 로컬의 소스를 사용하여 변경을 실시간으로 반영할 수 있었다.
+- 그런데, `Dockerfile`을 보면 `COPY`가 있다.
+- 로컬의 소스 코드를 사용하게 만들었으므로 굳이 `COPY`를 해줄 필요가 없다고 생각되는 부분이다.
+- 그러면 `COPY`를 지울 수 있을까?
+- 그렇다.
