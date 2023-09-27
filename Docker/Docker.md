@@ -681,9 +681,9 @@ RUN npm install
 COPY . .
 
 # $ 기호를 앞에 적어서 Argument임을 명시
-ENV PORT $DEFAULT_PORT
+ENV PORT ${DEFAULT_PORT}
 
-EXPOSE $PORT
+EXPOSE ${PORT}
 
 CMD [ "npm", "start" ]
 ```
