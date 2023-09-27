@@ -688,7 +688,8 @@ COPY . .
 ENV PORT 80
 
 # 바로 사용할 수 있다!
-EXPOSE PORT
+# $ 기호를 사용해 환경 변수임을 알려줘야한다.
+EXPOSE $PORT
 
 CMD [ "npm", "start" ]
 ```
