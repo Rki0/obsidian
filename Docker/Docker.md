@@ -776,6 +776,7 @@ docker run -d --rm -p 3000:8000 --env-file ./.env --name feedback-app -v feedbac
 # Containers & Networks
 - `container` 내부에서 `WWW` 웹으로 요청을 보내는 것은 특별한 설정 없이도 가능하다.(오픈 API는 그냥 연결된다는 뜻)
 - 단, DB 연결 혹은 다른 `container`간 연결은 그냥 되지 않는다.
+
 - 가령, 아래 코드가 포함된 상태에서 `container`를 시작하면 DB와 연결할 수 없다며 에러를 뱉을 것이다.
 
 ```js
@@ -812,4 +813,34 @@ mongoose.connect(
 - `localhost` 부분을 `host.docker.internal`로 변경해주면 된다!
 - `host.docker.internal`는 `Docker`가 이해할 수 있는 특수한 도메인이다.
 - 이는 `container` 내부에서 알 수 있는 호스트 머신의 IP 주소로 변환된다.
-- 
+- 물론, 위 방법은 `mongoDB`가 호스트 머신에 설치되어 있을 때 가능한 것이다. 설치되어 있지 않다면 저렇게 바꿔도 연결이 되지 않을 것이므로 참고!
+
+- `container` 간 통신은 어떻게 해야할까?
+- `node app`용 `container`가 있고, DB용 `container`가 있을 때 둘을 연결해줘야 정상적으로 작동할텐데 말이다.
+- `host.docker.internal`은 이제 작동하지 않는다. 다른 `container`의 IP 주소가 아니라 로컬 호스트 머신의 IP 주소를 참조하기 때문이다.
+- `docker container inspect`를 사용하여 DB 이미지로 만든 `container`를 살펴보자.
+- 출력되는 값들 중 `NetworkSettings`에 `IPAddress`가 있다! 여기서 `container`의 IP 주소를 얻을 수 있다.
+- 이 IP 주소를 사용하여 `container` 간 연결을 구현할 수 있다!
+- 그 IP 주소로 `host.docker.internal`을 대체해주면 된다.
+
+```js
+mongoose.connect(
+	"mongodb://DB_container의_IP_주소:27017/swfavorites",
+	{ useNewUrlParser: true },
+	(err) => {
+		if (err) {
+			console.log(err);
+		} else {
+			app.listen(3000);
+		}
+	}
+);
+```
+
+- 이제 `node app`이 들어있는 `container`와 `DB`가 들어있는 `container`가 연결되었다!
+
+- 그러면 다른 `container`를 연결하기 위해서는 매번 IP 주소를 찾는 일을 해줘야하는걸까?
+- 그리고 IP 주소가 하드 코딩되어 있기 때문에 매번 `image`를 다시 `build`해야하는데 이 것도 불편하다.
+- 이를 개선해보자!
+
+## Creating Container Networks
