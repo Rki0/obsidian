@@ -776,3 +776,40 @@ docker run -d --rm -p 3000:8000 --env-file ./.env --name feedback-app -v feedbac
 # Containers & Networks
 - `container` 내부에서 `WWW` 웹으로 요청을 보내는 것은 특별한 설정 없이도 가능하다.(오픈 API는 그냥 연결된다는 뜻)
 - 단, DB 연결 혹은 다른 `container`간 연결은 그냥 되지 않는다.
+- 가령, 아래 코드가 포함된 상태에서 `container`를 시작하면 DB와 연결할 수 없다며 에러를 뱉을 것이다.
+
+```js
+mongoose.connect(
+	"mongodb://localhost:27017/swfavorites",
+	{ useNewUrlParser: true },
+	(err) => {
+		if (err) {
+			console.log(err);
+		} else {
+			app.listen(3000);
+		}
+	}
+);
+```
+
+- 이를 해결하기 위해서는 `URL`만 바꿔주면 된다.
+- 코드 내에서 `Docker`에게 주는 특별한 힌트를 넣어주면 된다.
+
+```js
+mongoose.connect(
+	"mongodb://host.docker.internal:27017/swfavorites",
+	{ useNewUrlParser: true },
+	(err) => {
+		if (err) {
+			console.log(err);
+		} else {
+			app.listen(3000);
+		}
+	}
+);
+```
+
+- `localhost` 부분을 `host.docker.internal`로 변경해주면 된다!
+- `host.docker.internal`는 `Docker`가 이해할 수 있는 특수한 도메인이다.
+- 이는 `container` 내부에서 알 수 있는 호스트 머신의 IP 주소로 변환된다.
+- 
