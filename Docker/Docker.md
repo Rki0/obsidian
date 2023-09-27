@@ -855,4 +855,38 @@ mongoose.connect(
 docker network create [network name]
 ```
 
-- 네트워크를 생성한 뒤
+- 네트워크를 생성한 뒤에는 `container`를 연결하면 된다.
+
+```
+docker run -d --name mongodb --network favorites-net mongo
+```
+
+- 이제 `mongodb`라는 `container`는 `favorites-net`이라는 네트워크에 속하게 되었다.
+- 이번에는 하드 코딩된 `mongodb`라는 `container`의 IP 주소를 바꿔주자.
+- 여러 `container`가 동일한 네트워크의 일부분인 경우, 다른 `container`의 이름을 입력하는 것으로 그 것을 대체할 수 있다.
+
+```js
+mongoose.connect(
+	"mongodb://DB_container의_이름:27017/swfavorites",
+	{ useNewUrlParser: true },
+	(err) => {
+		if (err) {
+			console.log(err);
+		} else {
+			app.listen(3000);
+		}
+	}
+);
+```
+
+- 이렇게 입력한 `container`의 이름은 그 `container`의 IP 주소로 변환되어 사용된다.
+
+```
+docker run --name favorites -d --rm -p 3000:3000 --network favorites-net favorites-node 
+```
+
+- 코드가 변경되었으므로 `image`를 다시 `build`하고 `container`를 네트워크에 넣어주도록 하자.
+- 그런데...신기한 점이 있지않았나? `mongodb`를 실행할 때는 포트 번호를 지정하지 않았었다!
+- 하지 않아도 정상적으로 작동한다.
+- 왜? `-p` 옵션은 로컬 호스트 머신이나 네트워크 외부에서 그 `container`의 무언가에 연결할 계획인 경우에만 필요하기 때문이다.
+- `mongodb`의 경우 `favorites`라는 `container`가 연결될 뿐이며, `container` 간에 연결이 있다면 포트를 열어줄 필요가 없기 때문에 가능했던 것이다!
