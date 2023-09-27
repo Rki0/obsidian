@@ -704,4 +704,13 @@ docker run -d --rm -p 3000:8000 --env PORT=8000 --name feedback-app -v feedback:
 - CLI에 적은 8000이 반영된다! `Environment Variables`는 `runtime`에 적용되기 때문이다.
 
 - 혹은 `.env` 파일을 만들고, 그 것을 사용하도록 할 수도 있다.
-- 
+```
+PORT=8000
+```
+
+```
+docker run -d --rm -p 3000:8000 --env-file ./.env --name feedback-app -v feedback:/app/feedback -v "/Users/pakkiyoung/udemy_docker:/app:ro" -v /app/temp -v /app/node_modules feedback-node:env
+```
+
+- CLI에 `--env-file [파일 경로]`를 사용하면 된다.
+- CLI가 실행되는 곳이 루트 디렉토리이기 때문에, 해당 디렉토리의 `.env`라는 것을 명시하기 위해 `./.env`로 적는다.
