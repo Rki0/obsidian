@@ -688,7 +688,36 @@ EXPOSE ${PORT}
 CMD [ "npm", "start" ]
 ```
 
+- CLI를 사용하는 경우에는 다음과 같이 사용할 수 있다.
 
+```
+docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000 .
+```
+
+- `ARG`를 사용하는 위치에 대한 이야기를 해보자면, `ARG` 또한 결국 `layer`를 만드는 것이기 때문에, `Argument`의 변경이 있으면 그 아래에 있는 명령어들을 `cached`된 것을 사용하지 않고, 다시 `build`하고 다시 실행하는 과정을 거치게 된다.
+- 따라서, 사용하는 곳에 적절하게 배치하는 것이 좋다.
+
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+# 사용되는 곳 위로 ARG 명령어를 옮겼다.
+# ARG의 변경이 있을 시, 이 아래로만 build가 다시 진행될 것이다.
+ARG DEFAULT_PORT=80
+
+ENV PORT ${DEFAULT_PORT}
+
+EXPOSE ${PORT}
+
+CMD [ "npm", "start" ]
+```
 
 2. `Environment Variables`
 	- `Environment Variables`는 `Dockerfile`에서도 사용할 수 있고, 애플리케이션 코드에서도 사용할 수 있다.
