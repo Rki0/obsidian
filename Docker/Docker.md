@@ -619,7 +619,7 @@ CMD [ "node", "server.js" ]
 - 스냅샷을 가진 `image`를 프로덕션 환경에서 `container`를 가동하는데 사용할 수 있게하기 위함이다!
 -  (개인적으로 이 부분을 필자는 이렇게 이해했다.) 배포 환경에서 `Bind Mounts`를 사용한다면 `image` 자체는 소스 코드를 가지고 있지 않기 때문에, `container`가 로컬과 직접적으로 연결되어 있게 되고, 이는 좋지 않다는 것이다. `image`가 `build`될 때의 스냅샷을 가지고 서버를 돌리는 것이 더 안전하기 때문이다.
 
-## dockerignore
+## .dockerignore
 ```dockerfile
 FROM node
 
@@ -642,4 +642,9 @@ CMD [ "node", "server.js" ]
 - `dependencies` 설치를 위한 것과 소스 코드 스냅샷을 위한 것 말이다.
 - 그러면 `package.json`을 두 번 `COPY`하는 것이 되는데...그러고 싶지 않다!
 - 복사되는 내용을 제한할 수 있는 방법이 있을까?
-- 
+- `.dockerignore` 파일을 작성하면 된다!
+- 이를 통해 `COPY` 명령으로 복사해서는 안되는 폴더와 파일을 지정할 수 있다.
+- `.dockerignore`에 적힌 것은 `image`에 복사되지 않는다.
+```
+node_module
+```
