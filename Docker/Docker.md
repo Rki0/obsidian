@@ -700,3 +700,8 @@ docker run -d --rm -p 3000:8000 --env PORT=8000 --name feedback-app -v feedback:
 ```
 - `--env key=value`의 형태로 사용하는 것을 확인할 수 있다.
 - `-e`로 줄여서 사용할 수도 있고, `--env key=value --env key=value`처럼 사용해서 여러 환경 변수를 만들어줄 수도 있다.
+- 위 명령어에서 `PORT`를 8000으로 설정했는데, `Dockerfile`에는 80으로 정의되어 있다. 둘 중 어떤 것이 반영될까?
+- CLI에 적은 8000이 반영된다! `Environment Variables`는 `runtime`에 적용되기 때문이다.
+
+- 혹은 `.env` 파일을 만들고, 그 것을 사용하도록 할 수도 있다.
+- 
