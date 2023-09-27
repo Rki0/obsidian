@@ -774,4 +774,5 @@ docker run -d --rm -p 3000:8000 --env-file ./.env --name feedback-app -v feedbac
 - 따라서, 민감한 정보는 넣지 않는 것이 좋다.
 
 # Containers & Networks
-
+- `container` 내부에서 `WWW` 웹으로 요청을 보내는 것은 특별한 설정 없이도 가능하다.(오픈 API는 그냥 연결된다는 뜻)
+- 단, DB 연결 혹은 다른 `container`간 연결은 그냥 되지 않는다.
