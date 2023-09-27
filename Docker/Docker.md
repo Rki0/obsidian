@@ -656,4 +656,39 @@ node_modules
 
 ## Arguments & Environment Variables
 - `Docker`는 `build-time Arguments`와 `runtime environment variables`를 지원한다.
-- 
+- 이를 통해 하드 코딩을 피할 수 있다.
+- `image`를 `build` 할 때, 또는 `container`를 실행할 때만 동적으로 설정할 수 있다.
+
+1. `Arguments`
+	- `Arguments`는 `Dockerfile`에서 특정 명령어로 다른 값을 추출하는데 사용할 수 있는 변수를 설정할 수 있다.
+	- `image`를 `build`할 때 `--build-arg`를 통해 사용할 수 있다.
+
+2. `Environment Variables`
+	- `Environment Variables`는 `Dockerfile`에서도 사용할 수 있고, 애플리케이션 코드에서도 사용할 수 있다.
+	- `Dockerfile`에서 `ENV` 명령어를 사용하거나, `docker run`할 때 `--env` 옵션을 사용하는 것으로 구현할 수 있다.
+
+- `node.js`에서 `port`를 환경 변수로 사용하는 예시를 살펴보자
+```js
+app.listen(process.env.PORT);
+```
+- 이를 위해 `Dockerfile`을 다음과 같이 변경한다.
+
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+# ENV 설정
+ENV PORT 80
+
+# 바로 사용할 수 있다!
+EXPOSE PORT
+
+CMD [ "npm", "start" ]
+```
