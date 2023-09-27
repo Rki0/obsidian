@@ -645,6 +645,15 @@ CMD [ "node", "server.js" ]
 - `.dockerignore` 파일을 작성하면 된다!
 - 이를 통해 `COPY` 명령으로 복사해서는 안되는 폴더와 파일을 지정할 수 있다.
 - `.dockerignore`에 적힌 것은 `image`에 복사되지 않는다.
+
 ```
-node_module
+node_modules
 ```
+
+- `node_modules`를 `.dockerignore`에 적은 것이다.
+- 로컬에 있는 `node_modules`가 더 오래된 것이라면 중요한 `dependencies`가 적용되지 않을 수 있으므로, `COPY`에서 배제한 것이다.
+- 따라서, 로컬에 `node_modules`가 있는 경우, `image`에 복사되지않고 `npm install`로 인해 `image` 내부에 생성된 `node_modules`를 사용하게 된다.
+
+## Arguments & Environment Variables
+- `Docker`는 `build-time Arguments`와 `runtime environment variables`를 지원한다.
+- 
