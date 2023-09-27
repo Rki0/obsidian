@@ -661,7 +661,34 @@ node_modules
 
 1. `Arguments`
 	- `Arguments`는 `Dockerfile`에서 특정 명령어로 다른 값을 추출하는데 사용할 수 있는 변수를 설정할 수 있다.
+	- `Arguments`는 애플리케이션 코드에서 접근할 수 없다. `Dockerfile`에서만 사용할 수 있다.
+	- `build-time`이기 때문에 `run-time` 명령어(e.g. `CMD`)에서는 사용할 수 없다는 점에 주의하자.
 	- `image`를 `build`할 때 `--build-arg`를 통해 사용할 수 있다.
+	- 동일한 `image`를 사용하되, 다른 디폴트 값으로 여러 번 `build`를 할 때 사용할 수 있다.
+
+```dockerfile
+FROM node
+
+# Argument 생성
+ARG DEFAULT_PORT=80
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+# $ 기호를 앞에 적어서 Argument임을 명시
+ENV PORT $DEFAULT_PORT
+
+EXPOSE $PORT
+
+CMD [ "npm", "start" ]
+```
+
+
 
 2. `Environment Variables`
 	- `Environment Variables`는 `Dockerfile`에서도 사용할 수 있고, 애플리케이션 코드에서도 사용할 수 있다.
@@ -714,3 +741,5 @@ docker run -d --rm -p 3000:8000 --env-file ./.env --name feedback-app -v feedbac
 
 - CLI에 `--env-file [파일 경로]`를 사용하면 된다.
 - CLI가 실행되는 곳이 루트 디렉토리이기 때문에, 해당 디렉토리의 `.env`라는 것을 명시하기 위해 `./.env`로 적는다.
+- 참고로, 별도의 파일을 통해 설정한 환경 변수는 `container`의 정보에서 전부 확인할 수 있다.
+- 따라서, 민감한 정보는 넣지 않는 것이 좋다.
