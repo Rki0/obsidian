@@ -693,3 +693,10 @@ EXPOSE $PORT
 
 CMD [ "npm", "start" ]
 ```
+
+- CLI로 진행하는 법은 다음과 같다.
+```
+docker run -d --rm -p 3000:8000 --env PORT=8000 --name feedback-app -v feedback:/app/feedback -v "/Users/pakkiyoung/udemy_docker:/app:ro" -v /app/temp -v /app/node_modules feedback-node:env
+```
+- `--env key=value`의 형태로 사용하는 것을 확인할 수 있다.
+- `-e`로 줄여서 사용할 수도 있고, `--env key=value --env key=value`처럼 사용해서 여러 환경 변수를 만들어줄 수도 있다.
