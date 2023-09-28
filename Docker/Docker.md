@@ -1165,5 +1165,121 @@ _Do note that none of the variables below will have any effect if you start the 
 If there is already a DB that exists by means of named volume or bind mounts etc., the container seems to simply ignore those env variables.
 ```
 
-- 자, 이제 DB의 영속성을 추가했다! 다음으로는 
-- 
+- 자, 이제 DB의 영속성을 추가했다!
+- 다음으로는 Backend의 로그 파일을 영속성을 가지게 하고, 소스 코드의 변경을 실시간으로 반영할 수 있도록 변경해주자.
+
+## Add Volume & Bind Mounts in Backend
+- 로그가 담기는 폴더를 `Named Volume`으로 만들어 영속성을 추가한다.
+- 또한 Backend 폴더를 `Bind Mounts`해서 코드를 실시간으로 반영하도록 만든다.
+- `node_modules`를 `Anonymous Volume`으로 처리해서 `Bind Mounts`가 덮어쓰지 못하도록 예외 처리도 해주자.
+
+```
+docker run --name goals-backend --rm -d -v logs:/app/logs -v /Users/pakkiyoung/udemy_docker/backend:/app -v /app/node_modules -p 80:80 --network goals-net goals-node
+```
+
+- 앞서 공부했듯, 더 깊은 경로를 우선시 하기 때문에 로그 폴더는 `Bind Mounts`가 덮어쓰지 않는다.
+- 물론, `node_modules`로 같은 이유로 `Bind Mounts`가 덮어쓰지 않는다.
+
+- 이제 실시간 소스 코드 변경을 반영해보자.
+- `devDependencies`에 `nodemon`을 추가하고, `scripts`를 수정한 뒤, `Dockerfile`의 `CMD`를 변경해주자.
+
+```json
+{
+	// ... //
+
+	"scripts": {
+		"start": "nodemon app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+
+	// ... //
+
+	"devDependencies": {
+		"nodemon": "^3.0.1"
+	}
+}
+```
+
+```dockerfile
+CMD [ "npm", "start" ]
+```
+
+- `image`를 다시 `bulid`하고 `container`를 재시작하도록 하자.
+- 이제 Backend의 소스 코드 변경이 즉각 반영되는 것을 확인할 수 있다!
+
+## Add Environment Variables to connect to DB 
+- 현재 DB와 연결되는 코드에 유저 정보가 하드 코딩되어 있는데, 이를 동적으로 사용하기 위해 환경 변수로 변경하도록 하자.
+- `Dockerfile`에 `ENV`를 추가하고, 소스 코드를 변경해주자.
+
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 80
+
+ENV MONGODB_USERNAME root
+
+ENV MONGODB_PASSWORD secret
+
+CMD [ "npm", "start" ]
+```
+
+```js
+mongoose.connect(`mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@mongodb:27017/course-goals?authSource=admin`,
+	{
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	},
+	(err) => {
+		if (err) {
+			console.error("FAILED TO CONNECT TO MONGODB");
+			console.error(err);
+		} else {
+			console.log("CONNECTED TO MONGODB");
+			app.listen(80);
+		}
+	}
+);
+```
+
+- 그런데, DB 쪽에서는 `username`을 `kio`로 작성했는데, 왜 `ENV`에는 `root`라고 넣는걸까?
+- 상관없다.
+- 만약, DB에 설정한 것과 다르면 Backend를 `docker run`을 할 때 `-e`를 사용해서 환경 변수를 다시 추가해주면 된다. 이 때 추가한 것이 더 나중에 적용되므로 가능한 방법이다. 물론, 편하게 `ENV`에 똑같이 설정해놓고 `docker run`할 때 `-e`를 안 쓰는 것도 가능하다.
+- `docker run`에서 환경 변수를 설정하면 같은 `image`라도 `container` 별로 다른 환경 변수를 사용할 수 있다는 장점이 있을 것이다.
+
+```
+docker run --name goals-backend --rm -d -v logs:/app/logs -v /Users/pakkiyoung/udemy_docker/backend:/app -v /app/node_modules -p 80:80 -e MONGODB_USERNAME=kio --network goals-net goals-node
+```
+
+- 그런데, 이렇게 하면 `MongoError: Authentication failed.` 에러를 마주할 것이다.
+- `cotainer`에서 로그를 살펴보니, `MONGODB_PASSWORD`가 `undefined`로 들어오는 것이 확인된다!
+- 분명히 `Dockerfile`에 작성했는데도 말이다.
+- 하지만 문제는 `ENV` 문법을 틀렸던 것이었다.
+
+```dockerfile
+ENV MONGODB_USERNAME=root
+
+ENV MONGODB_PASSWORD=secret
+```
+
+- `=` 기호를 통해 디폴트 값을 설정해줘야하는데 이를 누락한 것이었다.
+- 다시 `image`를 `build`하고 다시 `container`를 띄우면 정상 작동하는 것이 확인된다!
+
+- 마지막으로 `.dockerignore`를 추가해서 `COPY`하지 않을 파일을 설정하자
+
+```
+node_moduels
+
+Dockerfile
+
+.git
+```
+
+- 이제 `contaienr`에 이미 `COPY`한 폴더, 파일을 다시 복사하지 않도록 처리가 완료되었다!
