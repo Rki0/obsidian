@@ -889,4 +889,10 @@ docker run --name favorites -d --rm -p 3000:3000 --network favorites-net favorit
 - 그런데...신기한 점이 있지않았나? `mongodb`를 실행할 때는 포트 번호를 지정하지 않았었다!
 - 하지 않아도 정상적으로 작동한다.
 - 왜? `-p` 옵션은 로컬 호스트 머신이나 네트워크 외부에서 그 `container`의 무언가에 연결할 계획인 경우에만 필요하기 때문이다.
-- `mongodb`의 경우 `favorites`라는 `container`가 연결될 뿐이며, `container` 간에 연결이 있다면 포트를 열어줄 필요가 없기 때문에 가능했던 것이다!
+- `mongodb`의 경우 `favorites`라는 `container`가 연결될 뿐이며, 외부와 연결할 필요가 없기 때문에 포트를 열지 않아도 됐던 것이다!
+
+- `container`에서 요청을 전송할 때에만 `Docker`에서 자동 IP 변환이 발생한다.
+- 요청이 `container`에서 전송되지 않거나, 요청이 다른 곳, 예를들어 브라우저에서 생성된 경우에는 `Docker`는 아무 작업도 하지 않는다.
+
+# Multiple Container Application with Docker
+- 대부분의 애플리케이션은 다중 `container`로 이루어져있다!
