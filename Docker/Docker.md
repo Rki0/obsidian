@@ -1116,4 +1116,45 @@ docker run --name goals-backend --rm -d -p 80:80 --network goals-net goals-node
 
 ## Add Persist Data to DB using Volumes
 - 앞서 띄웠던 DB `container`는 삭제하면 그 데이터가 전부 날아간다.
-- `Volume`을 사용해서 영속적으로 
+- `Named Volume`을 사용해서 영속적으로 만들어주자.
+
+```
+docker run --name mongodb --rm -d -v data:/data/db --network goals-net mongo
+```
+
+- 이제 DB `container`를 지웠다가 다시 실행해도 데이터가 남아있는 것을 확인할 수 있다!
+- 이제 남은 것은 DB에 접속을 제한하는 것이다.
+- `mongo image`는 이를 위해 환경 변수를 설정을 통한 인증 기능을 제공한다.
+
+```
+ocker run --name mongodb --rm -d -v data:/data/db -e MONGO_INITDB_ROOT_USERNAME=kio -e MONGO_INITDB_ROOT_PASSWORD=secret --network goals-net mongo
+```
+
+- `-e`를 통해 환경 변수 설정을 알리고, `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`를 통해 아이디와 비밀번호를 설정한다.
+- 물론, 이 방법은 안전한 방법이 아니므로 개발용으로만 사용하자.
+- 아무튼, 위 명령어를 통해 DB `container`를 시작하면, 데이터를 사용하려고 할 때 에러가 발생한다!
+- 당연하다. 아이디와 비밀번호를 설정해놨으니 기존 코드로는 접속이 제한이 되는 것이다.
+- 따라서, Backend에서 DB에 연결하는 부분의 코드를 수정해줄 필요가 있다.
+- 이 부분은 DB를 무엇을 쓰냐에 따라 달라질테니 전체적인 흐름에 집중하자.
+
+```js
+mongoose.connect(
+	"mongodb://kio:secret@mongodb:27017/course-goals?authSource=admin",
+	{
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	},
+	(err) => {
+		if (err) {
+			console.error("FAILED TO CONNECT TO MONGODB");
+			console.error(err);
+		} else {
+			console.log("CONNECTED TO MONGODB");
+			app.listen(80);
+		}
+	}
+);
+```
+
+- 그런데, 연결이 됐다고는 뜨는데 실제로 브라우저에서 요청을 전송하면 여전히 에러가 발생한다.
+- 왜? 
