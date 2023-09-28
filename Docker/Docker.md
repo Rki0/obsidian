@@ -1003,3 +1003,85 @@ docker build -t goals-react .
 ```
 
 - 다음으로는 `container`를 띄워주자.
+
+```
+docker run -p 3000:3000 -d --rm --name goals-frontend goals-react
+```
+
+- 그러나, `docker ps -a`로 확인해보면, `container`가 바로 종료되고, 삭제된 것이 확인된다.
+- `-d`를 해제하고 상황을 살펴보니 리액트가 개발 서버를 시작하고, 바로 종료되는 것을 볼 수 있었다.
+- 왜? 이건 이 리액트 프로젝트의 설정과 관련된 것이다.
+
+```
+docker run -p 3000:3000 --rm --name goals-frontend -it goals-react 
+```
+
+- `-it` 옵션을 사용해서 인터렉티브 모드로 실행하면 정상적으로 실행된다!
+- 그저 `container`를 띄우고 끝이 아니라, 명령을 입력하여 상호작용하는 것이 가능하기를 원하기 때문이다.
+
+- 만약 이 때 `Error: error:0308010C:digital envelope routines::unsupported` 에러가 발생한다면 `node` 버전이 문제일 수 있으므로, `FROM`에 `node`의 버전을 적절하게 명시한 뒤 사용하도록 하자. 여기서는 `node:16`이 정상적으로 작동하는 버전이었다.
+- 이제 Frontend도 `container`로 실행이 되도록 만들었다!
+
+## Frontend, Backend, DB in Same Network!
+- 이제 각각의 파트를 `Dockerlize`하는 것에 성공했으니, 하나의 네트워크에 담아 관리하는 것으로 전환하도록 하자.
+- 우선, 네트워크를 생성한다.
+
+```
+docker network create goals-net
+```
+
+- 이제 각각의 파트를 `container`로 띄울 때, 네트워크에 포함해서 띄워주면 된다.
+
+```
+docker run --name mongodb --rm -d --network goals-net mongo
+```
+
+- 이전과 달리 네트워크 내에서 `container` 간 통신이 이뤄지므로 포트를 적지 않는다.
+- Backend도 마찬가지이다. Frontend와 같은 네트워크에서 통신을 하고 있으므로 포트를 열지 않아도 된다.
+- 또한, 같은 네트워크 내에서 통신을 하기 때문에 DB와의 연결 코드 DB `container`를 바라보도록 수정해줘야한다.
+
+```js
+mongoose.connect(
+	"mongodb://mongodb:27017/course-goals",
+	{
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	},
+	(err) => {
+		if (err) {
+			console.error("FAILED TO CONNECT TO MONGODB");
+			console.error(err);
+		} else {
+			console.log("CONNECTED TO MONGODB");
+			app.listen(80);
+		}
+	}
+);
+```
+
+```
+docker build -t goals-node . 
+```
+
+```
+docker run --name goals-backend --rm -d --network goals-net goals-node 
+```
+
+- 마지막으로는 Frontend `container`를 네트워크에 넣어서 띄워주자.
+- 물론, 여기서도 API 통신이 진행되는 곳에서의 URL을 Backend `container`의 이름으로 바꿔줘야한다. 
+
+```js
+const response = await fetch('http://goals-backend/goals');
+```
+
+- `image`를 다시 `build`하고, `container`를 띄워주도록 하자.
+
+```
+docker build -t goals-react .
+```
+
+```
+docker run --name goals-frontend --rm -d -p 3000:3000 --network goals-net -it goals-react
+```
+
+- 로컬 환경에서 변경을 계속 확인할 수 있도록 Frontend 포트는 열어두었다.
