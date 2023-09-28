@@ -1156,4 +1156,14 @@ mongoose.connect(
 );
 ```
 
+- 만약, `MongoError: Authentication failed.`가 발생한다면 `volume`이 문제가 될 가능성이 있으므로, 앞에서 설정했던 `data`라는 `volume`을 삭제하고 다시 진행해보자.
+- 이 에러와 관련하여 유데미 강의 질의응답과 mongo의 공식 문서 발췌본을 추가한다.
+
+```
+_Do note that none of the variables below will have any effect if you start the container with a data directory that already contains a database: any pre-existing database will always be left untouched on container startup._ 
+
+If there is already a DB that exists by means of named volume or bind mounts etc., the container seems to simply ignore those env variables.
+```
+
+- 자, 이제 DB의 영속성을 추가했다! 다음으로는 
 - 
