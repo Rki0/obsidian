@@ -896,3 +896,110 @@ docker run --name favorites -d --rm -p 3000:3000 --network favorites-net favorit
 
 # Multiple Container Application with Docker
 - 대부분의 애플리케이션은 다중 `container`로 이루어져있다!
+- 크게 DB, backend, frontend로 나눴을 때 대략적으로 어떤 기능들이 필요할까?
+
+- DB
+	- Data must persist(각종 데이터 등)
+	- Access should be limited
+- Backend
+	- Data must persist(로그 파일 등)
+	- Live Source Code Update(개발 편의를 위해 코드 변경 실시간 반영)
+- Frontend
+	- Live Source Code Update
+
+## Dockerlize DB
+- `mongo`라는 `image`는 `Docker Hub`에서 공식적으로 지원되고 있으므로 바로 `container` 생성 가능
+- 만약, 백엔드쪽이 `Dockerlize`되지 않았다면 로컬 백엔드와 `conatiner`인 DB가 통신해야하는 상황이 되는 것이므로 포트를 열어줘야한다.
+```
+docker run --name mongodb -d --rm -p 27017:27017 mongo
+```
+
+## Dockerlize Backend
+- 지금까지 공부해온 방법과 다를게 없다!
+- `Dockerfile` 만들고, `image`를 `build`한다!
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 80
+
+CMD [ "node", "app.js" ]
+```
+
+- 그런데, DB와 연결을 해주기 위해서 코드를 수정해줘야한다.
+- `host.docker.internal`을 사용하여 `localhost`였던 코드를 바꿔준다.
+
+```js
+mongoose.connect(
+	"mongodb://host.docker.internal:27017/course-goals",
+	{
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	},
+	(err) => {
+		if (err) {
+			console.error("FAILED TO CONNECT TO MONGODB");
+			console.error(err);
+		} else {
+			console.log("CONNECTED TO MONGODB");
+			app.listen(80);
+		}
+	}
+);
+```
+
+```
+docker build -t goals-node .
+```
+
+- 그리고 `container`를 띄우도록 하자.
+
+```
+docker run --name goals-backend --rm goals-node
+```
+
+- 이제 DB와 Backend가 연결되었다!
+- 그러나 Frontend와는 연결이 되지 않는다.
+- Backend를 `container`에 띄우고 있을 때 노출되는 포트를 게시하지 않았기 때문이다.
+- 그래서 Frontend가 특정 포트에서 Backend와 통신하려는 것이 실패하는 것이다.
+- 따라서, 아래와 같이 `-p`를 사용해 포트를 열어주도록 하자.(이번에는 `detached` 모드로 실행했다.)
+
+```
+docker run --name goals-backend --rm -d -p 80:80 goals-node
+```
+
+- 이제 아직 `Dockerlize`되지 않은 Frontend가 Backend `container`와 통신할 수 있게 된다!
+
+## Dockerlize Frontend
+- 마찬가지로 `Dockerfile`을 작성해준다.
+
+```dockerfile
+FROM node
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
+```
+
+- `image`를 `build`해주자.
+
+```
+docker build -t goals-react .
+```
+
+- 다음으로는 `container`를 띄워주자.
