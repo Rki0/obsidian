@@ -1127,7 +1127,7 @@ docker run --name mongodb --rm -d -v data:/data/db --network goals-net mongo
 - `mongo image`는 이를 위해 환경 변수를 설정을 통한 인증 기능을 제공한다.
 
 ```
-ocker run --name mongodb --rm -d -v data:/data/db -e MONGO_INITDB_ROOT_USERNAME=kio -e MONGO_INITDB_ROOT_PASSWORD=secret --network goals-net mongo
+docker run --name mongodb --rm -d -v data:/data/db --network goals-net -e MONGO_INITDB_ROOT_USERNAME=kio -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
 ```
 
 - `-e`를 통해 환경 변수 설정을 알리고, `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`를 통해 아이디와 비밀번호를 설정한다.
