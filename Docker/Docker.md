@@ -1085,3 +1085,35 @@ docker run --name goals-frontend --rm -d -p 3000:3000 --network goals-net -it go
 ```
 
 - 로컬 환경에서 변경을 계속 확인할 수 있도록 Frontend 포트는 열어두었다.
+
+- 그런데, `GET http://goals-backend/goals net::ERR_NAME_NOT_RESOLVED` 에러가 발생한다.
+- 왜? 
+- Frontend는 어떤 서버가 아니라 브라우저에서 실행된다. 이는 Backend와 비교되는 핵심적인 차이이다.
+- Backend는 `node` 런타임에 의해 `container`에서 직접적으로 실행된다.
+- 그러나 Frontend는 그저 `npm start`를 통해 개발 서버를 시작하고, 리액트 애플리케이션을 제공한다.
+- Frontend는 `container` 내에서 실행되는게 아니라 브라우저 내에서 실행되는 것이다.
+- 즉, `http://goals-backend/goals`로 바꿔놨던 API 접근 코드가 `container`에서 실행되지 않기 때문에 적절한 IP로 변경되지 않음을 의미한다.
+- Frontend `container`에서 실행되는 것은 오직 리액트 애플리케이션을 제공하는 개발 서버뿐이다.
+- 따라서, 다시 `localhost`로 URL을 변경한 뒤에, `--network` 옵션을 제거한 뒤 다시 `container`를 띄우자.  네트워크를 활용해서 다른 `container`와 통신을 할 수 없을 뿐더러, API 통신 부분은 `Docker` 환경에서 실행되지 않기 때문이다.
+
+```js
+const response = await fetch("http://localhost/goals");
+```
+
+```
+docker run --name goals-frontend --rm -d -p 3000:3000 -it goals-react
+```
+
+- 또한, `localhost`로 URL이 변경되었기 때문에 Backend의 포트를 열어줘야 통신이 가능하므로, Backend도 포트를 개방하여 `container`를 띄워주도록 하자. 물론, 여전히 `mongodb`와는 네트워크 내 통신을 하고 있으므로 `--network`도 유지해줘야한다.
+
+```
+docker run --name goals-backend --rm -d -p 80:80 --network goals-net goals-node
+```
+
+- 이제 리액트 애플리케이션에서 에러가 발생하지 않는 것을 확인할 수 있다.
+- 물론, 여전히 개발 서버라는 점을 기억해두자.
+- 그리고 여전히 데이터 영속성과 실시간 소스 코드 변경 반영은 적용하지 않은 상태이다.
+
+## Add Persist Data to DB using Volumes
+- 앞서 띄웠던 DB `container`는 삭제하면 그 데이터가 전부 날아간다.
+- `Volume`을 사용해서 영속적으로 
