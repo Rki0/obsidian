@@ -1332,7 +1332,7 @@ Dockerfile
 - `version`은 사용하려는 `Docker Compose` 사양의 버전을 말한다. 따라서 `Docker Compose`에서 사용 가능한 기술에 영향을 미친다.
 - `services`는 최소한 하나의 하위 요소가 필요하다. 바로 `container`이다! 들여쓰기를 통해 하위 요소를 입력하고, 그들의 이름을 설정할 수 있다.
 - 그리고 그 하위 요소 각각에 대해서 다시 들여쓰기를 통해 상세 설정을 진행할 수 있다.
-- `image`를 통해 어떤 `image`를 사용할 것인지 지정할 수 있다.
+- `image`를 통해 어떤 `image`를 사용할 것인지 지정할 수 있다. 이는 `Docker hub`이나 레지스트리에 등록해놓은 것을 가져오는 것으로, 이미 `build`된 `image`를 사용한다는 점을 반드시 기억하자!
 - `Docker Compose`를 사용하면 `-d`와 `--rm`은 디폴트로 지정되기 때문에 굉장히 편하다!
 - `volumes`를 통해 `volume`을 지정할 수 있다. `volume`을 지정할 때는 맨 앞에 `-`를 붙여준다.
 - `environments`를 통해 환경 변수를 지정할 수 있다. 두 가지 방법이 있는데, `MONGODB_USERNAME: kio`라고 적는 것과 `- MONGODB_USERNAME=kio`라고 적는 것이 있다. 선호하는 것을 사용하자. 전자의 경우 `:` 다음에 스페이스를 넣어줘야하는 것을 잊지말자.
@@ -1432,3 +1432,120 @@ volumes:
 ```
 
 ## Docker-Compose Frontend
+-  Frontend도 Backend와 다를게 없다. 유일하게 다른 점은 `-it` 옵션이 사용됐었다는 점이다.
+- 이는 `stdin_open`, `tty` 옵션을 통해 설정할 수 있다.
+- `stdin_open` 옵션은 이 서비스가 개방형 입력 연결이 필요하다는 것을 알리는 것이다.
+- 그리고 `tty` 옵션을 통해 이를 터미널에 연결해주도록 하자.
+- 마지막으로 Backend와 연결되어 있으므로, `depends_on`에 Backend를 넣어주자.
+
+```yaml
+version: "3.8"
+
+services:
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: kio
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      
+  backend:
+    build: ./backend
+    ports:
+      - "80:80"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+
+volumes:
+  data:
+  logs:
+```
+
+- 이제 Frontend, Backend, DB가 전부 잘 작동하는 것을 확인할 수 있다!
+
+## Force Re-Building image & Naming container
+
+- `docker-compose up --build`를 사용하면 `image`의 `re-build`를 강제할 수 있다.
+- 그렇지 않으면 `Dockerfile`을 기반으로 `build`히는 `image`가 한 번만 `build`된다.
+- 즉, 기존 `image`를 재사용 한다는 것이다.
+- 예를들어, 소스 코드에 변경이 생겨 `image`를 새로 `build`해야하는 일이 발생한다면 `--build`를 추가하여 이를 강제할 수 있다는 것이다.
+- 참고로 `docker-compose up`은 `docker-compose build`를 실행하는 것을 포함하고 있기 때문에 `build` 옵션에 작성해놓은 커스텀 `image`들이 `build`되는 것이다.
+- 또한, 앞서 `container`의 이름이 `Docker Compose`에 의해 생성된 것으로 실행된다고 했었다.
+- 그런데, `container_name` 옵션을 사용해서 이름을 직접 지정하면 그 이름을 사용하게 할 수도 있다.
+
+```yaml
+version: "3.8"
+
+services:
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: kio
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      
+  backend:
+    build: ./backend
+    ports:
+      - "80:80"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+
+volumes:
+  data:
+  logs:
+```
+
+# Utility Containers
+- `Utility Containers`란 Node, PHP 환경 등과 같이 어떠한 `Environment`만을 가지고 있는 `container`를 말한다.
+
+## Why we use Utility Containers?
+- `npm`은 `NodeJs`가 설치된 환경에서만 사용 가능하다.
+- 지금까지는 로컬에 저런 것들이 설치된 상태에서 진행을 했기에, 로컬에서 만든 프로젝트를 그대로 `container`에 넣어왔다.
+- 그러나, 매번 달라지는 프로젝트를 할 때마다 Node 설치하고, Python 설치하고, PHP 설치하고...이러면 매우 귀찮을 것이다.
+- 이런 부분을 도와주는 것이 `Utility Containers`이다!
+
+## Various approach to implement Command in Docker
+- `docker exec` 명령어를 통해 `container`가 실행하는 기본 명령 외에 특정 명령을 실행할 수 있다.
+- 즉, 실행 중인 `container` 내에서 추가적인 명령을 실행할 수 있다는 것이다.
+- 예를들어, `node` 프로젝트를 시작하고자 할 때, `docker run node`를 하면 자동적으로 `image`를 불러와서 `container`를 띄운다.
+- 터미널을 사용해 추가 명령을 하기 위해서는 `docker run node -it -d`를 사용한다.
+- 이 후, `docker exec -it [container_name] npm init`을 해주면 `npm init`을 실행하여 node 애플리케이션 초기 설정을 하는 과정을 진행할 수 있다.(`-it` 옵션이 없으면 인터랙션이 안되어 바로 종료되어 버리니 주의하자)
+- 
