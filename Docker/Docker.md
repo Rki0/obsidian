@@ -1548,4 +1548,92 @@ volumes:
 - 예를들어, `node` 프로젝트를 시작하고자 할 때, `docker run node`를 하면 자동적으로 `image`를 불러와서 `container`를 띄운다.
 - 터미널을 사용해 추가 명령을 하기 위해서는 `docker run node -it -d`를 사용한다.
 - 이 후, `docker exec -it [container_name] npm init`을 해주면 `npm init`을 실행하여 node 애플리케이션 초기 설정을 하는 과정을 진행할 수 있다.(`-it` 옵션이 없으면 인터랙션이 안되어 바로 종료되어 버리니 주의하자)
-- 
+- 즉, 로컬에 `node`가 설치되어 있지 않아도 `container` 내에서 초기 프로젝트를 시작할 수 있다는 것이다!!
+- 다른 방법도 있다.
+- 디폴트 명령을 오버라이드 하는 방법인데, `docker run -it node npm init`이 그 예시이다.
+- `node image`를 실행해서 `container`를 생성하는데, `-it`로 인터랙션 모드를 실행한 뒤, `npm init`으로 바로 프로젝트 초기 설정을 진행하는 것이다.
+- 그러나 이 방법은 인터랙티브 모드가 끝나면 프로젝트가 종료되서 `container`가 사라진다. 즉, 현재 단계에서는 아직 쓸모가 없다는 것이다.
+
+## Let's build Utility Container!
+- `Utility Container`를 만들고자 한다면 자체 `image`가 필요하다.
+- 따라서, `Dockerfile`을 작성한다.
+- 또한, 커맨드 실행을 사용자가 모두 담당하도록 하기 위해 `CMD` 작성은 하지 않았다.
+
+```dockerfile
+FROM node:14
+
+WORKDIR /app
+```
+
+- `image`를 `build`하고 `container`를 띄워보자.
+- 그런데, 이번에는 `container`에서 생성한 것을 로컬로 미러링하고자 한다!!!
+- `container`에서 생성한 것을 호스트 머신에서도 사용할 수 있게 되는 것이다.
+- `container`의 도움으로 호스트 머신에서 프로젝트를 시작할 수 있게 되는 것이다.
+- 호스트 머신에 부가 프로그램을 설치하지 않고도 `Utility Container`을 사용해 프로젝트를 진행하는 것이다.
+- 방법은 간단하다. `-v`를 사용해 로컬에서 프로젝트 경로를 `Bind Mounts`하면 된다.
+
+```
+docker run -it -v /Users/pakkiyoung/udemy_docker_util:/app node-util npm init
+```
+
+- 위 명령어를 실행하면 호스트 머신에서 그 결과가 보여지는 것을 확인할 수 있다!!(`package.json`의 생성)
+- 따라서, `npm`과 `node`를 호스트 머신에서 지워도 된다!!
+
+## Using ENTRYPOINT
+- `Dockerfile`에서 사용할 수 있는 명령어로 `CMD`와 유사하지만 다른 점이 있다.
+- 앞서 `docker run`에서 `image` 뒤에 명령을 추가하면 그 명령이 실행됐는데, 그 때 `Dockerfile`에 지정된 명령을 덮어쓰게 된다.(`CMD`를 덮어쓰게 되버린다는 뜻이다)
+- 그러나, `ENTRYPOINT`의 겨우 `docker run`에서 `image` 이름 뒤에 입력하는 모든 것이 `ENTRYPOINT` 뒤에 추가된다.
+
+```dockerfile
+FROM node:14
+
+WORKDIR /app
+
+ENTRYPOINT [ "npm" ]
+```
+
+- 즉, `docker run ..... npm init`으로 작성했던 것을 `docker run ..... init`으로 작성할 수 있게 된다는 것이다!
+- 이를 확인하기 위해 `image`를 다시 `build`하고 `container`를 생성해보자.(`package.json`도 지우고)
+
+```
+docker build -t mynpm .
+```
+
+```
+docker run -it -v /Users/pakkiyoung/udemy_docker_util:/app mynpm init
+```
+
+- `init`만 입력해도 `npm init`을 입력한 것처럼 작동하는 것을 확인할 수 있다(`package.json`이 생성됨)
+- 이를 이용해 `dependencies`를 바로 설정하도록 할 수도 있다.
+
+```
+docker run -it -v /Users/pakkiyoung/udemy_docker_util:/app mynpm install express --save
+```
+
+- `express` 라이브러리가 설치되는 것을 확인할 수 있다!
+- 그런데, 이 방법은 터미널에서 긴 명령어를 수행해야한다는 단점이 존재한다. `Docker Compose`로 이를 해결해보자!
+
+```yaml
+version: "3.18"
+
+services:
+  mynpm:
+	build: ./
+	stdin_open: true
+	tty: true
+    volumes:
+	  - ./:/app
+```
+
+- 이제 `docker-compose up`을 하면 될 것 같지만, 이 방법은 `npm`만 실행하고 종료되어 버린다.
+- 하나의 `container`를 `Docker-compose`로 다룰 때는 `run` 명령어를 사용해 보도록 하자.
+
+```
+docker-compose run --rm npm init
+```
+
+- 이제 이전과 같이 `package.json`을 생성하는 CLI가 나오는 것을 확인할 수 있다.
+
+# Images, Container, Compose - All in action!
+- php - Laravel 을 사용하는 프로젝트를 구성하는 것을 통해 지금까지 배운 것을 총 복습해보자!
+- 이 기술 스
