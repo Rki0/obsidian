@@ -1314,4 +1314,29 @@ Dockerfile
 - 앞서 언급한 문제점 중 2번째 문제인, 여러 개의 `container`를 각각 다루는 것으로 인한 불편함을 해결하고자 한다.
 - 여러 개의 `containers`를 한번에 관리할 수 있는 방법에 대해서 알아보자.
 - 바로 `Docker Compose`가 이를 도와주는 도구이다.
+- `Docker Compose`는 `docker build`와 `docker run` 명령을 대체할 수 있는 도구이다.
+- 다수의 명령을 단 하나의 파일로 가지고 있을 수 있다.
+- 즉, 여러 개의 `container`를 조종하는 명령을 하나의 파일로 할 수 있다는 것이다!
+- 그리고 그 파일은 다른 사람들과 공유할 수 있다!
+- `Docker Compose`는 커스텀 `image`를 위한 `Dockerfile`를 대체하지 않는다.
+- `Docker Compose`는 `iamge`나 `container`를 대체하지 않는다. 그 것들을 다루는 것을 쉽게 하는 것이다.
+- `Docker Compose`는 다수의 호스트 머신에서 다중 `container`를 관리하는데는 적합하지 않다.
+- 하나의 호스트 머신에서 다중 `container`를 다루는데 강점이 있는 것이다!!
 ## Automating Multi-Container Setups
+- `Docker Compose`에서 핵심이자 가장 중요한 요소는 `Services`라고 불린다.(e.g. `containers`)
+- 각각의 `Service` 아래에서 포트를 개방할 수도 있고, 환경 변수를 설정할 수도 있고, `volume`이나 네트워크를 정의할 수도 있다.
+- 앞서, `Docker Compose`는 `Dockerfile`을 대체하는 것이 아니라고 했다.
+- 따라서, 별도의 파일을 만들어줘야하는데, 바로 `docker-compose.yml` 혹은 `docker-compose.yaml` 파일이다. 이 파일들은 들여쓰기로 구분되므로 참고하자.
+- 이 파일 안에서 다중 `container` 환경, 프로젝트 설정 등을 기재한다.
+
+- `version`은 사용하려는 `Docker Compose` 사양의 버전을 말한다. 따라서 `Docker Compose`에서 사용 가능한 기술에 영향을 미친다.
+- `services`는 최소한 하나의 하위 요소가 필요하다. 바로 `container`이다! 들여쓰기를 통해 하위 요소를 입력하고, 그들의 이름을 설정할 수 있다.
+- 그리고 그 하위 요소 각각에 대해서 다시 들여쓰기를 통해 상세 설정을 진행할 수 있다.
+- `image`를 통해 어떤 `image`를 사용할 것인지 지정할 수 있다.
+- `Docker Compose`를 사용하면 `-d`와 `--rm`은 디폴트로 지정되기 때문에 굉장히 편하다!
+- `volumes`를 통해 `volume`을 지정할 수 있다. `volume`을 지정할 때는 맨 앞에 `-`를 붙여준다.
+- `environments`를 통해 환경 변수를 지정할 수 있다. 두 가지 방법이 있는데, `MONGODB_USERNAME: kio`라고 적는 것과 `- MONGODB_USERNAME=kio`라고 적는 것이 있다. 선호하는 것을 사용하자. 전자의 경우 `:` 다음에 스페이스를 넣어줘야하는 것을 잊지말자.
+- 아니면 환경 변수 파일을 지정할 수도 있다.(`--env-file` 처럼)
+- `env_file`을 사용하면 환경 변수 파일을 가져오는 것을 실행할 수 있다. 단 이 때는 `=`을 사용해서 환경 변수를 정의하는 것으로 바꿔줘야한다. 마찬가지로 해당 명령어의 자식으로 해당 환경 변수 파일의 경로를 입력해주면 된다.
+- 작성하다보니 `key:value pair`인 경우(`:` 사용)라면 `-`가 필요없고, 그게 아니라면 `-`가 필요하다는 것을 알 수 있었다.
+- `networks`를 통해 네트워크를 지정할 수도 있다. 그런데, 할 필요가 없다! `Docker Compose`를 사용하면 입력된 모든 서비스에 대해 새 환경을 자동으로 생성하고, 
