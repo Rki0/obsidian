@@ -1339,4 +1339,96 @@ Dockerfile
 - 아니면 환경 변수 파일을 지정할 수도 있다.(`--env-file` 처럼)
 - `env_file`을 사용하면 환경 변수 파일을 가져오는 것을 실행할 수 있다. 단 이 때는 `=`을 사용해서 환경 변수를 정의하는 것으로 바꿔줘야한다. 마찬가지로 해당 명령어의 자식으로 해당 환경 변수 파일의 경로를 입력해주면 된다.
 - 작성하다보니 `key:value pair`인 경우(`:` 사용)라면 `-`가 필요없고, 그게 아니라면 `-`가 필요하다는 것을 알 수 있었다.
-- `networks`를 통해 네트워크를 지정할 수도 있다. 그런데, 할 필요가 없다! `Docker Compose`를 사용하면 입력된 모든 서비스에 대해 새 환경을 자동으로 생성하고, 
+- `networks`를 통해 네트워크를 지정할 수도 있다. 그런데, 할 필요가 없다! `Docker Compose`를 사용하면 입력된 모든 서비스에 대해 새 환경을 자동으로 생성하고, 모든 서비스를 즉시 그 네트워크에 추가하기 때문이다. 즉, 하나의 동일한 `Docker Compose` 파일에 정의된 서비서들은 이미 `Docker`에 의해 생성된 동일한 네트워크의 일부가 된다!! 물론, 자체 네트워크를 사용하기 위해 입력해도 된다.(e.g. `goals-net`) 그러나 자동 생성된 네트워크를 사용해도 서비스들이 그 네트워크에 같이 속해있기만 하면 되기 때문에 문제가 없다.
+
+- 앞서 말한 `volumes`는 특정 서비스 내부의 `volume`을 적을 때도 사용하지만, `services`의 형제 요소로 사용하기도한다.
+- 서비스 내에서 사용하는 `Named Volume`을 나열해줘야하기 때문이다!! `Anonymous Volume`과 `Bind Mounts`는 작성할 필요가 없다!
+- 특이하게도 명명된 이름만 작성하고 값은 넣지 않는다.(e.g. `data:`)
+- 이는 `Docker Compose`가 `Named Volume`을 인식하기 위해 필요한 구문일 뿐이기 때문이다.
+
+## Run Docker-Compose!
+
+- 아래 명령어를 통해 `Docker Compose`에서 찾을 수 있는 모든 서비스가 시작된다.
+- 그런데 `Attached`로 실행되기 때문에 `-d` 옵션을 붙여주면 된다.
+
+```
+docker-compose up -d
+```
+
+- 만약 `Docker Compose`의 모든 서비스를 종료하고 싶다면 아래 명령어를 사용하면 된다.
+
+```
+docker-compose down
+```
+
+- 네트워크와 `container`를 모두 삭제해준다.
+- 단, `volume`은 삭제되지 않는다.
+- `volume`까지 삭제하고 싶다면 `-v` 옵션을 붙여주면 된다.
+
+## Docker-Compose DB
+
+```yaml
+version: "3.8"
+
+services:
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: kio
+      MONGO_INITDB_ROOT_PASSWORD: secret
+	  # - MONGO_INITDB_ROOT_USERNAME=kio
+	  # - MONGO_INITDB_ROOT_PASSWORD=secret
+	# env_file:
+	  # - ./env/mongo.env
+
+volumes:
+  data:
+```
+## Docker-Compose Backend
+- DB는 `official image`를 사용했기 때문에 문제가 없었지만, Backend는 커스텀 `image`를 사용했었다.
+- 따라서 `Dockerfile`을 만들어뒀었다.
+- 그러면...`image`를 `build`하는 것을 어떻게 알려주지?
+- `Docker Compose`에는 이 기능 또한 들어있다!
+- `build` 옵션을 통해 이를 진행할 수 있다. `build`를 위한 `Dockerfile`이 있는 폴더를 알려주면 된다.
+- 물론, 중첩된 폴더 구조에서 사용하기 위한 `context`라는 옵션이 있는데, `Dockerfile`은 항상 본인이 속해 있는 폴더에 대해서 진행하기 때문에 상위 폴더에 접근해 무엇인가를 하기 위해서는 굉장히 복잡해진다. 이는 뒤에서 살펴보도록하자.
+- `ports`를 통해 포트를 열어주도록 하자.
+- Backend에서는 `Bind Mounts`도 사용했었는데, 이는 `volumes`에 같이 적어주면 된다.
+- 게다가 절대 경로를 입력해줬어야했는데, `Docker Compose`에서는 이를 편하게 할 수 있다!
+- 상대 경로를 입력하면 된다!
+- 마지막으로 `Docker Compose`에만 있는 `depends_on` 옵션을 통해 이미 실행되고 있는 다른 `container`에 의존한다는 것을 알려줄 수 있다.
+- Backend는 `mongodb`에 의존하고 있으므로 이를 연결해주면 된다.
+- 참고로, 실행 중인 `container`를 확인해보면 `NAME`이 yaml 파일에 작성한 것과 약간 다른 것을 볼 수 있는데, 이 것은 `Docker Compose`가 자동으로 부여한 것으로 내부적으로는 yaml에 작성한 것을 사용해도 문제없이 인식하여 작동한다.
+
+```yaml
+version: "3.8"
+
+services:
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: kio
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      
+  backend:
+    build: ./backend
+    ports:
+      - "80:80"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - mongodb
+
+volumes:
+  data:
+  logs:
+```
+
+## Docker-Compose Frontend
