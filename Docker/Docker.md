@@ -1283,3 +1283,35 @@ Dockerfile
 ```
 
 - 이제 `contaienr`에 이미 `COPY`한 폴더, 파일을 다시 복사하지 않도록 처리가 완료되었다!
+
+## Add Bind Mounts in Frontend
+- 이제 Frontend도 실시간 소스 코드 반영을 해주기 위해 작업을 해줘야한다.
+- 이는 `Bind Mounts`로 구현할 수 있다.
+- 그런데, 전체 Frontend 폴더를 `Bind`할 필요는 없다. `src`, 즉, 소스 코드 부분만 처리해주면 된다. 이 부분이 리액트 코드가 있는 부분이기 때문이다.
+
+```
+docker run --name goals-frontend --rm -d -p 3000:3000 -it -v /Users/pakkiyoung/udemy_docker/frontend/src:/app/src goals-react 
+```
+
+- 이제 소스 코드 변경이 실시간으로 변경되는 것을 확인할 수 있다!
+- 이제 끝이다! 다만 약간 개선할 부분이 있다.
+- Frontend `image`를 `build`할 때, `npm install`도 오래 걸리는데, 그로 인해 생성된 `node_modules`를 `COPY`하는 것까지 있어서 시간이 많이 소요된다.
+- 따라서, `.dockerignore` 파일을 통해 이를 관리하도록 하자.
+
+```
+node_modules
+Dockerfile
+.git
+```
+
+- 확실히 `image`를 `build`하는 속도가 빨라진 것이 보인다!
+
+- 이제 개발 단계에서의 `Docker` 설정은 마무리가 되었다.
+- 그러나, 여전히 개발 단계에서만 사용하고 있다는 것은 문제가 될 수 있다. 배포 단계를 전혀 고려하지 않고 사용하고 있기 때문이다.
+- 또한, 매번 `docker run` 같은 커맨드를 Frontend, Backend, DB마다 입력해줘야했기 때문에 명령어 누락의 위험성이 높다.
+
+# Docker Compose
+- 앞서 언급한 문제점 중 2번째 문제인, 여러 개의 `container`를 각각 다루는 것으로 인한 불편함을 해결하고자 한다.
+- 여러 개의 `containers`를 한번에 관리할 수 있는 방법에 대해서 알아보자.
+- 바로 `Docker Compose`가 이를 도와주는 도구이다.
+## Automating Multi-Container Setups
