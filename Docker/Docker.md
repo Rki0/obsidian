@@ -1535,6 +1535,7 @@ volumes:
 
 # Utility Containers
 - `Utility Containers`란 Node, PHP 환경 등과 같이 어떠한 `Environment`만을 가지고 있는 `container`를 말한다.
+- 만약, 어떤 기능을 담당하는, 예를들어, DB, Nginx, 소스 코드 등등 지속적으로 기능 수행을 위해 작동하고 있어야하는 것들은 `App Container`이다.
 
 ## Why we use Utility Containers?
 - `npm`은 `NodeJs`가 설치된 환경에서만 사용 가능하다.
@@ -1636,4 +1637,29 @@ docker-compose run --rm npm init
 
 # Images, Container, Compose - All in action!
 - php - Laravel 을 사용하는 프로젝트를 구성하는 것을 통해 지금까지 배운 것을 총 복습해보자!
-- 이 기술 스
+- 이 기술 스택이 상당히 복잡한 구성을 가지기 때문에 연습하기 좋기 때문이다.
+
+## Add Nginx Container
+- `Nginx`가 하는 일은 들어오는 요청을 살펴보고 `php container`로 전달해주는 것이다.
+- `nginx.conf` 파일을 추가하고, `docker-compose.yaml`을 작성하자.
+- `official image`의 설명을 보면, 어떻게 설정해야하는지 잘 알려주므로 꼭 참고하도록 하자.
+
+```yaml
+version: "3.8"
+
+services:
+  server:
+  image: "nginx:stable-alpine"
+  ports:
+    - "8000:80"
+  volumes:
+	- ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+```
+
+## Add php Container
+- `php.dockerfile`을 생성하여 `php official image`를 기반으로 한 커스텀 `image`를 생성하고자 한다.
+- VSC는 `~~~.dockerfile`을 `Dockerfile`로 인식해준다.
+- `/var/www/html`은 웹 서버에 표준적으로 이용되는 디렉토리 구조이다.
+- 만약, `CMD`나 `ENTRYPOINT` 명령어를 사용하지 않는다면, `image`의 디폴트 명령어를 사용하게 되는데, `php`의 경우에는 `php` 인터프리터를 호출하는 명령이다. 이는 php 코드를 해석해주는 역할을 한다.
+- 소스 코드 변경 반영을 위해 `Bind Mounts`를 하는데, 이 때, `delegated` 옵션을 추가해주면 변경 반영에 `Batch`가 적용되어, 성능 최적화가 가능하다.
+- 
