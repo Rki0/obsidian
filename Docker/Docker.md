@@ -1714,4 +1714,12 @@ npm:
 - 개발 중에는 `Bind Mounts`를 많이 사용했지만, 실제 프로덕션에서는 사용하지 말아야한다.
 - 프로덕션에서는 `Containerized app`은 동작을 위해 추가적인 `build step`이 필요할 수 있다.(e.g. React apps)
 - `Docker Compose`를 로컬에서 사용하여 모든 것을 테스트할 수 있었지만, 프로덕션에서는 다중 `Container` 프로젝트는 다중 호스트(리모트 머신)에 나눠질 필요가 있다.
-## 
+## Hosting Provider
+-  `Docker`를 배포에 사용할 수 있게 해주는 서비스는 정말 많은데, 대표적으로는 `AWS`, `Azure` ,`GCP`가 있다.
+## Deploy Docker Container on AWS EC2
+- 크게 3가지 단계로 구분할 수 있다.
+
+1. Create and launch EC2 Instance, VPC(Virtual Public Cloud) and security group
+2. Configure security group to expose all required ports to WWW
+3. Connect to instance(SSH), install Docker and run container
+
