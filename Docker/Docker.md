@@ -1723,3 +1723,8 @@ npm:
 2. Configure security group to expose all required ports to WWW
 3. Connect to instance(SSH), install Docker and run container
 
+## Bind Mounts, Volumes & COPY
+- 개발 단계와 배포 단계에서는 `container`를 실행하는 것에 차이가 있기 때문에, 이들의 사용에 차이가 발생한다.
+
+1. 개발 단계
+	- Containers should encapsulate the runtime environment but not necessarily the code
