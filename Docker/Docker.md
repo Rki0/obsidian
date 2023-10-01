@@ -1662,4 +1662,34 @@ services:
 - `/var/www/html`은 웹 서버에 표준적으로 이용되는 디렉토리 구조이다.
 - 만약, `CMD`나 `ENTRYPOINT` 명령어를 사용하지 않는다면, `image`의 디폴트 명령어를 사용하게 되는데, `php`의 경우에는 `php` 인터프리터를 호출하는 명령이다. 이는 php 코드를 해석해주는 역할을 한다.
 - 소스 코드 변경 반영을 위해 `Bind Mounts`를 하는데, 이 때, `delegated` 옵션을 추가해주면 변경 반영에 `Batch`가 적용되어, 성능 최적화가 가능하다.
-- 
+- 또한, `php image`가 내부적으로 9000번 포트를 개방하고 있는데, 우리는 `Nginx`를 통해 이와 통신하므로 `nginx.conf`에서 `php`를 9000번으로 연결되게 해줘야한다.
+
+## Add MySQL Container
+- `MySQL`도 `mongoDB` 때와 동일하다. `official image`를 사용하여 시작한다.
+- `image`를 추가하고, 환경 변수를 등록한다.
+
+## Add Composer Container
+- Laravel을 설치하기 위해 composer를 사용한다.
+- 이는 `Utility Container`이다.
+
+## Run specific services using Docker Compose
+- `Docker Compose`에 `Utility Container`가 포함되어 있는 경우, 그들을 제외하고 특정 `container`만 실행하고 싶을 수도 있다.
+
+```
+docker-compose up server php mysql
+```
+
+- `up` 뒤에 `target`이 되는 서비스들을 작성해주면 된다.
+- `MySQL` 설치 과정에서 `no matching manifest for linux/arm64/v8 in the manifest list entries` 에러가 발생하는데, 이는 `docker-compose.yaml`에서 `mysql` 하단에 `platform: linux/amd64`를 추가해주면 해결된다.
+
+- 그런데, 사용하고자 하는 서비스 이름을 전부 작성해주는 것은 너무 귀찮다.
+- 하나만 입력하면 자동으로 나머지를 실행하도록 할 수는 없을까?
+- `docker-compose.yaml`의 특정 서비스에 옵션을 추가하면 이를 가능하게 할 수 있다.
+- `depends_on`에 하나의 서비스와 함께 실행될 서비스 목록을 작성하면 된다.
+- 또한, 소스 코드 변경에 대해 `image`를 새롭게 `build`할 수 있도록 `docker-compose` 명령어에 `--build` 옵션을 추가해주자.
+
+```
+docker-compose up --build server
+```
+
+## 
