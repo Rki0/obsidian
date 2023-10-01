@@ -1692,4 +1692,26 @@ docker-compose up server php mysql
 docker-compose up --build server
 ```
 
+## Docker Compose without Dockerfile
+- `Dockerfile`이 없는 경우에도 `Docker Compose` 내에서 명령을 진행할 수 있다.
+- 단, `RUN`, `COPY` 등의 명령어를 수행할 수 없기 때문에 기본 `image`에 `entrypoint`와 작업 디렉토리 설정 정도만 할 수 있다.
+
+```yaml
+npm:
+  image: node:14
+  working_dir: /var/www/html
+  entrypoint: ["npm"]
+  volumes:
+    - ./src:/var/www/html
+```
+
+- 따라서 `Dockerfile`을 사용하는 것이 `docker-compose.yaml`을 보다 깔끔하게 사용할 수 있게 해준다고 생각된다.
+- 물론, 어떤 방법을 사용할지는 본인의 자유이다.
+
+# Deploying Docker Containers
+## From Development to Production
+- 로컬 머신에서 작동했던 것이 배포 후, 리모트 머신에서 동일하게 동작해야한다!
+- 개발 중에는 `Bind Mounts`를 많이 사용했지만, 실제 프로덕션에서는 사용하지 말아야한다.
+- 프로덕션에서는 `Containerized app`은 동작을 위해 추가적인 `build step`이 필요할 수 있다.(e.g. React apps)
+- `Docker Compose`를 로컬에서 사용하여 모든 것을 테스트할 수 있었지만, 프로덕션에서는 다중 `Container` 프로젝트는 다중 호스트(리모트 머신)에 나눠질 필요가 있다.
 ## 
