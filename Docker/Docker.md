@@ -1728,3 +1728,61 @@ npm:
 
 1. 개발 단계
 	- Containers should encapsulate the runtime environment but not necessarily the code
+	- Use "Bind Mounts" to provide your local host project files to the running container
+	- Allows for instant updates without restarting the container
+2. 프로덕션 단계
+	- A container should really work standalone, you should not have source code on your remote machine.
+	- Image / Container is the "single source of truth". 즉, `image`만 가져와서 실행시키면 이 애플리케이션에 필요한 모든 것을 얻을 수 있다는 사실을 의미.
+	- Use "COPY" to copy a code snapshot into the image
+	- Ensures that every image runs without any extra, surrounding configuration or code
+
+## Connect to EC2 Instance
+- 여기까지는 어렵지 않다. 인스턴스를 생성하고, SSH로 리모트 머신에 접근하면 된다.
+- `pem key-pair`를 다운받을 때, 프로젝트 루트 폴더에 같이 넣어주면, EC2에서 안내해주는 SSH 접근 명령어를 그대로 복사해서 사용하면 되기 때문에 편하다.
+- SSH 클라이언트로 접근에 성공하면 터미널에서 실행되는 것들은 리모트 머신에서 실행되는 것이 된다.
+
+## Install Docker to Virtual Machine
+- 우선 리모트 머신의 모든 필수 패키지를 업데이트 한다.
+```
+sudo yum update -y
+```
+
+- 그리고 `Docker`를 설치한다.
+```
+sudo yum -y install docker
+```
+
+- `Docker`를 시작한다.
+```
+sudo service docker start
+```
+
+```
+sudo usermod -a -G docker ec2-user
+```
+
+## Deploy Source Code VS Image
+- 이제 리모트 머신에 `Docker`를 설치했으므로, `image`를 가져와야하는데 두 가지 방법이 있다.
+
+1. Deploy Source Code
+	- 소스 코드, `Dockerfile` 등이 들어 있는 프로젝트 폴더의 모든 것은 리모트 머신에 복사하는 것이다.
+	- 그 후, 그 곳에서 `image`를 `build`하는 방식이다.
+	- Build image on remote machine
+	- Push source code to remote machine, run `docker build` and then `docker run`
+2. Deploy Built Image
+	- 로컬 머신에서 미리 `image`를 `build`하고, 리모트 머신에 이를 배포한다.
+	- Build image before deployment(e.g. on local machine)
+	- Just execute `docker run`
+
+- 첫 번째 방법은 불필요하게 복잡한 것들이 좀 있다.
+- 따라서, 두 번째 방법으로 진행한다.
+
+- `Docker Hub`에 `Repository`를 생성하고, 로컬 머신에서 `image`를 업로드 한다.
+- 이 때, `.dockerignore`를 작성하여 불필요하거나 공유하면 안되는 것들은 제외시켜놓자.
+
+```
+node_modules
+Dockerfile
+*.pem
+```
+
