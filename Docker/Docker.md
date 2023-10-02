@@ -1757,7 +1757,7 @@ sudo yum -y install docker
 sudo service docker start
 ```
 
-## Deploy Source Code VS Image
+## Deploy Source Code VS Deploy Image
 - 이제 리모트 머신에 `Docker`를 설치했으므로, `image`를 가져와야하는데 두 가지 방법이 있다.
 
 1. Deploy Source Code
@@ -1784,12 +1784,17 @@ Dockerfile
 
 - `image`를 빌드한다.
 ```
-docker build -t node-app .
+docker build -t [image name] .
+```
+
+- 같은 `image`에 `tag`를 달아 `Docker Hub`에 업로드하자.
+```
+docker tag [image name] [image tag]
 ```
 
 - 만약 `docker push`가 안된다면 `docker login`을 먼저 하고 진행하도록 하자.
 ```
-docker push rki0/docker-udemy
+docker push [image tag]
 ```
 
 - 이제 다시 EC2 터미널로 돌아가서 진행하도록 하자.
@@ -1797,6 +1802,9 @@ docker push rki0/docker-udemy
 - 권한 문제가 발생하는 것을 방지하기 위해 `sudo` 명령어를 함께 사용한다.
 - `Docker Hub`의 `Repository`에 올렸던 `image`를 실행하는 것이다.
 ```
+sudo docker run -d --rm -p 80:80 [Docker Hub image]
+
+ex)
 sudo docker run -d --rm -p 80:80 rki0/udemy-docker
 ```
 
@@ -1810,3 +1818,46 @@ docker build --platform linux/amd64 -t node-app .
 ```
 
 - 그리고 다음 단계를 다시 진행하도록 하자.
+- 참고로, `image`는 로컬(여기서는 리모트 머신)에 존재하는 것을 사용하기 때문에 이전에 생성된 `image`를 수동으로 지우고 진행해야한다.
+
+```
+docker image rm rki0/udemy-docker
+```
+
+- `image`를 지우고, 새롭게 `pull`했더니 잘 되는 것을 확인 할 수 있다!
+- 자, 이제 `docker run`까지 잘 되었으니...확인하는 일만 남았다!
+- 간단하다. EC2 콘솔에서 찾을 수 있는 `IPv4 Public IP`로 접속하면 잘 돌아가고 있는지가 바로 보인다.
+- 그러나...접속을 시도해봤지만, 결국 연결되지 않은 채로 끝나버린다.
+- 왜? 보안 문제 때문이다! EC2 인스턴스는 기본적으로 WWW의 모든 것과 연결이 끊어져있다.
+- 이를 연결해주기 위해 보안 그룹을 설정하면 된다.
+- `Inbound`와 `Outbound`가 있다.
+- `Outbound`는 다른 곳에 있는 인스턴스 대기열로부터 허용되는 트래픽을 제어한다. 디폴트로 모든 것을 허용하므로 `Docker Hub`에 접근하고, `docker run`을 실행하고, `image`를 다운로드 하는 것이 가능했던 것이다.
+- `Inbound`는 어딘가에 있는 이 인스턴스의 대기열에 허용된 모든 트래픽이 표시된다. `Outbound`와는 다르게 단 하나의 포트만 열려 있는 것이 확인된다. SSH에 대한 22번 포트가 그 것인데, 이 덕분에 전 세계가 포트 22를 통해 이 인스턴스에 연결할 수 있는 것이고, 따라서, `pem key-pair`이 중요한 것이다. 자신을 식별할 수 있는 수단이기 때문이다. 누구나 연결할 수 있지만 `pem key-pair`가 있는 사람만이 성공적으로 접근할 수 있을 것이다.
+- 아무튼, `HTTP` 요청이 허용될 수 있도록 포트를 개방해줘야한다.
+- `Inbound` 편집에 들어가 `HTTP` 유형을 개방해주도록 하자.(디폴트로 80번 포트가 열린다.)
+- 이제 다시 `IPv4 Public IP`로 접속하면!!!! 짠!! 연결이 된 것을 확인할 수 있다!
+
+- 이게 정말 엄청난 이유가, 리모트 머신에는 `Docker`와 `Docker Hub`에 있는 `image`만 설치했을 뿐이다.
+- 그 외에 어떤 것도 설치하지 않았는데, `node` 애플리케이션이 동작하는 것이다!!
+- `container`에 이 애플리케이션을 구동하기 위한 모든 것이 들어있다는 것이다.
+
+## Manage & Update Container, Image
+- 이제 특정 `built image`를 EC2에 배포하는 것은 성공했으니, 이들을 어떻게 업데이트할 수 있는지 알아보자.
+- 소스 코드에 변경이 생겼을 때, 어떻게 리모트 서버에 이를 가져올 수 있을까?
+- 간단하다. `image`를 다시 `build`하고, `Docker Hub`에 다시 `push`하고, 그 `image`를 다시 설치하면 된다.
+- 앞서 말했듯, 리모트 서버에서는 기존에 있던 `image`를 수동으로 삭제하고 진행한다.
+- 삭제하지 않고, `Docker Hub`에서 `image`를 `pull`하는 방법도 있다.
+
+```
+sudo docker pull [Docker Hub image]
+```
+
+- 이 후, `docker run`을 하면 `pull`한 `image`로 실행하기 때문에, 지우는 과정을 생략해도 된다.
+
+## Problem of this approach
+- 위 배포 방법은 몇 가지 단점이 있다.
+- 바로...모든 것을 수동으로 진행하고 있다는 것이다.
+- 인스턴스 생성도, 구성도, 연결도, 뭐든 전부 수동으로 하고 있다는 것이다.
+- 또한, 주의할 점이 있는데 `AWS` 같은 클라우드 서비스를 이용할 때는 반드시 리모트 머신을 온전하게 우리의 소유물로 가지고 있어야한다는 것이다.
+- 보안 등이 뚫리면 비용 등의 모든 문제는 우리에게 온다.
+- 이를 위해 필수적인 소프트웨어를 업데이트 상태로 유지해야하고, 네트워크
