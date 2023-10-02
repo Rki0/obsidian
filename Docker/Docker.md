@@ -1757,10 +1757,6 @@ sudo yum -y install docker
 sudo service docker start
 ```
 
-```
-sudo usermod -a -G docker ec2-user
-```
-
 ## Deploy Source Code VS Image
 - 이제 리모트 머신에 `Docker`를 설치했으므로, `image`를 가져와야하는데 두 가지 방법이 있다.
 
@@ -1786,3 +1782,31 @@ Dockerfile
 *.pem
 ```
 
+- `image`를 빌드한다.
+```
+docker build -t node-app .
+```
+
+- 만약 `docker push`가 안된다면 `docker login`을 먼저 하고 진행하도록 하자.
+```
+docker push rki0/docker-udemy
+```
+
+- 이제 다시 EC2 터미널로 돌아가서 진행하도록 하자.
+- 이전에 미리 `Docker`를 설치해놨기 때문에 `docker run` 명령어를 사용할 수 있다.
+- 권한 문제가 발생하는 것을 방지하기 위해 `sudo` 명령어를 함께 사용한다.
+- `Docker Hub`의 `Repository`에 올렸던 `image`를 실행하는 것이다.
+```
+sudo docker run -d --rm -p 80:80 rki0/udemy-docker
+```
+
+- 그런데 다음과 같은 에러가 발생했다. `WARNING: The requested image's platform (linux/arm64/v8) does not match the detected host platform (linux/amd64) and no specific platform was requested`
+- 찾아보니, `image`를 `build`했던 로컬 머신과 EC2 서버와의 플랫폼 호환성 문제인 것으로 보인다.
+- 따라서, `build` 단계에서 이를 해결하여 `image`를 만들어한다.
+- 다시 `image` 빌드 단계부터 시작하자. `--platform linux/amd64` 명령어를 통해 플랫폼을 설정하여 `build`를 진행하도록 하자.
+
+```
+docker build --platform linux/amd64 -t node-app .
+```
+
+- 그리고 다음 단계를 다시 진행하도록 하자.
