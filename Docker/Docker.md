@@ -1894,4 +1894,12 @@ sudo docker pull [Docker Hub image]
 - 이 부분은 환경 변수로 관리해주면 개발 단계와 배포 단계를 좀 더 편하게 왔다갔다 할 수 있을 것이다.
 
 - `image`를 `build`하고, `tag`를 지정하고 `Docker Hub`에 올린다.
+- 배포 환경에서는 개발 환경에서와 달리 코드의 실시간 변경을 반영하지 않으므로, `nodemon`을 사용해 `npm start`를 했던 개발 환경과 달리, 배포 환경에서는 `node app.js`처럼 해줘야한다.
+- 따라서, Backend의 `Dockerfile`의 `CMD`를 `AWS ECS` 콘솔에서 적절히 변경해줘야한다.
+- `AWS ECS`에서 `Task` 생성 시 확인할 수 있는 `Environment`에서 `Command`에 `node,app.js`를 입력해주면 된다.(`,` 구분은 `ECS`에서 요구하는 구분 규칙이니까 참고.)
+- 물론, 이 콘솔창에서 하지 않고, `image`와 `container`를 활용해서 진행하는 방법도 있다.(개인적으로는 그게 더 편해보인다.)
+- 환경 변수를 설정을 위해 `Dockerfile`에서 필요한 `ENV`를 작성하고 다시 `Docker Hub`에 올려주자.(`ENV`는 `AWS ECS` 콘솔에서 수정할 수 있으니 적당한 디폴트 값을 적어도 되는듯 하다.)
+- 이후, 콘솔에서 알맞은 환경 변수로 설정해주도록 하자.
+- 그렇게, Backend `container`를 추가했다.
+- 이제 DB `container`를 추가하도록 하자.
 - 
