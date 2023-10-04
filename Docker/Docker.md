@@ -1870,4 +1870,6 @@ sudo docker pull [Docker Hub image]
 - 따라서, `Docker`를 직접 사용하지 않고, `AWS ECS`의 규칙을 따라야한다는 것을 기억하자!!!
 - 즉, `Docker`를 설치하지 않기 때문에 `container`의 배포, 실행 등이 더 이상 `Docker` 명령으로 수행되지 않음을 의미한다!
 
-## Migrate to AWS ECS
+## AWS ECS(Elastic Container Service)
+- ECS에서 `Task Definition`을 통해 `container`를 등록하는데, 이 것은 `docker run`이 어떤 명령어를 수행해야하는지 알려주는 것과 같다. (e.g. `--name`, `-p`)
+- 
