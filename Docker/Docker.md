@@ -1902,4 +1902,10 @@ sudo docker pull [Docker Hub image]
 - 이후, 콘솔에서 알맞은 환경 변수로 설정해주도록 하자.
 - 그렇게, Backend `container`를 추가했다.
 - 이제 DB `container`를 추가하도록 하자.
+
+- 같은 방법으로 `container`를 추가하는데, `Official Image`를 사용하기 때문에 `image`를 적는 곳에 `Repository`가 아니라 `mongo`(`Official Image` 이름 그대로) 작성해주면 된다.
+- `mongoDB`의 기본 포트인 27017번을 매핑해준다.
+- DB 연결을 위한 환경 변수를 입력해준다.
+
+- 이제 `Clusters`로 들어가, `Services`에서 생성을 해준다.
 - 
