@@ -1908,4 +1908,4 @@ sudo docker pull [Docker Hub image]
 - DB 연결을 위한 환경 변수를 입력해준다.
 
 - 이제 `Clusters`로 들어가, `Services`에서 생성을 해준다.
-- 
+- 145강부터...
