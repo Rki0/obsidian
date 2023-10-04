@@ -1872,4 +1872,26 @@ sudo docker pull [Docker Hub image]
 
 ## AWS ECS(Elastic Container Service)
 - ECS에서 `Task Definition`을 통해 `container`를 등록하는데, 이 것은 `docker run`이 어떤 명령어를 수행해야하는지 알려주는 것과 같다. (e.g. `--name`, `-p`)
+- `FARGATE`는 `container`가 실행 중일 때만 서버를 구동하므로, 항상 EC2 인스턴스를 가지고 있지 않다는 것을 보장한다. 따라서 가격 측면에서 훨씬 안정적일 수 있다.
+
+## Update Container in AWS ECS
+- 소스 코드에 변경이 생겼다면 `image`를 다시 `build`하고, `tag`를 정해준 뒤, `Docker Hub`에 다시 올린다.
+- 문제는, `AWS ECS`가 `Docker Hub`에서의 변경을 어떻게 감지하냐는 것이다.
+- `AWS ECS`의 `Cluster`의 `Task Definition`에서 이를 설정할 수 있다.
+- 새로운 서비스를 만든다. 이 때, 최신 `image`를 가져와서 사용하게 된다.
+- `Actions` 탭에서 `Update Service`를 통해 업데이트를 클릭하면 된다.
+- 이러면 `Cluster`에 새로운 최신의 `Task`가 등록되며, 이게 활성되면 기존의 `Task`는 사라진다.
+- 이제 제공되는 IP로 접속하면 변경 사항이 반영된 것을 확인할 수 있다.
+
+## Multiple Containers with AWS ECS
+- 이번에는 DB와 Backend Container를 배포해보자.
+- `Docker Compose`를 사용하면 배포가 편할 것 같지만 그렇지 않다. 로컬에서 실행할 때와는 달리 고려해야하는 것들이 늘어나기 때문이다. 따라서, 여기서는 개별적으로 배포를 진행한다.
+- `AWS ECS`에서는 서비스 이름을 작성해서 IP를 자동으로 얻어서 사용하는 코드를 사용할 수 없다!(`mongoDB` 연결할 때 사용했던 그 것!)
+- 왜? 개발 단계에서는 모든 것들이 하나의 컴퓨터에서 발생하는데, 배포가 되면 각각의 `container`가 클라우드 프로바이더(`AWS`로 제공된 리포트 머신들)에 의해 실행되고 관리되기 때문에 동일한 머신에서 이들이 관리될 확률이 매우 낮다.
+- `AWS ECS`의 경우, 동일한 `Task`에 `container`를 추가하면 동일한 머신에서의 실행이 보장된다!! 이를 활용할 것이다!
+- 그러나 여전히 네트워크를 생성하지는 않으므로, 서비스 이름 대신 `localhost`를 코드 내부에서 주소로 사용할 수 있게 해준다.(이 또한 `mongoDB` 연결할 때 경험했던 그 것!)
+- 따라서, `AWS ECS`로 배포하는 경우 서비스 이름 대신 `localhost`로 작성해야한다.
+- 이 부분은 환경 변수로 관리해주면 개발 단계와 배포 단계를 좀 더 편하게 왔다갔다 할 수 있을 것이다.
+
+- `image`를 `build`하고, `tag`를 지정하고 `Docker Hub`에 올린다.
 - 
