@@ -40,4 +40,25 @@
 	- 즉, `isFetching` + 이 쿼리를 만든 적이 없다. fetch 중이고, 표시할 캐시 데이터도 없다는 뜻.
 
 - 즉, `isLoading`은 `isFetching`의 subset이다.
-- 큰 의미가 없어
+- 큰 의미가 없어보이지만, cached data가 있을 때와 없을 때의 코드를 구분하는 경우가 있어 활용된다.(e.g. pagination)
+
+# Stale Data
+- Why does it matter if the data is stale?
+- Data refetch only triggers for stale data
+	- For example, component remount, window refocus
+	- `staleTime` translates to "max age"(데이터를 허용하는 최대 나이)
+	- How to tolerate data potentially being out of date?(데이터가 만료되었다고 판단하는 시간)
+	- 즉, `staleTime`을 설정하는 것은 해당 데이터가 언제 만료되는 것인지를 설정하는 것과 같다.
+	- `staleTime`이 지나면 데이터가 낡은(stale) 데이터가 된다.
+	- 기본값이 0인데, 디폴트로는 항상 서버에서 다시 가져와야 한다고 가정하고 있다는 뜻이 된다. 실수로 클라이언트에 만료된 데이터를 줄 확률을 줄일 수 있기 때문이다.
+
+# staleTime vs cacheTime
+- `staleTime` is for re-fetching
+- Cache is for data that might be re-used later
+	- query goes into "cold storage" if there's no active `useQuery`
+	- cache data expires after `cacheTime`(default : 5 min)
+		- how long it's been since the last active `useQuery`.
+		- 즉, 특정 쿼리에 대한 `useQuery`가 활성화된 후 경과한 시간을 의미한다.
+	- After the cache expires, the data is garbage collected
+- Cache is backup data to display while fetching
+- 새로운 데이터를 수집하는 동안 빈 페이지가 보여지는 것을 막고, 조금 오래된 데이터라도 보여주고 있는 것이다. 이는 활용하기 나름이므로, 사용하지 말아야할 때는 `cacheTime`을 0으로 설정하면 된다.
