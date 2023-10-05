@@ -31,3 +31,13 @@
 - Retry on error
 - Callbacks
 	- 에러나 응답에 대해 콜백을 전달할 수 있다.
+
+# isFetching vs isLoading
+1. isFetching
+	- the async query function hasn't yet resolved
+2. isLoading
+	- no cached data, plus isFetching
+	- 즉, `isFetching` + 이 쿼리를 만든 적이 없다. fetch 중이고, 표시할 캐시 데이터도 없다는 뜻.
+
+- 즉, `isLoading`은 `isFetching`의 subset이다.
+- 큰 의미가 없어
