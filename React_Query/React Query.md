@@ -62,3 +62,29 @@
 	- After the cache expires, the data is garbage collected
 - Cache is backup data to display while fetching
 - 새로운 데이터를 수집하는 동안 빈 페이지가 보여지는 것을 막고, 조금 오래된 데이터라도 보여주고 있는 것이다. 이는 활용하기 나름이므로, 사용하지 말아야할 때는 `cacheTime`을 0으로 설정하면 된다.
+
+# Why don't comments refresh?
+- 특정 게시물의 코멘트를 fetch하는 `useQuery`를 사용했지만 게시물이 변경해도 코멘트 데이터가 변경되지 않았고, `stale` 상태로 이전과 동일한 데이터를 유지한다...왜???
+- Every query uses the same key(comments)
+- Data for queries with known keys only refetched upon trigger. 즉, 알려진 key를 사용하는 경우라면 어떠한 트리거가 있어야지만 refetch를 한다는 것이다!
+- Example triggers:
+	- component remount
+	- window refocus
+	- running refetch function
+	- automated refetch
+	- query invalidation after a mutation
+- 이러한 이유로 인해서, 데이터가 만료되어도 새 데이터를 가져오지 않았던 것이다.
+## solution
+- Option : remove programmatically for every new title
+	- it's not easy
+	- it's not really what we want
+- No reason to remove data from the cache...
+	- we're not even performing the same query!
+- Query includes Post Id
+	- Cache on a per-query basis
+	- don't share cache for any "comments" query regardless of post id
+- What we really want : label the query for each post separately
+- Pass array for the query key, not just a string(e.g. `['comments', post.id]`)
+- Treat the query key as a dependency array
+	- When key changes, create a new query
+- Query function values should be part of the key
