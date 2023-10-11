@@ -88,3 +88,21 @@
 - Treat the query key as a dependency array
 	- When key changes, create a new query
 - Query function values should be part of the key
+
+# Pagination
+- Track current page in component state(`currentPage`)
+- Use query keys that include the page number(`["posts", currentPage]`)
+- User clicks "next page" or "previous page" button
+	- update `currentPage` state
+	- fire off new query
+
+# Pre-fetching
+- Pagination를 구현해서 다음 페이지로 넘어갈 때, 데이터를 불러오는 것 때문에 로딩이 걸린다.
+- 이는 UX에 좋지않다. Pre-fetching을 통해 미리 다음 데이터를 가져와 캐시에 넣어놓는 것으로 로딩이 보이는 문제를 해결해보자.
+- adds data to cache
+- automatically stale(configurable)
+- shows while re-fetching
+	- as long as cache hasn't expired!
+- Prefetching can be used for any anticipated data needs
+	- not just pagination!
+- 
