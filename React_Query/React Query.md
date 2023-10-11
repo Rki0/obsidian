@@ -244,3 +244,15 @@
 	- prefetch next page
 - different trigger : prefetch treatments on home page load
 	- user research : 85% of home page loads are followed by treatments tab loads
+	- 그러면 유저가 클릭하기 전에 미리 treatments 데이터를 가져오면 좋겠다!
+	- Treatments don't change often, so cached data isn't really a problem
+- garbage collected if no `useQuery` is called after `cacheTime`
+	- if typically not loaded by default `cacheTime`(5 min), specify longer cacheTime
+
+- `prefetchQuery` is a method on the `queryClient`
+	- adding to the client cache
+- `useQueryClient` returns `queryClient`(with Provider)
+- Make a `uesPrefetchTreatments` hook within `useTreatments.ts`
+	- uses the same query function and key as the `useTreatments` call
+	- call `usePrefetchTreatments` from Home component
+	- 
