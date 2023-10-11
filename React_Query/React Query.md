@@ -180,3 +180,22 @@
 - integrating with auth
 - dependent queries
 - testing
+
+# custom hooks
+- in larger apps, make custom hook for each type of data
+	- can access from multiple components
+	- no risk of mixing up keys
+	- query function encapsulated in custom hook
+	- abstracts implementation from display layer
+		- update hook if you change implementation
+		- no need to update components
+
+# useIsFetching
+- in smaller apps
+	- used `isFetching` from `useQuery` return object
+
+- in larger app
+	- Loading spinner whenever any query `isFetching`
+	- `useIsFetching` tell us this!
+
+- No need for `isFetching` on every custom hook / `useQuery` call
