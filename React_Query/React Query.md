@@ -199,3 +199,48 @@
 	- `useIsFetching` tell us this!
 
 - No need for `isFetching` on every custom hook / `useQuery` call
+
+# QueryClient default onError option
+- No `useError` analogy for `useIsFetching`
+	- need more than integer; unclear how to implement
+- Instead, set default `onError` handler for QueryClient
+	- defaults for QueryClient
+
+# Alternative to onError : Error Boundary
+- handler errors with React Error Boundary
+- `useErrorBoundary` for `useQuery`
+- option to `useQuery / useMutation`
+	- or in `defaultOptions` when creating QueryClient
+- Set to true to propagate errors to the nearest error boundary
+
+# Options for pre-populating data
+- method
+	- where to use?
+	- data from?
+	- added to cache?
+
+- `prefetchQuery`
+	- method to `queryClient`
+	- server
+	- yes
+
+- `setQueryData`
+	- method to `queryClient`
+	- client
+	- yes
+
+- `placeholderData`
+	- method to `useQuery`
+	- client
+	- no
+
+- `initialData`
+	- method to `useQuery`
+	- client
+	- yes
+
+# Prefetch Treatments
+- saw prefetch with pagination
+	- prefetch next page
+- different trigger : prefetch treatments on home page load
+	- user research : 85% of home page loads are followed by treatments tab loads
