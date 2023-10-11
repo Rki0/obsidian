@@ -170,3 +170,13 @@
 	- For displaying a loading spinner
 	- We'll see an example of when it's useful to distinguish between `isFetching` and `isFetchingNextPage`
 
+# Bi-directional Scrolling
+- Bi-directional is useful when starting in the middle
+- All `next` methods and properties have equivalent for `previous`
+
+# React Query in Larger App
+- centralizing fetching indicator / error handling
+- refetching data
+- integrating with auth
+- dependent queries
+- testing
