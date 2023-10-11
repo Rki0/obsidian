@@ -124,3 +124,49 @@
 	- `isLoading` but no `isFetching`
 	- by default, no retries(configurable!)
 
+# Infinite Scroll
+- fetch new data "just in time" as user scrolls
+- more efficient than fetching all data at once
+- Fetch new data when...
+	- user click a button
+	- user scrolls to certain point on the page
+## vs pagination
+- pagination
+	- track current page in component state
+	- new query updates page number
+	- 다른 페이지 데이터 셋에 생기는 방식
+- `useInfiniteQuery` tracks next query
+	- next query is returned as part of the data
+	- 즉, 원래 데이터 배열에 추가되는 방식
+
+# Shape of useInfiniteQuery Data
+- Shape of data different than `useQuery`
+- Object with two properties : 
+	- pages
+	- pageParams
+- Every query has its own element in the `pages` array
+- `pageParams` tracks the keys of queries that have been retrieved
+	- rarely used, won't use here
+
+# useInfiniteQuery Syntax
+- `pageParams` is a parameter passed to the queryFn
+- Current value of `pageParams` is maintained by React Query
+- `useInfiniteQuery` options
+	- `getNextPageParam` : lastPage, allPages
+		- 다음 페이지로 가는 방식을 정의한다.
+		- Updates `pageParam`
+		- Might use all of the pages of data(`allPages`)
+		- we will use just the `lastPage` of data(specifically the `next` property)
+
+# useInfiniteQuery Return Object Properties
+- `fetchNextPage`
+	- function to call when the user needs more data
+	- 즉, 스크롤에서 데이터가 소진되는 지점에서 사용될 함수
+- `hasNextPage`
+	- Based on return value of `getNextPageParam`
+	- 마지막 쿼리의 데이터를 어떻게 사용할지 지시한다.
+	- if `undefined`, no more data
+- `isFetchingNextpage`
+	- For displaying a loading spinner
+	- We'll see an example of when it's useful to distinguish between `isFetching` and `isFetchingNextPage`
+
