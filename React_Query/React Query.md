@@ -41,6 +41,7 @@
 
 - 즉, `isLoading`은 `isFetching`의 subset이다.
 - 큰 의미가 없어보이지만, cached data가 있을 때와 없을 때의 코드를 구분하는 경우가 있어 활용된다.(e.g. pagination)
+- `isFetching`을 사용하면 캐시 데이터가 있더라도 true가 되기 때문에, pagination 같은 경우 UX를 위해 `isLoading`을 사용하는게 더 좋다.
 
 # Stale Data
 - Why does it matter if the data is stale?
@@ -105,4 +106,21 @@
 	- as long as cache hasn't expired!
 - Prefetching can be used for any anticipated data needs
 	- not just pagination!
-- 
+
+# Mutations
+- Mutation : making a network call that changes data on the server
+	- jsonplaceholder API doesn't change server
+	- go through the mechanics of making the change
+- Day Sap app will demonstrate showing changes to user:
+	- 변경 사항을 유저에게 보여주는 방법은 여러 가지가 있다.
+	- Optimistic updates(assume change will happen) : 서버로 전달되는 변경이 잘 됐다고 가정하고 진행하는 방법. 만약, 잘 안 됐다면 롤백한다.
+	- Update React Query cache with data returned from the server
+	- Trigger re-fetch of relevant data(invalidation)
+
+# useMutation
+- Similar to `useQuery`, but :
+	- returns `mutate` function
+	- doesn't need query key
+	- `isLoading` but no `isFetching`
+	- by default, no retries(configurable!)
+
