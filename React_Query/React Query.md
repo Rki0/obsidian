@@ -255,4 +255,36 @@
 - Make a `uesPrefetchTreatments` hook within `useTreatments.ts`
 	- uses the same query function and key as the `useTreatments` call
 	- call `usePrefetchTreatments` from Home component
-	- 
+
+# Filtering with the select option
+- Allow user to filter out any appointments that aren't available
+- Why is the select option the best way to do this?
+	- React Query memo-izes to reduce unnecessary computation
+	- tech details : 
+		- triple equals comparison of select function
+		- only runs if data changes and the function has changed
+	- need a stable function(`useCallback` for anonymous function)
+
+# Re-fetching! Why? When?
+- Re-fetch ensures stale data gets updated from server
+	- seen when we leave the page and refocus
+- Stale queries are re-fetched automatically in the background when :
+	- New instances of the query mount
+	- Every time a react component(that has a useQuery call) mounts
+	- The window is refocused
+	- The network is reconnected
+	- configured `refetchInterval` has expired
+		- Automatic polling
+
+# Re-fetching! How?
+- Control with global or query-specific options :
+	- `refetchOnMount`, `refetchOnWindowFocus`, `refetchOnReconnect`, `refetchInterval`
+	- Or, imperatively : `refetch` function in `useQuery` return object
+
+# Suppressing Re-Fetch
+- How?
+	- Increase stale time
+	- turn off `refetchOnMount`, `refetchOnWindowFocus`, `refetchOnReconnect`
+- Only for very rarely changed, not mission-critical data
+	- treatments or staff(definitely no appointments!)
+- Ask : is it worth it?
