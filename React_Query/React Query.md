@@ -288,3 +288,17 @@
 - Only for very rarely changed, not mission-critical data
 	- treatments or staff(definitely no appointments!)
 - Ask : is it worth it?
+
+# Update Global Settings
+- Global default options vs individual query options
+- Here, want settings for everything but appointments
+	- User profile and user appointments invalidated after mutations
+	- Appointments get special settings(including auto-refetching on interval)
+
+# Polling / Auto Re-Fetching
+- Appointments is the opposite of treatments and staff
+	- We want it to be updated even if the user doesn't take action
+	- Appointments may change on server, want to keep up-to-date
+- Overrode defaults for `staleTime`, `cacheTime`, `refetchOn*`
+- Use `refetchInterval` option to useQuery
+- 
