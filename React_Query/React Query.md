@@ -370,3 +370,37 @@
 	- no `isLoading` vs `isFetching` : because there is no cache
 	- returns `mutate` function which actually runs mutation
 	- `onMutate` callback(useful for optimistic queries!)
+
+# invalidateQueries
+- Invalidate appointments cache data on mutation
+	- so user doesn't have to refresh the page
+- `invalidateQueries` effects : 
+	- marks query as stale
+	- triggers re-fetch if query currently being rendered
+
+# Query key Prefixes
+- Goal : invalidate all queries related to appointments on mutation
+- `invalidateQueries` takes a query key **prefix**
+	- invalidate all related queries at once
+	- can make it exact with `{exact : true}` option
+	- other queryClient methods take prefix too(like `removeQueries`)
+
+# Optimistic Updates
+- update cache before response from server
+- you're "optimistic" that the mutation will work
+
+- cache gets updated quicker
+	- especially useful if lots of components rely on it
+	- what if your optimism was unfounded and the server update fails?
+## Rollback / Cancel Query
+- `useMutation` has an `onMutate` callback
+	- returns context value that's handed to `onError` for rollback
+	- context value contains previous cache data
+- `onMutate` function can also cancel refetches-in-progress
+	- don't want to overwrite optimistic update with old data from server!
+
+# Making Query "Cancel-able"
+- Query functions haven't been cancelable by React Query
+- In order to cancel from React Query, query function must :
+	- return a promise with a `cancel` property that cancels query
+	- 
