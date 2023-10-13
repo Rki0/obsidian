@@ -301,4 +301,39 @@
 	- Appointments may change on server, want to keep up-to-date
 - Overrode defaults for `staleTime`, `cacheTime`, `refetchOn*`
 - Use `refetchInterval` option to useQuery
-- 
+
+# JWT Authentication
+- server sends token on successful login(or user creation)
+- client sends token in headers with requests as proof of identify
+## Security
+- token contains encoded information such as the username and user ID
+- decoded and matched on the server
+
+# React Query and Auth
+- Who should "own" the user data, `useAuth` or `useQuery`?
+	- Should `useAuth` call `useQuery`, or make the axios call directly?
+	- Should `useAuth` have a provider that stores data, or store user data in React Query cache?
+## Separation of Concerns
+- React Query : provide cache for "sever state" on the client
+- `useAuth` : provides functions for signin/signup/signout
+- Conclusion : React Query will store data(via `useUser`)
+- `useAuth` collects user data from call to server(add to cache)
+## Role of useUser
+- Return `user` data from React Query
+	- Load from `localStorage` on initialization
+- Keep user data up to date with server with `useQuery`
+	- query function return `null` if no user logged in
+- Whenever user updates(sign in/ sign out / mutation)
+	- update React Query cache via `setQueryData`
+	- update `localStorage` in `onSuccess` callback
+		- `onSuccess` runs after :
+		- `setQueryData`
+		- query function
+
+# Why not store user data in Auth provider?
+- Definitely an option
+- Disadvantage is added complexity
+	- Separate Provider(Context) to create/maintain
+	- Redundant data in React Query cache vs dedicated Auth Provider
+- Starting fresh : store in React Query cache, forgo Auth Provider
+- Legacy project : may be more expedient to maintain both
