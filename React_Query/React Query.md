@@ -337,3 +337,36 @@
 	- Redundant data in React Query cache vs dedicated Auth Provider
 - Starting fresh : store in React Query cache, forgo Auth Provider
 - Legacy project : may be more expedient to maintain both
+
+# Set query cache values in useAuth
+- React Query acting as a provider for auth
+- Use `queryClient.setQueryData`(쿼리 키와 값을 가져와 쿼리 캐시에 해당 키에 대한 값을 설정할 수 있다.)
+
+# Setting Initial Value
+- Use `initialData` value to `useQuery`
+	- For use when you want initial value to be added to the cache
+	- For placeholder, use `placehodlerData` or default destructed value
+- Initial value will come from `localStorage`
+
+# Dependent Queries
+- Separate query for user appointments
+	- Change more frequently than user data
+- Make the query dependent on `user` being truthy
+
+# Remove userAppointments Query
+- Make sure user appointments data is cleared on sign out
+	- `queryClient.removeQureis`
+- Why not use `removeQureis` for user data?
+	- `setQueryData` invokes `onSuccess`(`removeQuries` does not)
+- `userAppointments` does not need `onSuccess` for useUser
+
+# useMutation
+- 일회성이다.
+- very similar to `useQuery`!
+- Differences
+	- no cache data
+	- no retries
+	- no refetch
+	- no `isLoading` vs `isFetching` : because there is no cache
+	- returns `mutate` function which actually runs mutation
+	- `onMutate` callback(useful for optimistic queries!)
