@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ad4f93c417d8caaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React Test(Jest, React Testing Library).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -123,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React_Query/React Query.md",
+                "file": "React Test(Jest, React Testing Library).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React_Query/React Query.md",
+                "file": "React Test(Jest, React Testing Library).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React_Query/React Query.md"
+                "file": "React Test(Jest, React Testing Library).md"
               }
             }
           },
@@ -203,10 +215,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4a5165c728e4e71d",
+  "active": "ad4f93c417d8caaf",
   "lastOpenFiles": [
-    "Docker/Docker.md",
     "React_Query/React Query.md",
+    "React Test(Jest, React Testing Library).md",
+    "Test",
+    "Docker/Docker.md",
     "React_Query",
     "Algorithm/Search/Naive String Search.md",
     "Algorithm/Dynamic Programming.md",
@@ -234,7 +248,6 @@
     "Algorithm/Sort/Selection Sort.md",
     "Algorithm/Sort/Bubble Sort(Sinking Sort).md",
     "Data_Structure/Linked_List/Doubly Linked List.md",
-    "Data_Structure/Linked_List/Linked List.md",
     "Pasted image 20230915223330.png",
     "Algorithm/Sort",
     "Untitled.canvas",
