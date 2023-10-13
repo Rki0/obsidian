@@ -403,4 +403,11 @@
 - Query functions haven't been cancelable by React Query
 - In order to cancel from React Query, query function must :
 	- return a promise with a `cancel` property that cancels query
-	- 
+
+# Manually Canceling Query
+- React Query uses AbortController to cancel queries
+	- standard JavaScript interface, send AbortSignal to DOM request
+- Automatically canceled queries use this signal "behind the scenes"
+	- out-of-date or inactive queries
+- Manually canceled axios query :
+	- pass `signal` to axios via argument to query function
