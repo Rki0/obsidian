@@ -63,3 +63,22 @@ expect(elementArray).toHaveLength(7);
 	- assertions throw errors when expectation fails
 - No error -> tests pass
 	- Empty test passes!
+
+```js
+test("renders learn react link", () => {
+	throw new Error("test failed");
+});
+```
+
+# TDD(Test-Driven Development)
+- Write tests before writing code
+	- then write code according to "spec" set by tests
+- "red-green" testing
+	- Tests fail before code is written
+
+1. Write "shell" function(내용은 없고 존재만 하는 함수, 컴포넌트를 의미)
+2. Write tests
+3. Tests fail(red)
+4. Write code
+5. Tests pass!(green)
+
