@@ -136,3 +136,29 @@ test("renders learn react link", () => {
 - Issue with functional tests :
 	- high-level makes them resistant to refactors
 	- high-level makes them difficult to diagnose
+
+# screen Query Methods
+- `screen` 메서드는 아래와 같은 메서드를 사용할 수 있다.
+
+```js
+command[All]ByQueryType
+```
+
+- command
+	- `get` : expect element to be in DOM
+	- `query` : expect element not to be in DOM
+	- `find` : expect element to appear async
+
+- All
+	- (exclude) expect only one match
+	- (include) expect more than one match
+
+- QueryType
+	- `Role` (most preferred)
+	- `AltText` (images)
+	- `Text` (display elements)
+	- Form elements
+		- `PlaceholderText`
+		- `LabelText`
+		- `DisplayValue`
+
