@@ -123,3 +123,9 @@ test("renders learn react link", () => {
 	- involves collaboration between lots of roles
 		- developers, QA, business partners, etc
 	- defines process for different groups to interact
+
+# Accessibility and Finding Elements
+- Testing Library recommends finding elements by accessibility handles
+- Can't find an element like a screen reader would?
+	- Then your app isn't friendly to screen readers😭
+
