@@ -129,3 +129,7 @@ test("renders learn react link", () => {
 - Can't find an element like a screen reader would?
 	- Then your app isn't friendly to screen readers😭
 
+# When to Unit Test?
+- For more complicated functions, unit tests help with : 
+	- covering all possible edge cases
+	- 
