@@ -132,4 +132,7 @@ test("renders learn react link", () => {
 # When to Unit Test?
 - For more complicated functions, unit tests help with : 
 	- covering all possible edge cases
-	- 
+	- determining what caused functional tests to fail
+- Issue with functional tests :
+	- high-level makes them resistant to refactors
+	- high-level makes them difficult to diagnose
