@@ -162,3 +162,21 @@ command[All]ByQueryType
 		- `LabelText`
 		- `DisplayValue`
 
+# "Not wrapped in act" Error
+- component is changing after the test is over
+	- test function quits before state updates are complete
+
+1. Test renders component
+2. Component triggers network call
+3. Test function exits
+4. Unmount component
+5. Network call returns
+
+- 4,5번의 문제로 인해 발생하는데, 네트워크 호출이 돌아오기 전에 컴포넌트가 언마운트되면 Race Condition으로 인해 에러가 발생하는 것이다.
+- 따라서, Race Condition을 제거하는 방향으로 가야한다.
+
+1. Test renders component
+2. Component triggers network call
+3. Unmount component
+4. Network call is canceled
+5. Test function exits
