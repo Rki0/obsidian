@@ -180,3 +180,10 @@ command[All]ByQueryType
 3. Unmount component
 4. Network call is canceled
 5. Test function exits
+
+# Passing a Mock as a Prop
+- How to pass when rendering component in test?
+- `jest.fn()`
+	- Jest mock function
+	- Does not do anything
+	- Merely a placeholder to avoid errors
