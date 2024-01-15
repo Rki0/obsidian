@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Data_Structure/Stack.md",
+                "file": "TOEIC.md",
                 "mode": "source",
                 "source": false
               }
@@ -71,6 +71,16 @@
           "type": "bookmarks",
           "state": {}
         }
+      },
+      {
+        "id": "db5b74d01626cb5b",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency"
+          }
+        }
       }
     ],
     "currentTab": 0
@@ -85,7 +95,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Data_Structure/Stack.md",
+            "file": "TOEIC.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +112,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Data_Structure/Stack.md",
+            "file": "TOEIC.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +124,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Data_Structure/Stack.md"
+            "file": "TOEIC.md"
           }
         }
       }
@@ -133,13 +143,13 @@
   },
   "active": "ebe99779189dd4f8",
   "lastOpenFiles": [
+    "Data_Structure/Stack.md",
     "Algorithm/Sort/Sort.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
     "Data_Structure/Tree/Tree.md",
     "Data_Structure/Tree/Trie.md",
     "Data_Structure/Tree/Heap.md",
     "Algorithm/Floyd's ...(토끼 거북).md",
-    "Data_Structure/Stack.md",
     "Data_Structure/Hash Table(Hash Map).md",
     "Data_Structure/Queue.md",
     "Algorithm/Sort/Quick Sort.md",
