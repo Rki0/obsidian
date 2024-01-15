@@ -64,7 +64,81 @@ ___ customers is my job.
 => (It) is good (for) you (to read many books). (It ~for ~to)
 ```
 #### 명사절
+- 명사절의 기본 구조 : `명사절 접속사 + (주어) + 동사` 덩어리로 사용된다!!
+- 명사절 접속사에는 대표적으로 `what`이 있다.
 ```
 (What Bob plans to discuss at the meeting) is unclear.
 Bob이 회의에서 논의하려고 계획한 것이 무엇인지 분명하지 않다.
+```
+#### 동사, 형용사 등은 문장의 주어 자리에 올 수 없다.
+```
+The film's exciting [conclude / (conclusion)] was praised by critics.
+그 영화의 흥미진진한 결말은 비평가들에 의해 찬사 받았다.
+```
+#### 추가 포인트
+##### 어미가 혼동되는 단어들을 주의!
+- 추가 자료 확인할 것!
+```
+~tive : objective 명)목적,목표 형)객관적인
+~al : original 명)원본 형)원래의,최초의
+~ic : characteristic 명)특징,특색 형)특징적인
+
+Please send us the ___ of your diploma.
+((A) original) (B) originality
+관사 the가 사용되었기 때문에 명사가 와야하는 것은 맞다.
+그러나, B는 "독창성"이라는 뜻이므로 해석적으로 맞지않다.
+A가 명사로 사용될 경우 "원본"이라는 뜻으로 사용되므로 A가 맞다!
+단어의 어미만 보고 정답을 선택하지 않도록 주의하자.
+```
+##### 주어는 동사와 수일치 되어야 한다.
+```
+The [outlooks / (outlook)] for higher revenues in the second quarter is positive.
+이사분기에 더 높은 수익에 대한 전망은 긍정적이다.
+
+is라는 단수 동사가 나왔기 때문.
+```
+### 2. 가짜주어 it / there
+#### it은 to 부정사구, that절 같은 긴 주어를 대신해서 쓰인다.
+```
+(It) is important (to monitor the customer's feedback carefully).
+고객들의 의견을 신중하게 검토하는 것은 중요하다.
+
+(It) is expected (that Ms.Bennet will be promoted in this month).
+Ms.Bennet이 이번 달에 승진될 것이라고 예상된다.
+```
+
+#### it ~(for + 목적어) to 구문
+```
+It is important to : to 이하가 중요한
+It is necessary to : to 이하가 필요한
+It is essential to : to 이하가 필수적인
+It is vital to : to 이하가 중요한
+It is imperative to : to 이하가 의무인
+It is critical to : to 이하가 중요한
+It is difficult to : to 이하가 어려운
+It is easy to : to 이하가 쉬운
+It is hard to : to 이하가 어려운
+It is possible to : to 이하가 가능한
+It is impossible to : to 이하가 불가능한
+```
+#### it ~that 구문
+- `it ~whether`도 주어가 긴 경우 `whether` 뒤로 뺄 수 있음을 기억하자! ~인지 아닌지.
+```
+It is necessary that : that 이하가 필요한
+It is essential that : that 이하가 필수적인
+It is imperative that : that 이하가 의무인
+It is important / critical / essential / viatal that : that 이하가 중요한
+It is uncertain that / whether : that 이하가 불확실한. whether 이하(~인지 아닌지)가  불확실한.
+It remains to be seen that / whether : that 이하를 지켜봐야 하는. whether 이하(~인지 아닌지) 지켜봐야 하는.
+```
+#### there
+- `There(가주어) + v + s(진주어)`의 형태이다.
+- There is / was / has been / remains / exists + 단수 주어
+- There are / were / have been / remain / exist + 복수 주어
+```
+There are (many cars) in the parking lot.
+주차장에는 많은 차들이 있다.
+
+There [(remain) / remains] a few problems.
+몇 가지 문제들이 남아 있다.
 ```
