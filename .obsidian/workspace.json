@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
+                "file": "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
+                "file": "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md"
+                "file": "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md"
               }
             }
           },
@@ -205,10 +205,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5bf90047f4804405",
+  "active": "0701f0098106a2f9",
   "lastOpenFiles": [
-    "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
     "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
+    "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
     "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
     "English/Dev-English.md",
     "English/TOEIC",
