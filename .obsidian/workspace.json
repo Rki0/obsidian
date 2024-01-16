@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "English/TOEIC/문법(주어,동사). 어휘(동사1).md",
+                "file": "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "문법(목적어,보어). 어휘(동사2).md",
+                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0701f0098106a2f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
                 "mode": "source",
                 "source": false
               }
@@ -111,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "문법(목적어,보어). 어휘(동사2).md",
+                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "문법(목적어,보어). 어휘(동사2).md",
+                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +163,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "문법(목적어,보어). 어휘(동사2).md"
+                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md"
               }
             }
           },
@@ -195,8 +207,9 @@
   },
   "active": "5bf90047f4804405",
   "lastOpenFiles": [
-    "English/TOEIC/문법(주어,동사). 어휘(동사1).md",
-    "문법(목적어,보어). 어휘(동사2).md",
+    "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
+    "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
+    "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
     "English/Dev-English.md",
     "English/TOEIC",
     "Untitled.canvas",
@@ -228,7 +241,6 @@
     "Algorithm/Sort/Quick Sort.md",
     "Algorithm/Sort/Merge Sort.md",
     "Algorithm/Sort/Sort.md",
-    "Algorithm/Sort/Insertion Sort.md",
     "Pasted image 20230915223330.png",
     "Algorithm/Sort",
     "Algorithm",
