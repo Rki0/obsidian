@@ -8,19 +8,18 @@
 5. KFCLMC(Keep / Find / Consider / Leave / Make / Call) + 목적어 + __ - 목적격 보어
 
 - 주어가 될 수 있는 것은 목적어와 보어로도 사용 가능하다!
-## 주어 자리에 올 수 있는 것
-### 1. 명사 역할을 하는 것
-#### 명사구
+## 1. 주어 자리에 올 수 있는 것 : 명사 역할을 하는 것
+### 명사구
 ```
 (The sales manager) led a training session for new staff.
 그 영엉부장은 신입 사원들을 위한 교육을 이끌었다.
 ```
-##### ⭐️출제 포인트 - 한정사(명사 앞에 사용되는 표현들)
+#### ⭐️출제 포인트 - 한정사(명사 앞에 사용되는 표현들)
 1. 관사 - a / an / the
 2. 지시형용사 - this / that / these / those
 3. 소유격 - my / our / your / 's
 4. **수량형용사** - many / much / most / all / every / some / any
-#### 대명사
+### 대명사
 ```
 (We) are attending a conferences this weekend.
 우리는 이번 주말에 회의에 참석할 것이다.
@@ -33,14 +32,14 @@
 (His(e.g. his car, his report, etc...)) is better.
 그의 것이 더 낫다.
 ```
-#### 동명사
+### 동명사
 - 동사 원형에 `~ing`를 붙여서 만든 것.
 - 타동사로 동명사를 만들었다면 뒤에 목적어를 써줘야한다.
 ```
 (Running a business) is difficult.
 회사를 경영하는 것은 어렵다.
 ```
-##### ⭐️출제 포인트 - 수 일치
+#### ⭐️출제 포인트 - 수 일치
 - 동명사구가 주어가 되면 단수 취급을 한다.
 ```
 (Reading books) [(is) / are] good for you.
@@ -48,14 +47,14 @@
 ___ customers is my job.
 (A) Attractive ((B) Attracting)
 ```
-#### to 부정사구
+### to 부정사구
 - 동사 앞에 `to`를 붙여서 만든 것.
 - 명사, 형용사, 부사로 사용될 수 있다.
 ```
 (To complete) the report by Friday is my goal.
 보고서를 금요일까지 완성하는 것이 나의 목표이다.
 ```
-##### ⭐️출제 포인트 - 가주어 / 진주어
+#### ⭐️출제 포인트 - 가주어 / 진주어
 - to 부정사가 주어가 될 경우에는 `It ~for ~to` 구문으로 출제
 - to 부정사가 주어로 쓰이면 너무 길어서 뒤로 뺀다 => 가주어 `it`의 탄생!
 - `~for`는 행위의 주체를 설명하므로 있을 수도, 없을 수도 있다.(즉, 의미상 주어)
@@ -63,20 +62,20 @@ ___ customers is my job.
 (To read many books) is good for you.
 => (It) is good (for) you (to read many books). (It ~for ~to)
 ```
-#### 명사절
+### 명사절
 - 명사절의 기본 구조 : `명사절 접속사 + (주어) + 동사` 덩어리로 사용된다!!
 - 명사절 접속사에는 대표적으로 `what`이 있다.
 ```
 (What Bob plans to discuss at the meeting) is unclear.
 Bob이 회의에서 논의하려고 계획한 것이 무엇인지 분명하지 않다.
 ```
-#### 동사, 형용사 등은 문장의 주어 자리에 올 수 없다.
+### 동사, 형용사 등은 문장의 주어 자리에 올 수 없다.
 ```
 The film's exciting [conclude / (conclusion)] was praised by critics.
 그 영화의 흥미진진한 결말은 비평가들에 의해 찬사 받았다.
 ```
-#### 추가 포인트
-##### 어미가 혼동되는 단어들을 주의!
+### 추가 포인트
+#### 어미가 혼동되는 단어들을 주의!
 - 추가 자료 확인할 것!
 ```
 ~tive : objective 명)목적,목표 형)객관적인
@@ -90,15 +89,15 @@ Please send us the ___ of your diploma.
 A가 명사로 사용될 경우 "원본"이라는 뜻으로 사용되므로 A가 맞다!
 단어의 어미만 보고 정답을 선택하지 않도록 주의하자.
 ```
-##### 주어는 동사와 수일치 되어야 한다.
+#### 주어는 동사와 수일치 되어야 한다.
 ```
 The [outlooks / (outlook)] for higher revenues in the second quarter is positive.
 이사분기에 더 높은 수익에 대한 전망은 긍정적이다.
 
 is라는 단수 동사가 나왔기 때문.
 ```
-### 2. 가짜주어 it / there
-#### it은 to 부정사구, that절 같은 긴 주어를 대신해서 쓰인다.
+## 2. 가짜주어 it / there
+### it은 to 부정사구, that절 같은 긴 주어를 대신해서 쓰인다.
 ```
 (It) is important (to monitor the customer's feedback carefully).
 고객들의 의견을 신중하게 검토하는 것은 중요하다.
@@ -107,7 +106,7 @@ is라는 단수 동사가 나왔기 때문.
 Ms.Bennet이 이번 달에 승진될 것이라고 예상된다.
 ```
 
-#### it ~(for + 목적어) to 구문
+### it ~(for + 목적어) to 구문
 ```
 It is important to : to 이하가 중요한
 It is necessary to : to 이하가 필요한
@@ -121,7 +120,7 @@ It is hard to : to 이하가 어려운
 It is possible to : to 이하가 가능한
 It is impossible to : to 이하가 불가능한
 ```
-#### it ~that 구문
+### it ~that 구문
 - `it ~whether`도 주어가 긴 경우 `whether` 뒤로 뺄 수 있음을 기억하자! ~인지 아닌지.
 ```
 It is necessary that : that 이하가 필요한
@@ -131,7 +130,7 @@ It is important / critical / essential / viatal that : that 이하가 중요한
 It is uncertain that / whether : that 이하가 불확실한. whether 이하(~인지 아닌지)가  불확실한.
 It remains to be seen that / whether : that 이하를 지켜봐야 하는. whether 이하(~인지 아닌지) 지켜봐야 하는.
 ```
-#### there
+### there
 - `There(가주어) + v + s(진주어)`의 형태이다.
 - There is / was / has been / remains / exists + 단수 주어
 - There are / were / have been / remain / exist + 복수 주어
@@ -141,4 +140,50 @@ There are (many cars) in the parking lot.
 
 There [(remain) / remains] a few problems.
 몇 가지 문제들이 남아 있다.
+```
+### 가주어 it과 there 자리에 다른 단어는 올 수 없다.
+```
+[(It) / That] is Mr.Evans that is responsible for organizing the workshop.
+워크숍을 계획하는 데 책임이 있는 사람은 바로 Mr.Evans이다.
+```
+### 🤝🏻보너스 문제
+1. Enclosed(동봉된)
+2. Attached(첨부된) + 동사 + 주어
+3. Included(포함된)
+4. Listed(열거된)
+```
+Attached is a list of our products.(단수 주어)
+Attached are photos of our products.(복수 주어)
+
+___ is a comprehensive study of our city.
+(A) Attachment ((B) Attached)
+(C) Attaching (D) Attaches
+is 앞이 빈 칸이니까 주어가 오겠지? 그럼 명사겠지? A! 틀림.
+그러나 주어는 a comprehensive study 이다.
+따라서 B가 정답!
+```
+## 3. 동사 자리에 올 수 있는 것 : (조동사 +) 동사
+### 문장의 동사가 될 수 있는 것은 '(조동사 +) 동사'이다.
+```
+The manager (oversees) more than 50 workers.
+그 관리자는 50명 이상의 근로자들을 감독한다.
+
+The manager (can oversee) more than 50 workers.
+그 관리자는 50명 이상의 근로자들을 감독할 수 있다.
+```
+### "동사원형 + ~ing"나 "to + 동사원형"과 같은 형태는 문장의 동사가 되지 못한다.
+- 이들은 준동사로 동사의 특징을 가지고 있어 목적어, 부사 등등을 사용하지만 동사의 자리에 들어가지는 않는다.
+```
+The manager [overseeing / to oversee] more than 50 workers.(X)
+```
+- 동명사 = 명사
+- 분사 = 형용사
+- To 부정사 = 명사 / 형용사 / 부사
+### 명사나 형용사 등은 문장의 동사 자리에 올 수 없다.
+#### ⭐️출제 포인트 - 혼동되는 품사 주의하기
+```
+We can ___ the price.
+우리는 가격을 인하할 수 있다.
+(A) low (B) lower
+B는 형용사로 "더 낮은"이라는 의미도 있지만, 동사로 "인하하다"라는 의미도 있다.
 ```
