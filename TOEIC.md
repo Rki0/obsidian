@@ -181,9 +181,94 @@ The manager [overseeing / to oversee] more than 50 workers.(X)
 - To 부정사 = 명사 / 형용사 / 부사
 ### 명사나 형용사 등은 문장의 동사 자리에 올 수 없다.
 #### ⭐️출제 포인트 - 혼동되는 품사 주의하기
+- 추가 자료 확인!
 ```
 We can ___ the price.
 우리는 가격을 인하할 수 있다.
-(A) low (B) lower
+(A) low ((B) lower)
 B는 형용사로 "더 낮은"이라는 의미도 있지만, 동사로 "인하하다"라는 의미도 있다.
+```
+### 동사는 수, 태, 시제가 맞아야 한다.
+```
+The chairperson [review / (reviews)] his notes before each meeting.
+그 회장은 각 회의 전에 그의 메모를 검토한다.
+```
+## 4. 명령문은 주어 없이 동사원형으로 시작된다.
+### 명령문은 주어 없이 동사원형으로 시작된다.
+```
+Please (complete) this survey and sign at the bottom.
+이 설문지를 작성하시고 하단에 서명해 주십시오.
+```
+#### ✋🏻잠깐! 명령문의 4 친구들!!! -> 공손함과 친절함을 표현
+- `Please` complete the survey.
+- `kindly` stop by my office.
+- `Simply` fill out the form.
+- `Just` leave a message.
+### When절 / If 절 + 명령문 : ~ 할 때 / ~ 한다면, ~ 해라
+```
+When applying for a visa, (verify) that all the necessary documents are present.
+비자를 신청할 때, 모든 필요한 서류들이 있는지 확인하십시오.
+```
+### 명령문의 동사 자리에, 원형이 아닌 동사나 준동사, 명사 등은 오지 못한다.
+```
+Please [has / (have)] a seat.
+자리에 앉아 주십시오.
+```
+
+# 어휘 Chapter 01. 동사1
+## 핵심 단어
+### extend : 연장하다, 늘이다
+```
+Because of the heavy workload, the manager has decided to (extend the deadline) by a weak.
+과중한 업무량으로 인해, 관리자는 마감일을 한 주 연장하기로 결정했다.
+```
+#### ⭐️출제 포인트
+- extension : n. 연장, 확장
+- extensive : adj. 넓은
+- Collocation(연어. 이어지는 말)
+```
+Extend the deadline = 마감 시한을 연장하다 = prolong
+Extend the thanks / gratitude = 고마움을 표명하다 = express
+Extend the invitation = 초대를 하다
+Extend the hospitality = 호의를 베풀다
+Extend the discount = 할인을 제공하다
+Extend the job = 일자리를 제공하다, 제안하다
+Extend the resignation = 사의를 표명하다
+```
+### reserve : 예약하다, (권리, 이익 등을) 보유하다
+```
+Staff attending the promotions conference must (reserve) their own hotel (accommodations).
+판촉 회의에 참가하는 직원들은 각자의 호텔 숙소를 예약해야 한다.
+```
+#### ⭐️출제 포인트
+- reservation : 1) 예약 2) 주저함, 망설임
+- Collocation
+```
+reserve the table = 예약하다 = book
+reserve the right = 간직하다, 가지다 = hold
+```
+### deliberate : 심사 숙고하다, 심의하다
+```
+The members of the board deliberated all afternoon over the merger proposition.
+이사회 임원들은 오후 내내 합병안에 대해 심사 숙고했다.
+```
+#### ⭐️출제 포인트
+- "고의적인, 신중한"이라는 의미의 형용사로도 사용된다!
+```
+deliberate attempt = 의도적인 시도
+deliberate approach = 신중한 접근
+```
+### address : 다루다, 제기하다
+```
+Labor union officials will (address) the recent (changes) to the benefits package.
+노동조합 임원들은 복리 후생 제도의 최근 변화를 다룰 것이다.
+```
+#### ⭐️출제 포인트
+- Collocation - 동사(해결하다)
+```
+address the problem = deal with = handle = attend to
+```
+- Collocation - 명사(연설)
+```
+deliver an address = give a (speech / remark) = 연설을 하다
 ```
