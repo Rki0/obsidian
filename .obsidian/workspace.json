@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dev-English.md",
+                "file": "English/Dev-English.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TOEIC.md",
+                "file": "English/TOEIC/문법(주어,동사). 어휘(동사1).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5bf90047f4804405",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "문법(목적어,보어). 어휘(동사2).md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TOEIC.md",
+                "file": "문법(목적어,보어). 어휘(동사2).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TOEIC.md",
+                "file": "문법(목적어,보어). 어휘(동사2).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TOEIC.md"
+                "file": "문법(목적어,보어). 어휘(동사2).md"
               }
             }
           },
@@ -181,14 +193,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0df4dc5d1cc685dd",
+  "active": "5bf90047f4804405",
   "lastOpenFiles": [
+    "English/TOEIC/문법(주어,동사). 어휘(동사1).md",
+    "문법(목적어,보어). 어휘(동사2).md",
+    "English/Dev-English.md",
+    "English/TOEIC",
     "Untitled.canvas",
-    "TOEIC.md",
-    "Dev-English.md",
+    "TODO.md",
     "React Test(Jest, React Testing Library).md",
     "React_Query/React Query.md",
-    "DevEnglish",
+    "English",
     "Test",
     "Docker/Docker.md",
     "React_Query",
@@ -197,7 +212,6 @@
     "Algorithm/Dijkstra Algorithm.md",
     "Data_Structure/Graph/Graph.md",
     "Data_Structure/Priority Queue.md",
-    "TODO.md",
     "Data_Structure/Graph",
     "Data_Structure/Graph/Tree/Heap(Binary Heap).md",
     "Docker",
@@ -218,7 +232,6 @@
     "Pasted image 20230915223330.png",
     "Algorithm/Sort",
     "Algorithm",
-    "Data_Structure/Graph/Tree",
-    "Data_Structure"
+    "Data_Structure/Graph/Tree"
   ]
 }
