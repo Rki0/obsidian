@@ -20,43 +20,7 @@
             }
           },
           {
-            "id": "0df4dc5d1cc685dd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5bf90047f4804405",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "0701f0098106a2f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3098b8f78ff7d28f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -66,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2e6f4af98ef5b611",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -135,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
+                "file": "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
+                "file": "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md"
+                "file": "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md"
               }
             }
           },
@@ -217,11 +193,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3098b8f78ff7d28f",
+  "active": "2e6f4af98ef5b611",
   "lastOpenFiles": [
-    "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
     "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
+    "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
+    "English/문법.md",
+    "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
+    "Algorithm/Sort/Sort.md",
     "English/TOEIC/3강 - 문법(수식어). 어휘(명사1).md",
+    "2024-01-21.md",
     "English/TOEIC/2강 - 문법(목적어,보어). 어휘(동사2).md",
     "English/Dev-English.md",
     "English/TOEIC",
@@ -248,11 +228,7 @@
     "Algorithm/Search/DFS(Depth First Search).md",
     "Algorithm/Search/BFS(Breadth First Search).md",
     "Data_Structure/Graph/Tree/Tree.md",
-    "Data_Structure/Stack.md",
     "Algorithm/Search",
-    "Algorithm/Sort/Radix Sort.md",
-    "Algorithm/Sort/Quick Sort.md",
-    "Algorithm/Sort/Merge Sort.md",
     "Pasted image 20230915223330.png",
     "Algorithm/Sort",
     "Algorithm",
