@@ -20,30 +20,6 @@
             }
           },
           {
-            "id": "0701f0098106a2f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2e6f4af98ef5b611",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "9c25569a7d698807",
             "type": "leaf",
             "state": {
@@ -54,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "15e440a1496d6040",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -123,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md",
+                "file": "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md",
+                "file": "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md"
+                "file": "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md"
               }
             }
           },
@@ -205,10 +193,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9c25569a7d698807",
+  "active": "15e440a1496d6040",
   "lastOpenFiles": [
-    "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
     "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md",
+    "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
+    "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
     "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
     "English/문법.md",
     "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
@@ -239,7 +228,6 @@
     "Data_Structure/Hash Table(Hash Map).md",
     "Data_Structure/Graph/Tree/Binary Search Tree(BST).md",
     "Algorithm/Search/DFS(Depth First Search).md",
-    "Algorithm/Search/BFS(Breadth First Search).md",
     "Algorithm/Search",
     "Pasted image 20230915223330.png",
     "Algorithm/Sort",
