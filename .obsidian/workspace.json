@@ -54,9 +54,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "861ac24e51568884",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -123,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
+                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
+                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md"
+                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md"
               }
             }
           },
@@ -205,10 +217,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c077dde5ef8ac05",
+  "active": "861ac24e51568884",
   "lastOpenFiles": [
-    "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
+    "Udemy",
     "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
+    "Udemy/클린코드 리액트(React) - Poco Jang.md",
+    "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
     "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md",
     "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
     "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
@@ -238,8 +252,6 @@
     "Docker",
     "Algorithm/Search/Binary Search.md",
     "Data_Structure/Graph/Tree/Trie.md",
-    "Data_Structure/Hash Table(Hash Map).md",
-    "Data_Structure/Graph/Tree/Binary Search Tree(BST).md",
     "Algorithm/Search",
     "Pasted image 20230915223330.png",
     "Algorithm/Sort",
