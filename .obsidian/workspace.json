@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md",
+                "file": "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md",
+                "file": "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md"
+                "file": "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md"
               }
             }
           },
@@ -217,8 +217,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "861ac24e51568884",
+  "active": "1c077dde5ef8ac05",
   "lastOpenFiles": [
+    "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
+    "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
+    "Udemy/클린코드 리액트(React) - Poco Jang.md",
     "Pasted image 20240128195036.png",
     "Pasted image 20240128191829.png",
     "Pasted image 20240128181402.png",
@@ -229,11 +232,7 @@
     "Pasted image 20240128171657.png",
     "Pasted image 20240128171000.png",
     "Pasted image 20240128170821.png",
-    "Pasted image 20240128161818.png",
     "Udemy",
-    "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
-    "Udemy/클린코드 리액트(React) - Poco Jang.md",
-    "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
     "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md",
     "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
     "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
