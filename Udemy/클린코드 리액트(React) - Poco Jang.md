@@ -88,3 +88,14 @@ fasle에서 true라던지..
 ![[Pasted image 20240209144256.png]]
 # Props
 ## 불필요한 Props 복사 및 연산
+불필요한 연산을 줄이기 위해서는
+1. props를 바로 사용하기
+2. 연산된 값을 props로 넘기기
+3. useMemo로 연산 최적화하기
+등의 방법이 있다.
+![[Pasted image 20240209145824.png]]
+## Curly Braces
+문자열을 전달하는 경우에는 굳이 중괄호로 감싸서 쓰지말자.
+값이 계산되서 들어가야하는 경우에는 중괄호로 감싸야한다.
+![[Pasted image 20240209151317.png]]
+## Shorthand Props
