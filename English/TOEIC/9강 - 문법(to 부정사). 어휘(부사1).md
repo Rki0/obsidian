@@ -193,6 +193,56 @@ Regular exercise (helps) [to] relieve work-related stress.
 ```
 ### 지각 동사(hear, see, watch, notice) + 목적어 + 동사 원형 / 현재 분사
 ```
-I watched him park the vehicle.
+I (watched) him (park) the vehicle.
+I (watched) him (parking) the vehicle. => 동작의 진행을 강조
 
+I (saw) you (dance).
+I (saw) you (dancing). => 동작의 진행을 강조
 ```
+# 어휘
+## Chapter 04. 부사 1
+### meticulously : 꼼꼼하게, 세심하게
+```
+The famed artist (meticulously) paints portraits of historical figures.
+그 유명한 화가는 역사적인 인물들의 초상화를 꼼꼼하게 그린다.
+```
+#### ⭐️ 출제 포인트
+- thoroughly = meticulously review / go over / check
+### adversely : 불리하게, 반대로
+```
+The increasing cost of food has (adversely) impacted the restaurant industry.
+상승하는 식품 원가는 요식업계에 불리하게 영향을 미쳤다.
+```
+#### ⭐️ 출제 포인트
+- Adverse weather = unfavorable = inclement
+- adversely affect / influence 불리하게 영향을 미치다
+### approximately : 대략
+```
+The flight from Seoul to Tokyo lasts (approximately) two hours.
+서울에서 도쿄까지의 비행은 대략 두 시간 동안 계속된다.
+```
+#### ⭐️ 출제 포인트
+- approximately 3,000 people = about, roughly
+### dramatically : 급격히, 극적으로
+```
+Over the decade, demand for high-definition televisions has increased (dramatically).
+10년 동안, 고화질 텔레비전에 대한 수요는 급격히 증가해 왔다.
+```
+#### ⭐️ 출제 포인트
+- sharply = considerably
+- remarkably = significantly + 증가/감소
+### relatively : 상대적으로, 비교적
+```
+Attendence at this month's job fair was (relatively) low compared to the previous one.
+이번 달 취업 설명회 참석률은 이전 것과 비교하여 상대적으로 낮았다.
+```
+#### ⭐️ 출제 포인트
+- relatively expensive / easy / difficult
+### mutually : 상호 간에, 서로
+```
+The beverage producer and the restaurant formed a (mutually) advantageous partnerhsip.
+음료 제조업체와 식당은 상호 간에 이로운 제휴를 맺었다.
+```
+#### ⭐️ 출제 포인트
+- mutually acceptable 서로 받아들일 수 있는
+- mutually beneficial 서로 도움이 되는
