@@ -97,3 +97,102 @@ The company implemented the new strategy ___ the market share.
 Lisa needs [listen / (to listen)] to the instructions more carefully.
 ```
 ## to 부정사의 형태와 의미상 주어
+### to 부정사는 "to + 동사원형"의 형태를 가진다.
+```
+Call this number [to confirmation / to confirming / (to confirm)] your reservation.
+```
+#### 전치사 to와 혼동하지 말자
+| 부정사 to | 전치사 to |
+| ---- | ---- |
+| In order to ~하기 위해<br>Be asked to 요청 받다 | In addition to 게다가<br>Be devoted to 헌신하다 |
+### 수동형은 to be p.p, 진행형은 to be ~ing, 완료형은 to have p.p이다.
+#### 수동
+```
+She wants (to be known) for her accomplishments.
+```
+#### 진행
+```
+The building owner seemed (to be fixing) the lock on the front door this morning.
+```
+#### 완료
+```
+It is great (to have met) you at the convention.
+```
+### 의미상의 to 앞에 'for + 명사 / 대명사 목적격'
+```
+The manager's objective was (for staff) to improve their skills.
+
+ex)
+In order to buy a car
+=> In order for [us / them / me] to buy a car
+```
+## to 부정사를 취하는 동사, 명사, 형용사
+### to 부정사를 취하는 동사
+|  | 동사 + 목적어 |
+| ---- | ---- |
+| 원하다 | want / need / wish / hope |
+| 계획하다 | plan / aim / decide |
+| 제안/약속/거절 | propose / promise / agree / refuse |
+| 기타 | fail / serve / pretend / afford / manage / strive |
+
+|  | 동사 + 목적어 + to 부정사(목적 보어) |
+| ---- | ---- |
+| 원하다 | want / need / expect / invite |
+| 부추기다 | encourage / convince / cause |
+| 강요하다 | force / compel / require |
+| 허락하다 | allow / enable |
+| 알려주다 | remind / warn / advise |
+|  | 수동태로 바뀌면  be + p.p + to 부정사 |
+
+| 자동사 + 보어(to 부정사) => PARS(파스) |  |  |
+| ---- | ---- | ---- |
+| prove to | ~인 것으로 판명되다 | It proves to be effective |
+| appear to | ~인 것처럼 보인다 | It appears to be expensive |
+| remain to | 아직 ~ 해야 한다 | It remains to be reviewed<br>It remains to be seen = 지켜볼 일이다 |
+| seem to | ~인 것 같다 | He seems to be nice |
+
+- 타동사 + to V 라면 to 부정사가 목적어
+- 자동사 + to V 라면 to 부정사가 보어
+### to 부정사를 취하는 명사 - 형용사적 용법
+| ability to | 능력 |
+| ---- | ---- |
+| chance to | 기회 |
+| decision to | 결정 |
+| right to | 권리 |
+| authority to | 권한 |
+| way to | 방법 |
+| ⭐️effort to | 노력 |
+| ⭐️attempt to | 시도 |
+```
+a right to be silent 묵비권
+in an effort / attempt to ~하기 위한 노력/시도
+```
+### to 부정사를 취하는 형용사
+| be 형 to(부정사) |  |
+| ---- | ---- |
+| be able to | ~할 수 있다 |
+| be willing to | 기꺼이 ~하다 |
+| be pleased / delighted to | ~ 기쁘게 생각하다 |
+| be about to | 막 ~하려고 하다 |
+| be reluctant / unwilling to | 마지못해 ~하다 |
+| be dedicated / committed / devoted to + 목적어 | 여기서 to는 전치사 to이다. 따라서 목적어 필요. |
+```
+The legal team is (ready) (to review) the revised contract.
+```
+## 원형 부정사를 목적격 보어로 갖는 동사
+### 사역 동사(make, let, have) + 목적어 + 원형 부정사
+```
+Mr.Wellington (let) Marco (change) the schedule.
+```
+- have + 목적어(사람) + 동사 원형(have Tom deliver it)
+- have + 목적어(사물) + 과거 분사(have the car repaired)
+### 준 사역 동사 help (+목적어) + 원형 부정사 / to 부정사
+```
+I (helped) Andrea [to] finish the research.
+Regular exercise (helps) [to] relieve work-related stress.
+```
+### 지각 동사(hear, see, watch, notice) + 목적어 + 동사 원형 / 현재 분사
+```
+I watched him park the vehicle.
+
+```
