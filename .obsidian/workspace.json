@@ -32,18 +32,6 @@
             }
           },
           {
-            "id": "23bbaca04480fc87",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c0ba98e39623e704",
             "type": "leaf",
             "state": {
@@ -68,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -219,9 +207,9 @@
   },
   "active": "c0ba98e39623e704",
   "lastOpenFiles": [
-    "Untitled.md",
-    "English/TOEIC/10강 - 문법(동명사). 어휘(부사2).md",
     "English/TOEIC/9강 - 문법(to 부정사). 어휘(부사1).md",
+    "English/TOEIC/10강 - 문법(동명사). 어휘(부사2).md",
+    "Untitled.md",
     "English/Dev-English.md",
     "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md",
     "Udemy/클린코드 리액트(React) - Poco Jang.md",
