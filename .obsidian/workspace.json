@@ -37,7 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12강 - 문법(명사). 어휘(형용사 관련어구2).md",
+                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0a8e75b42ebc434b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -123,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "12강 - 문법(명사). 어휘(형용사 관련어구2).md",
+                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "12강 - 문법(명사). 어휘(형용사 관련어구2).md",
+                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12강 - 문법(명사). 어휘(형용사 관련어구2).md"
+                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md"
               }
             }
           },
@@ -205,10 +217,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c98d0dea40a906c",
+  "active": "0a8e75b42ebc434b",
   "lastOpenFiles": [
+    "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
+    "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
     "English/TOEIC/9강 - 문법(to 부정사). 어휘(부사1).md",
-    "12강 - 문법(명사). 어휘(형용사 관련어구2).md",
     "English/TOEIC/11강 - 문법(분사). 어휘(형용사 관련어구 1).md",
     "English/TOEIC/10강 - 문법(동명사). 어휘(부사2).md",
     "Untitled 1.md",
@@ -248,7 +261,6 @@
     "Algorithm/Search/Naive String Search.md",
     "Algorithm/Dynamic Programming.md",
     "Algorithm/Dijkstra Algorithm.md",
-    "Data_Structure/Graph/Graph.md",
     "Data_Structure/Graph",
     "Docker",
     "Algorithm/Search",
