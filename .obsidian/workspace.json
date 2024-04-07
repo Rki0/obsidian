@@ -92,6 +92,18 @@
             }
           },
           {
+            "id": "c9bfa21fc49e53dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "861ac24e51568884",
             "type": "leaf",
             "state": {
@@ -104,7 +116,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -171,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/3. 전화 업무 시 트러블 & 대응 방법.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,7 +200,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/3. 전화 업무 시 트러블 & 대응 방법.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -211,7 +223,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/3. 전화 업무 시 트러블 & 대응 방법.md"
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md"
               }
             }
           },
@@ -253,10 +265,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4467075da682217b",
+  "active": "c9bfa21fc49e53dc",
   "lastOpenFiles": [
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/2. 매너 있게 전화걸기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/3. 전화 업무 시 트러블 & 대응 방법.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/2. 매너 있게 전화걸기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/1. 매너있게 전화받기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!",
     "Japanese",
@@ -297,7 +310,6 @@
     "React_Query/React Query.md",
     "English",
     "Test",
-    "Docker/Docker.md",
     "React_Query",
     "Data_Structure/Graph",
     "Docker",
