@@ -56,12 +56,12 @@
             }
           },
           {
-            "id": "acdce73caffe9aad",
+            "id": "5b92021b880af2d8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/5. 미팅 일정 잡기.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/6. 의뢰, 부탁하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/6. 의뢰, 부탁하기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/6. 의뢰, 부탁하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md"
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/6. 의뢰, 부탁하기.md"
               }
             }
           },
@@ -229,12 +229,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0a8e75b42ebc434b",
+  "active": "5b92021b880af2d8",
   "lastOpenFiles": [
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/5. 미팅 일정 잡기.md",
-    "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
     "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/5. 미팅 일정 잡기.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/6. 의뢰, 부탁하기.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
+    "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/3. 전화 업무 시 트러블 & 대응 방법.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/2. 매너 있게 전화걸기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/1. 매너있게 전화받기.md",
@@ -271,7 +272,6 @@
     "English/TOEIC",
     "Untitled.canvas",
     "TODO.md",
-    "React Test(Jest, React Testing Library).md",
     "English",
     "Test",
     "React_Query",
