@@ -56,18 +56,6 @@
             }
           },
           {
-            "id": "2436d1eb78b9108e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "acdce73caffe9aad",
             "type": "leaf",
             "state": {
@@ -92,7 +80,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -159,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/5. 미팅 일정 잡기.md",
+                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/5. 미팅 일정 잡기.md",
+                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/5. 미팅 일정 잡기.md"
+                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md"
               }
             }
           },
@@ -241,7 +229,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "acdce73caffe9aad",
+  "active": "0a8e75b42ebc434b",
   "lastOpenFiles": [
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/5. 미팅 일정 잡기.md",
