@@ -56,12 +56,12 @@
             }
           },
           {
-            "id": "e1c87144e59ab8db",
+            "id": "f854a85428bb0229",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/10. 인사 이동 전에 보내는 메일 쓰기.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/11. 인사 이동 후에 보내는 메일 쓰기.md",
                 "mode": "source",
                 "source": false
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/10. 인사 이동 전에 보내는 메일 쓰기.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/11. 인사 이동 후에 보내는 메일 쓰기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/10. 인사 이동 전에 보내는 메일 쓰기.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/11. 인사 이동 후에 보내는 메일 쓰기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/10. 인사 이동 전에 보내는 메일 쓰기.md"
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/11. 인사 이동 후에 보내는 메일 쓰기.md"
               }
             }
           },
@@ -229,10 +229,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "99e4ce193ef5787d",
+  "active": "f854a85428bb0229",
   "lastOpenFiles": [
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/9. 축하, 위로하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/10. 인사 이동 전에 보내는 메일 쓰기.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/11. 인사 이동 후에 보내는 메일 쓰기.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/9. 축하, 위로하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/8. 감사, 사죄하기.md",
     "2024-04-14.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/7. 거절하기.md",
@@ -269,7 +270,6 @@
     "English/TOEIC/5강 - 문법(주어와 수 일치). 어휘(명사3).md",
     "English/TOEIC/4강 - 문법(동사의 형태와 종류). 어휘(명사2).md",
     "English/문법.md",
-    "English/TOEIC/1강 - 문법(주어,동사). 어휘(동사1).md",
     "English/TOEIC",
     "Untitled.canvas",
     "English",
