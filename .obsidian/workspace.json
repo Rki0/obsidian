@@ -68,12 +68,12 @@
             }
           },
           {
-            "id": "14b741819a7d3b9a",
+            "id": "558134cbd18f7ed1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/14. 타사 방문하기, 손님 맞이하기, 안내하기, 회의 시작하기.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/15. 회의 진행 ~ 마무리하기.md",
                 "mode": "source",
                 "source": false
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/14. 타사 방문하기, 손님 맞이하기, 안내하기, 회의 시작하기.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/15. 회의 진행 ~ 마무리하기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/14. 타사 방문하기, 손님 맞이하기, 안내하기, 회의 시작하기.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/15. 회의 진행 ~ 마무리하기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/14. 타사 방문하기, 손님 맞이하기, 안내하기, 회의 시작하기.md"
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/15. 회의 진행 ~ 마무리하기.md"
               }
             }
           },
@@ -229,10 +229,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "14b741819a7d3b9a",
+  "active": "558134cbd18f7ed1",
   "lastOpenFiles": [
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/13. 프레젠테이션 진행하기 ~ 마무리하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/14. 타사 방문하기, 손님 맞이하기, 안내하기, 회의 시작하기.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/15. 회의 진행 ~ 마무리하기.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/13. 프레젠테이션 진행하기 ~ 마무리하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/12. 프레젠테이션 준비하기 ~ 시작하기.md",
     "Udemy/클린코드 리액트(React) - Poco Jang.md",
     "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
@@ -268,7 +269,6 @@
     "English/Dev-English.md",
     "English/TOEIC/6강 - 문법(능동태, 수동태). 어휘(형용사1).md",
     "English/TOEIC/8강 - 문법(가정법). 어휘(형용사3).md",
-    "English/TOEIC/7강 - 문법(시제). 어휘(형용사2).md",
     "Udemy",
     "English/TOEIC",
     "Untitled.canvas",
