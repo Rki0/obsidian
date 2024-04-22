@@ -78,9 +78,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e2bdf7b32fef4a3f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/18. 자주 쓰이는 쿠션어.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -147,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/17. 자주 쓰이는 비즈니스 회화 표현.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/18. 자주 쓰이는 쿠션어.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +176,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/17. 자주 쓰이는 비즈니스 회화 표현.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/18. 자주 쓰이는 쿠션어.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +199,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/17. 자주 쓰이는 비즈니스 회화 표현.md"
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/18. 자주 쓰이는 쿠션어.md"
               }
             }
           },
@@ -229,10 +241,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95b33c256683eee5",
+  "active": "e2bdf7b32fef4a3f",
   "lastOpenFiles": [
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/16. 화상 회의 시 트러블 & 대응 방법.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/17. 자주 쓰이는 비즈니스 회화 표현.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/18. 자주 쓰이는 쿠션어.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/16. 화상 회의 시 트러블 & 대응 방법.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/15. 회의 진행 ~ 마무리하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/14. 타사 방문하기, 손님 맞이하기, 안내하기, 회의 시작하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/13. 프레젠테이션 진행하기 ~ 마무리하기.md",
@@ -268,7 +281,6 @@
     "English/TOEIC/11강 - 문법(분사). 어휘(형용사 관련어구 1).md",
     "English/TOEIC/10강 - 문법(동명사). 어휘(부사2).md",
     "Untitled 1.md",
-    "English/Dev-English.md",
     "Udemy",
     "English/TOEIC",
     "Untitled.canvas",
