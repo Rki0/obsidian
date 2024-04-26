@@ -66,21 +66,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "fb58c8c10e239435",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/23. 상석과 하석.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -147,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/23. 상석과 하석.md",
+                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/23. 상석과 하석.md",
+                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/23. 상석과 하석.md"
+                "file": "Udemy/클린코드 리액트(React) - Poco Jang.md"
               }
             }
           },
@@ -229,10 +217,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fb58c8c10e239435",
+  "active": "861ac24e51568884",
   "lastOpenFiles": [
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/22. 매너있게 명함 주고 받기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/23. 상석과 하석.md",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/22. 매너있게 명함 주고 받기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/21. 자주 쓰이는 컴퓨터 용어.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/20. 자주 쓰이는 카타카나어.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/19. 자주 쓰이는 정중하고 격식있는 표현.md",
