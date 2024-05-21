@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1c79628df47a5739",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "영단어.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -151,8 +164,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ebe99779189dd4f8",
+  "active": "1c79628df47a5739",
   "lastOpenFiles": [
+    "일본어 단어.md",
     "영단어.md",
     "문법(목적어,보어). 어휘(동사2).md",
     "Untitled.canvas",
