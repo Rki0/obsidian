@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "일본어 단어.md",
+                "file": "영단어.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "일본어 단어.md",
+            "file": "영단어.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "일본어 단어.md",
+            "file": "영단어.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -139,7 +139,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "일본어 단어.md"
+            "file": "영단어.md"
           }
         }
       },
@@ -166,8 +166,8 @@
   },
   "active": "1c79628df47a5739",
   "lastOpenFiles": [
-    "영단어.md",
     "일본어 단어.md",
+    "영단어.md",
     "문법(목적어,보어). 어휘(동사2).md",
     "Untitled.canvas",
     "Data_Structure/Stack.md",
