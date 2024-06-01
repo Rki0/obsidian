@@ -78,9 +78,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5429188bf85b96c1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/한국인의 영어 습관 고치기/\"츄리닝\"이 영어로 뭘까요?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9d23a395473430f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -147,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
+                "file": "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +188,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
+                "file": "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +211,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md"
+                "file": "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md"
               }
             }
           },
@@ -229,11 +253,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8a1435f88c964094",
+  "active": "9d23a395473430f1",
   "lastOpenFiles": [
+    "English/한국인의 영어 습관 고치기/\"츄리닝\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
     "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"서비스\"가 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"비닐백\"이 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"스킨십\"이 영어로 뭘까요?.md",
@@ -266,8 +292,6 @@
     "Pasted image 20240128172054.png",
     "Pasted image 20240128172433.png",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/11. 인사 이동 후에 보내는 메일 쓰기.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/10. 인사 이동 전에 보내는 메일 쓰기.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/9. 축하, 위로하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!",
     "Japanese",
     "Udemy",
