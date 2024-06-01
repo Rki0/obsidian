@@ -66,9 +66,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8a1435f88c964094",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -118,7 +130,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -134,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
+                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
+                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md"
+                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md"
               }
             }
           },
@@ -216,11 +229,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "99e4ce193ef5787d",
+  "active": "8a1435f88c964094",
   "lastOpenFiles": [
-    "Untitled",
+    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
+    "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"서비스\"가 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"비닐백\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"스킨십\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기",
     "일본어 단어.md",
-    "Untitled.md",
     "영단어.md",
     "Udemy/클린코드 리액트(React) - Poco Jang.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/23. 상석과 하석.md",
@@ -250,10 +268,6 @@
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/11. 인사 이동 후에 보내는 메일 쓰기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/10. 인사 이동 전에 보내는 메일 쓰기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/9. 축하, 위로하기.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/8. 감사, 사죄하기.md",
-    "2024-04-14.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/7. 거절하기.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/6. 의뢰, 부탁하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!",
     "Japanese",
     "Udemy",
@@ -263,7 +277,6 @@
     "Test",
     "React_Query",
     "Data_Structure/Graph",
-    "Docker",
-    "Algorithm/Search"
+    "Docker"
   ]
 }
