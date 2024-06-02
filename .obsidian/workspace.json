@@ -66,69 +66,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "8a1435f88c964094",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5429188bf85b96c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"츄리닝\"이 영어로 뭘까요?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9d23a395473430f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cca706678e5d0b9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"멘탈\"이 영어로 뭘까요?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8a417cff9637f6d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"스킨\"이 영어로 뭘까요?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 9
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -195,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"스킨\"이 영어로 뭘까요?.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -212,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"스킨\"이 영어로 뭘까요?.md",
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -235,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/한국인의 영어 습관 고치기/\"스킨\"이 영어로 뭘까요?.md"
+                "file": "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md"
               }
             }
           },
@@ -277,10 +217,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8a417cff9637f6d5",
+  "active": "861ac24e51568884",
   "lastOpenFiles": [
-    "English/한국인의 영어 습관 고치기/\"멘탈\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"모닝콜\"이 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"스킨\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"멘탈\"이 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"츄리닝\"이 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
@@ -305,7 +246,6 @@
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/14. 타사 방문하기, 손님 맞이하기, 안내하기, 회의 시작하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/13. 프레젠테이션 진행하기 ~ 마무리하기.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/12. 프레젠테이션 준비하기 ~ 시작하기.md",
-    "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
     "Pasted image 20240128160328.png",
     "Pasted image 20240128160541.png",
     "Pasted image 20240128161600.png",
