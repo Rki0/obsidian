@@ -28,5 +28,49 @@ It should have been... : ~했어야 했는데
 He's great with... : 그는 ~를 잘해요
 
 <실수를 언급할 때>
-Unfortunately I... : 유감스럽게도 제가...
+Unfortunately, I... : 유감스럽게도 제가...
 유감스럽게도 제가 고객에게 잘못된 견적을 보냈네요.
+Unfortunately, I sent the wrong quote to a client.
+
+it looks like I ~ : 제가 ~ 한 것 같아요
+It looks like I sent the wrong quote to a client.
+제가 고객에게 잘못된 견적을 보낸 것 같아요.
+
+유감스럽게도 제가 그 서류를 분실했습니다.
+Unfortunately, I lost that document.
+
+제가 모든 주문서에 주문 번호를 잘못 기입한 것 같아요.
+It looks like I put the wrong order number on order forms.
+
+<~여야 하는데... 아닌 경우에>
+제가 미리 확인을 했어야 했는데..
+I should have checked it out.
+
+<~에 능하다, 소질이 있다>
+그는 사과에 능숙합니다.
+He's great with apologies.
+
+be good at something : ~에 능숙하다.
+
+그녀는 숫자에 능숙하다.
+She's great with numbers.
+
+그들은 숫자에 능숙하다.
+They're good at figures. <=> They're poor at figures(그들은 숫자에 약하다)
+
+# Pop Song
+너한테 꽃을 사줬어야 했는데..
+I should have bought you flowers.
+
+Mmm, too young too dumb to realize
+too ~ to : 너무 ~해서 ~ 할 수 없다, ~하기에는 너무 ~하다
+
+당신을 너무 어리숙해서, 이런 문제를 다룰 수가 없습니다.
+You are too naive to deal with this problem.
+
+# Tips
+손님 vs 고객
+customer vs client
+
+customer : 마트 등에서 서비스를 받는 손님
+client : 전문적인 서비스를 받는 고객

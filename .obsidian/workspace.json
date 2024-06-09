@@ -42,129 +42,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "0a8e75b42ebc434b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3931586b9becb798",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/05강) Trending Topics.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "adc1bb2d4a908357",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/06강) Review - A Walking Dictionary.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f6c684fd54147b31",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/07강) Everything You Want.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f389bea918bf775d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/08강) What Happened?.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0320ad9b74e0fcb5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "75fa6f8cdbf7c3e4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/10강) Getting Some Help.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8cc36f69ab6d99ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b3bc6f5e8a0b6a69",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/12강) Review - Mensch.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1aa6ea89ecc4f9c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/13강) Sorry for that.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 12
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -231,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/13강) Sorry for that.md",
+                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -248,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/13강) Sorry for that.md",
+                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -271,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/13강) Sorry for that.md"
+                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md"
               }
             }
           },
@@ -313,17 +193,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1aa6ea89ecc4f9c6",
+  "active": "1c98d0dea40a906c",
   "lastOpenFiles": [
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/12강) Review - Mensch.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/15강) Review - Appoloziger.md",
+    "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/05강) Trending Topics.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/06강) Review - A Walking Dictionary.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/07강) Everything You Want.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/08강) What Happened?.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/14강) Saying Good Bye.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/13강) Sorry for that.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/12강) Review - Mensch.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/10강) Getting Some Help.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/08강) What Happened?.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/07강) Everything You Want.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/06강) Review - A Walking Dictionary.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/05강) Trending Topics.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/04강) Navigating Your Area.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/03강) Review - Ice Breaking.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md",
@@ -339,10 +222,7 @@
     "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"서비스\"가 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"비닐백\"이 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"스킨십\"이 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기",
-    "일본어 단어.md",
     "Pasted image 20240128160328.png",
     "Pasted image 20240128160541.png",
     "Pasted image 20240128161600.png",
