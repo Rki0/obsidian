@@ -45,3 +45,15 @@ If Kelly hears the news, she will be disappointed.
 # Proverb
 오르막길이 있으면 내리막이 있기 마련이다.
 What goes up must come down.
+
+# Tips
+그래프, 차트의 종류
+Line Chart 꺾은 선 그래프
+Column Chart 세로 막대 그래프
+Bar Chart 가로 막대 그래프
+Band Chart 띠 그래프
+Pie Chart 원 그래프
+Donut Chart 도넛 그래프
+Cone Chart 원뿔 그래프
+Contour Chart 등고선도
+Cylinder Chart 원기둥 그래프
