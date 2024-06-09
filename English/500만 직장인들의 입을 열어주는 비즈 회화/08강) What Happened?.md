@@ -13,3 +13,6 @@ I was... when...
 I tried ... but...
 That't what ~ for..
 
+화면이 멈출 때, software를 업그레이드 하고 있던 중이었어요.
+I was uploading my software when the screen froze.
+
