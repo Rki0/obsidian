@@ -68,12 +68,27 @@ Let's meet somewhere halfway to the coffee shop.
 meet somewhere halfway : 중간에서 보다, 만나다
 
 난 대개 6시 15분이면 퇴근해.
-I'm usually off by quarter after 6.
+I'm usually off by quarter after(past) 6.
 
 이를테면 점심 식사 후?
+Let's say after lunch?
 
 나 내일은 시간이 안돼.
+I can't make it tomorrow.
 
 그게 좋겠다.
+That works for me.
 
 중간에서 만나자.
+Let's meet somewhere halfway.
+
+# Tip
+회사에서의 직위(Positions)
+영어권에서는 잘 사용하지 않고, Mr, Ms를 사용..
+
+assistant manager : 대리
+manager : 과장
+deputy general manager : 차장
+general manager : 부장
+VP = Vice President = (정치권) 부통령 = (경영권) 부장, 상무보
+Senior VP : 상무보, 상무
