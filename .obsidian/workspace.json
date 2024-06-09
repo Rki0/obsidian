@@ -114,9 +114,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "75fa6f8cdbf7c3e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/10강) Getting Some Help.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8cc36f69ab6d99ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -183,7 +207,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md",
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -200,7 +224,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md",
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,7 +247,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md"
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md"
               }
             }
           },
@@ -265,10 +289,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "99e4ce193ef5787d",
+  "active": "8cc36f69ab6d99ca",
   "lastOpenFiles": [
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/08강) What Happened?.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/10강) Getting Some Help.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/08강) What Happened?.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/07강) Everything You Want.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/06강) Review - A Walking Dictionary.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/05강) Trending Topics.md",
@@ -293,8 +319,6 @@
     "일본어 단어.md",
     "영단어.md",
     "Udemy/클린코드 리액트(React) - Poco Jang.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/23. 상석과 하석.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/22. 매너있게 명함 주고 받기.md",
     "Pasted image 20240128160328.png",
     "Pasted image 20240128160541.png",
     "Pasted image 20240128161600.png",
