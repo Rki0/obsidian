@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "0f70498f774ffb8f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/3강) Review - Ice Breaking.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "890ec6f066b554e1",
             "type": "leaf",
             "state": {
@@ -92,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -159,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md",
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/3강) Review - Ice Breaking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +188,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md",
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/3강) Review - Ice Breaking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -199,7 +211,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md"
+                "file": "English/500만 직장인들의 입을 열어주는 비즈 회화/3강) Review - Ice Breaking.md"
               }
             }
           },
@@ -241,10 +253,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d6c4382c9a506e4f",
+  "active": "0f70498f774ffb8f",
   "lastOpenFiles": [
-    "English/Dev-English.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/3강) Review - Ice Breaking.md",
+    "English/Dev-English.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/01강 ) Breaking The Ice.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화",
@@ -270,7 +283,6 @@
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/18. 자주 쓰이는 쿠션어.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/17. 자주 쓰이는 비즈니스 회화 표현.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/16. 화상 회의 시 트러블 & 대응 방법.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/15. 회의 진행 ~ 마무리하기.md",
     "Pasted image 20240128160328.png",
     "Pasted image 20240128160541.png",
     "Pasted image 20240128161600.png",
