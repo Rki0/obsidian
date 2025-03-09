@@ -51,6 +51,24 @@ or
 npm i name_of_my_library
 ```
 # Note
-1. Should include `dependencies` / `devDependencies` to `package.json`
-2. Change the version of the library for each publish
-3. ESmodule vs CommonJs
+## Should include `dependencies` / `devDependencies` to `package.json`
+If you don't include the dependencies used by your application,
+an error will occur when the user installs your library.
+## Change the version of the library for each publish
+Before publishing, you must update the `version` in `package.json`.
+```json
+// Current status
+{
+	// ... //
+	"version": "0.0.1",
+}
+
+// When you publish new version
+{
+	// ... //
+	"version": "0.0.2",
+}
+```
+## ESmodule vs CommonJs 
+If you want to support `ESmodule` and `CommonJS`,
+you should dfd

@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "ef845fec59a3ad4d",
+    "id": "fa6a3fb63dfa8381",
     "type": "split",
     "children": [
       {
-        "id": "d03cdfce01ba9d9e",
+        "id": "da171bd7cafeaa6f",
         "type": "tabs",
         "children": [
           {
-            "id": "dc5505786926c07e",
+            "id": "ae7c4fc34fa98490",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -16,7 +16,9 @@
                 "file": "Library/Javascript(Typescript).md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Javascript(Typescript)"
             }
           }
         ]
@@ -25,25 +27,28 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fc20032ca5dc30af",
+    "id": "466a145d3b79e6da",
     "type": "split",
     "children": [
       {
-        "id": "d61027d22ea6fc9d",
+        "id": "cecf95314f6bd2f5",
         "type": "tabs",
         "children": [
           {
-            "id": "99e4ce193ef5787d",
+            "id": "545006d33a75310d",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
-            "id": "edccd4eaf646f763",
+            "id": "d67a05419473af4d",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,15 +59,19 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
-            "id": "d038cb710c810d24",
+            "id": "75816f2d85c2ee02",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -72,15 +81,15 @@
     "width": 300
   },
   "right": {
-    "id": "74d9f2b6a3e4ee03",
+    "id": "86ff1e44e9a2b3c3",
     "type": "split",
     "children": [
       {
-        "id": "324a10776884d65e",
+        "id": "f33d16b08e06e3ca",
         "type": "tabs",
         "children": [
           {
-            "id": "1c5783a027a0ee81",
+            "id": "642d32e125b44c12",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -93,11 +102,13 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Javascript(Typescript)"
             }
           },
           {
-            "id": "15aa1ddb58ce2c48",
+            "id": "4985969881c9724c",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -105,40 +116,39 @@
                 "file": "Library/Javascript(Typescript).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Javascript(Typescript)"
             }
           },
           {
-            "id": "72443ec0568011da",
+            "id": "33c2562800c8f352",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
-            "id": "49f41716b93fa9ca",
+            "id": "fe47f31626ec88dd",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Library/Javascript(Typescript).md"
-              }
-            }
-          },
-          {
-            "id": "37bd007af7951f6f",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
+                "file": "Library/Javascript(Typescript).md",
+                "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Javascript(Typescript)"
             }
           }
         ],
@@ -150,61 +160,15 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:Open graph view": false,
       "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dc5505786926c07e",
-  "lastOpenFiles": [
-    "Library/Javascript(Typescript).md",
-    "Library",
-    "English/Dev-English.md",
-    "English/TOEIC/9강 - 문법(to 부정사). 어휘(부사1).md",
-    "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/15강) Review - Appoloziger.md",
-    "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/05강) Trending Topics.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/06강) Review - A Walking Dictionary.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/07강) Everything You Want.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/08강) What Happened?.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/09강) Review - Daydreamer.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/14강) Saying Good Bye.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/13강) Sorry for that.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/12강) Review - Mensch.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/11강) Proper Conduct.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/10강) Getting Some Help.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/04강) Navigating Your Area.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/03강) Review - Ice Breaking.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화/01강 ) Breaking The Ice.md",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
-    "English/500만 직장인들의 입을 열어주는 비즈 회화",
-    "English/한국인의 영어 습관 고치기/\"모닝콜\"이 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"스킨\"이 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"멘탈\"이 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기",
-    "Pasted image 20240128160328.png",
-    "Pasted image 20240128160541.png",
-    "Pasted image 20240128161600.png",
-    "Pasted image 20240128161818.png",
-    "Pasted image 20240128170821.png",
-    "Pasted image 20240128171000.png",
-    "Pasted image 20240128171657.png",
-    "Pasted image 20240128171735.png",
-    "Pasted image 20240128172054.png",
-    "Pasted image 20240128172433.png",
-    "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!",
-    "Japanese",
-    "Udemy",
-    "English/TOEIC",
-    "Untitled.canvas",
-    "English",
-    "Test",
-    "React_Query"
-  ]
+  "active": "fe47f31626ec88dd",
+  "lastOpenFiles": []
 }
