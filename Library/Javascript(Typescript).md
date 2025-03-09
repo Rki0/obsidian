@@ -30,7 +30,7 @@ You should set the `bin`.
 And the key of the `bin` should be same with the `name` field.
 ```json
 {
-// ... //
+	// ... //
 	"name": "name_of_my_library",
 	"bin": {
 		"name_of_my_library": "./index.js"
