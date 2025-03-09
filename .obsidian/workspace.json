@@ -140,22 +140,13 @@
                 "searchQuery": ""
               }
             }
-          },
-          {
-            "id": "d44bf2a6fdad5063",
-            "type": "leaf",
-            "state": {
-              "type": "reminder-list",
-              "state": {}
-            }
           }
         ],
         "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
