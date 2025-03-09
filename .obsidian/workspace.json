@@ -4,47 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "49349abcbd5329b2",
+        "id": "6c4b8e7d1f0c09c2",
         "type": "tabs",
         "children": [
           {
-            "id": "e7f43e27f7df7d72",
+            "id": "fb0cbeb1ff4c5c2b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/Dev-English.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "890ec6f066b554e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/9강 - 문법(to 부정사). 어휘(부사1).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1c98d0dea40a906c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "74d9f2b6a3e4ee03",
@@ -111,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md"
-              }
+              "state": {}
             }
           },
           {
@@ -193,8 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c98d0dea40a906c",
+  "active": "fb0cbeb1ff4c5c2b",
   "lastOpenFiles": [
+    "English/Dev-English.md",
+    "English/TOEIC/9강 - 문법(to 부정사). 어휘(부사1).md",
+    "English/TOEIC/12강 - 문법(명사). 어휘(형용사 관련어구2).md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/15강) Review - Appoloziger.md",
     "English/TOEIC/13강 - 문법(대명사 1). 어휘(동사 관련어구 1).md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/05강) Trending Topics.md",
@@ -210,7 +179,6 @@
     "English/500만 직장인들의 입을 열어주는 비즈 회화/04강) Navigating Your Area.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/03강) Review - Ice Breaking.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md",
-    "English/Dev-English.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화/01강 ) Breaking The Ice.md",
     "Japanese/업무 효율 UP & 회사에서 인정받는 일본어를 내것으로!/4. 비즈니스 메일의 기본.md",
     "English/500만 직장인들의 입을 열어주는 비즈 회화",
@@ -220,8 +188,6 @@
     "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"츄리닝\"이 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md",
-    "English/한국인의 영어 습관 고치기/\"서비스\"가 영어로 뭘까요?.md",
     "English/한국인의 영어 습관 고치기",
     "Pasted image 20240128160328.png",
     "Pasted image 20240128160541.png",

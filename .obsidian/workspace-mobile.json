@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "16c730b7507b9e06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md",
+            "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md",
+            "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -139,7 +151,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md"
+            "file": "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md"
           }
         }
       },
@@ -164,9 +176,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1c79628df47a5739",
+  "active": "16c730b7507b9e06",
   "lastOpenFiles": [
     "영단어.md",
+    "Untitled.md",
+    "English/한국인의 영어 습관 고치기/\"SNS\"가 영어로 뭘까요?.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/07강) Everything You Want.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/06강) Review - A Walking Dictionary.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/05강) Trending Topics.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/04강) Navigating Your Area.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/03강) Review - Ice Breaking.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/02강) It's Time!.md",
+    "English/500만 직장인들의 입을 열어주는 비즈 회화/01강 ) Breaking The Ice.md",
+    "English/한국인의 영어 습관 고치기/\"타이어 펑크\"가 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"콘센트\"가 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"츄리닝\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"스킨십\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"스킨\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"서비스\"가 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"비닐백\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"모닝콜\"이 영어로 뭘까요?.md",
+    "English/한국인의 영어 습관 고치기/\"멘탈\"이 영어로 뭘까요?.md",
     "일본어 단어.md",
     "문법(목적어,보어). 어휘(동사2).md",
     "Untitled.canvas",
@@ -174,16 +204,6 @@
     "Algorithm/Sort/Sort.md",
     "Data_Structure/Linked_List/Singly Linked List.md",
     "Data_Structure/Tree/Tree.md",
-    "Data_Structure/Tree/Trie.md",
-    "Data_Structure/Tree/Heap.md",
-    "Algorithm/Floyd's ...(토끼 거북).md",
-    "Data_Structure/Hash Table(Hash Map).md",
-    "Data_Structure/Queue.md",
-    "Algorithm/Sort/Quick Sort.md",
-    "Algorithm/Sort/Selection Sort.md",
-    "Algorithm/Sort/Insertion Sort.md",
-    "Data_Structure/Linked_List/Linked List.md",
-    "Algorithm/Binary Search.md",
-    "Algorithm/Naive String Search.md"
+    "Data_Structure/Tree/Trie.md"
   ]
 }
