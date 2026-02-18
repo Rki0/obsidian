@@ -11,10 +11,14 @@
             "id": "ee615b9b02bb064a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Claude/How to use Claude code.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "How to use Claude code"
             }
           }
         ]
@@ -74,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "86ff1e44e9a2b3c3",
@@ -138,12 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Claude/How to use Claude code.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of How to use Claude code"
             }
           }
         ],
@@ -151,7 +157,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,9 +174,10 @@
   },
   "active": "ee615b9b02bb064a",
   "lastOpenFiles": [
+    "Claude/How to use Claude code.md",
+    "Claude",
     "React Test(Jest, React Testing Library).md",
     "Untitled.base",
-    "Untitled.md",
     "Untitled 1.base",
     "images/Pasted image 20240209221735.png",
     "images",
