@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "How to use Claude code"
             }
+          },
+          {
+            "id": "476f73500af2fc48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Claude/Command.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Command"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -143,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Claude/How to use Claude code.md",
+                "file": "Claude/Command.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of How to use Claude code"
+              "title": "Outline of Command"
             }
           }
         ],
@@ -172,9 +187,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ee615b9b02bb064a",
+  "active": "476f73500af2fc48",
   "lastOpenFiles": [
     "Claude/How to use Claude code.md",
+    "Claude/Command.md",
     "Claude",
     "React Test(Jest, React Testing Library).md",
     "Untitled.base",
